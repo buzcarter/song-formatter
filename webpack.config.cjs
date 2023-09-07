@@ -5,7 +5,6 @@ module.exports = {
     'song-formatter': './src/js/index.ts',
   },
   output: {
-    clean: true,
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -18,6 +17,11 @@ module.exports = {
       ],
       test: /\.tsx?$/,
       use: 'ts-loader',
+    }, {
+      test: /\.css$/,
+      use: [
+        'css-loader',
+      ],
     }],
   },
   resolve: {

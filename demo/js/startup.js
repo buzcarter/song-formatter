@@ -1,15 +1,13 @@
 (() => {
   let ukeGeeks;
-  // const { ukeGeeks } = window;
+
   /**
    * For demo purposes allows one to turn on/off the inlineDiagrams setting.
-   * @method checkUrlOpts
-   * @return {void}
    */
   function checkUrlOpts() {
-    const re = new RegExp('[?&]inline=([^&]*)', 'i');
-    const m = (`${window.location}`).match(re);
-    if (!m || m.length < 1) {
+    const regEx = /[?&]inline=([^&]*)/i;
+    const matches = (`${window.location}`).match(regEx);
+    if (!matches || matches.length < 1) {
       return;
     }
     ukeGeeks.settings.inlineDiagrams = true;
