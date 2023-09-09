@@ -13,24 +13,24 @@ on:
 
 jobs:
   build-node:
-    name: Build with Node
+    # name: Build with Node
     runs-on: ubuntu-latest
     container: node:18
 
     steps:
-      - name: Install Node
+      # - name: Install Node
       - run: node --version
       - run: npm --version
 
-      - name: Checkout Master
+      # - name: Checkout Master
       - uses: actions/checkout@v3
       - run: npm install
 
-      - name: Run Build
+      # - name: Run Build
       - run: npm run build
 
-      - name: Run Tests
+      # - name: Run Tests
       - run: npm run test
 
-      - name: Upload
-      - run: actions/upload-pages-artifact@v2
+      # - name: Upload
+      - uses: actions/upload-pages-artifact@v2
