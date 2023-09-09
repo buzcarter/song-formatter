@@ -1,0 +1,33 @@
+name: Run Unit Tests
+description: Build and run all unit tests
+author: "Buz Carter"
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-node:
+    name: Build with Node
+    runs-on: ubuntu-latest
+    container: node:18
+
+    steps:
+      - name: Install Node
+      - run: node --version
+      - run: npm --version
+
+      - name: Checkout Master
+      - uses: actions/checkout@v3
+      - run: npm install
+
+      - name: Run Build
+      - run: npm run build
+
+      - name: Run Tests
+      - run: npm run test
