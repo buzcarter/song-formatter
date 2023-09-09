@@ -39,7 +39,7 @@ const RegExes = Object.freeze({
   ADD_IN:         /add:\s*string\s*(\S+)\s+fret\s+(\d+)\sfinger\s(\d)/i,
   // extra commands
   INSTRUCTION:    /{\s*instrument\s*:\s*(.*?)\s*}/i,
-  TUNING:         /{\s*tuning\s*:\s*(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s*}/i,
+  TUNING:         /{\s*tuning\s*:\s*([^}]+?)\s*}/i,
   // single digit numbers
   // num: /(\d)/g,
   NBR_OR_X:       /(\d{1,2}|x)/gi,
@@ -84,12 +84,12 @@ function getInstrument(text: string): string | null {
   return matches ? pack(matches[1]) : null;
 }
 
-/**
- * TODO: expects FOUR strings.
- */
 function getTuning(text: string): string[] | null {
   const matches = text.match(RegExes.TUNING);
-  return !matches ? null : [matches[1], matches[2], matches[3], matches[4]];
+  if (!matches) {
+    return null;
+  }
+  return matches[1].split(/\s+/);
 }
 
 function getName(text: string): string | null {
@@ -227,3 +227,7 @@ export function runBlock(text: string): Instrument {
     partsToChords(partsAry),
   );
 }
+
+export const __test__ = {
+  getTuning,
+};

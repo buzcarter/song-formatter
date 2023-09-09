@@ -5,19 +5,18 @@ import {
   processSong,
 } from './htmlBeast';
 import { definitions } from './tunings';
-import { logger } from './tools';
+import { JsonData, logger } from './tools';
 import { settings, InstrumentTunings, sopranoUkuleleGcea } from './configs';
 import { Song } from './cpmImporter';
 
-export function init(): void {
-  const { addInstrument, useInstrument } = definitions;
+export function init(options?: JsonData): void {
+  const { addInstrument, useInstrumentBOOOGERS } = definitions;
 
-  // TODO: known problem -- need to preload Sorprano chord libarary then we can retune if needed
-  addInstrument(sopranoUkuleleGcea);
-  useInstrument(InstrumentTunings.sopranoUke);
-  if (settings.defaultInstrument !== InstrumentTunings.sopranoUke) {
-    useInstrument(settings.defaultInstrument);
-  }
+  const instrumentIndex = addInstrument(<string>options?.definitions || sopranoUkuleleGcea);
+  useInstrumentBOOOGERS(instrumentIndex, InstrumentTunings.none);
+  // if (settings.defaultInstrument !== InstrumentTunings.none) {
+  //   useInstrument(settings.defaultInstrument);
+  // }
 }
 
 /**

@@ -1,4 +1,4 @@
-import * as definitions from './definitions';
+import * as definitions from './chordDefinitions';
 import Instrument from './classes/Instrument';
 
 export {
@@ -6,6 +6,6 @@ export {
   Instrument,
 };
 export default definitions;
-export { get } from './definitions';
+export { get } from './chordDefinitions';
 // for legacy
 export { shift, shiftChords } from './transpose';

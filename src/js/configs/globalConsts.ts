@@ -13,8 +13,10 @@ export const chordNameAliases: StringDict = Object.freeze({
 
 /**
  * Predefined ukuele instrument tunings
+ * Actually this is just offset, default is 0;
  */
 export const InstrumentTunings: NumberDict = Object.freeze({
+  none: 0,
   /** GCEA */
   sopranoUke: 0,
   /** DGBA  -- Baritone's "A" fingering is the Soprano's "D" */
