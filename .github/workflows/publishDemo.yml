@@ -15,23 +15,22 @@ jobs:
     container: node:18
     steps:
       - run: node --version
-        name: Check Node Version
+        name: Check Node Version 🔦
       - run: npm --version
-        name: Check NPM Version
+        name: Check NPM Version 🩺
       - uses: actions/checkout@v3
-        name: Checkout Main branch
+        name: Checkout Main branch 🧺
       - run: npm install
-        name: Install NPM Packages
+        name: Install NPM Packages 🔧
       - run: npm run test
-        name: Run unit tests
+        name: Run unit tests 🧪
       - run: npm run build
-        name: Build distribution bundles
+        name: Build distribution bundles 📦
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
-        # name: Deploy to GitHub Pages
         with:
           folder: dist
           branch: gh-pages
