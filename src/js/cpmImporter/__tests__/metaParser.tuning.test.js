@@ -1,4 +1,4 @@
-import { __test__ } from '../chordParser';
+import { __test__ } from '../metaParser';
 
 describe('cpmParser', () => {
   describe('getTuning', () => {

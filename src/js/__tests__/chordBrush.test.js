@@ -7,13 +7,14 @@ import { InstrumentTunings, settings, sopranoUkuleleGcea } from '../configs';
 import { runLine } from '../cpmImporter';
 import { definitions, get } from '../tunings';
 
-const { addInstrument, useInstrument } = definitions;
+const { addInstrument, useInstrumentBOOOGERS } = definitions;
 
 function loadAllChords() {
-  addInstrument(sopranoUkuleleGcea);
-  useInstrument(InstrumentTunings.sopranoUke);
+  const index = addInstrument(sopranoUkuleleGcea);
+  useInstrumentBOOOGERS(index, InstrumentTunings.none);
 
-  return definitions.getChords()
+  return definitions
+    .getChords()
     .map(({ name }) => get(name));
 }
 
