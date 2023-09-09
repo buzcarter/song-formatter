@@ -1,11 +1,7 @@
 name: Publish Demo Site
-# description: Build and deploy demo to GitHub pages
-# author: "Buz Carter"
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
     branches: [ "master" ]
 
 jobs:
