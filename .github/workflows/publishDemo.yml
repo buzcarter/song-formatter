@@ -1,6 +1,6 @@
 name: Publish Demo
-description: Build and deploy demo to GitHub pages
-author: "Buz Carter"
+# description: Build and deploy demo to GitHub pages
+# author: "Buz Carter"
 
 on:
   push:
