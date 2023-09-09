@@ -10,19 +10,24 @@ on:
 
 jobs:
   build-node:
-    name: Install and Build
+    name: Install, Build, Test, & Deploy
     runs-on: ubuntu-latest
     container: node:18
     steps:
-      - run: node --version
-        name: Check Node Version
-      - run: npm --version
-        name: Check NPM Version
+      - name: Check Node Version
+        run: node --version
+      - name: Check NPM Version
+        run: npm --version
+      - name: Checkout Main branch
       - uses: actions/checkout@v3
-        name: Checkout Main branch
-      - run: npm install
-        name: Install NPM Packages
-      - run: npm run test
-        name: Run unit tests
-      - run: npm run build
-        name: Build distribution bundles
+      - name: Install NPM Packages
+        run: npm install
+      - name: Run unit tests
+        run: npm run test
+      - name: Build distribution bundles
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          folder: "dist/"
+          clean: true
