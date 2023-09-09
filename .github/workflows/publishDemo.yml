@@ -8,31 +8,14 @@ on:
   pull_request:
     branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 jobs:
   build-node:
     name: Install and Build
     runs-on: ubuntu-latest
     container: node:18
-
     steps:
       - run: node --version
       - run: npm --version
-      name: Install Node
-
       - uses: actions/checkout@v3
       - run: npm install
-      name: Checkout Master
-
       - run: npm run build
-      name: Run Build
-
-      - run: npm run test
-      name: Run Tests
-
-      - uses: actions/upload-pages-artifact@v2
-      name: Upload
-        # inputs:
-        #   path: "dist/"
