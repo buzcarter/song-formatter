@@ -20,9 +20,10 @@
   function run() {
     ukeGeeks = window.ukeGeeks;
     checkUrlOpts();
-    ukeGeeks.scriptasaurus.init(false);
-    ukeGeeks.scriptasaurus.run();
+    const settings = window.mySettings || false;
+    ukeGeeks.init(settings);
+    ukeGeeks.run();
   }
 
-  setTimeout(run, 3000);
+  run();
 })();
