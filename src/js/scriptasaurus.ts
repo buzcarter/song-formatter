@@ -5,7 +5,7 @@ import {
   processSong,
 } from './htmlBeast';
 import { definitions } from './tunings';
-import { JsonData, logger } from './tools';
+import { JsonData, integer, logger } from './tools';
 import { settings, InstrumentTunings, sopranoUkuleleGcea } from './configs';
 import { Song } from './cpmImporter';
 
@@ -14,14 +14,10 @@ export function init(options?: JsonData): void {
 
   const instrumentIndex = addInstrument(<string>options?.definitions || sopranoUkuleleGcea);
   setInstrument(instrumentIndex, InstrumentTunings.none);
-  // if (settings.defaultInstrument !== InstrumentTunings.none) {
-  //   useInstrument(settings.defaultInstrument);
-  // }
 }
 
 /**
  * Runs all Scriptasaurus methods using the element Ids defined in the settings class.
- * This is your "Do All".
  */
 export function run(): Song | null {
   logger.log('run (Classic Mode)');
@@ -58,10 +54,10 @@ export function runByClasses(): Song[] {
 }
 
 /**
- * Is this really nececessary?
- * @param offset {int} (optional) default 0. Number of semitones to shift the tuning. See ukeGeeks.definitions.instrument.
+ * @todo: still nececessary?
+ * @param {number} offset default 0. Number of semitones to shift the tuning. See ukeGeeks.definitions.instrument.
  */
-export const setTuningOffset = (offset: number): void => definitions.useInstrument(offset);
+export const setTuningOffset = (offset: integer): void => definitions.useInstrument(offset);
 
 function showUnknownChordErrors(errs: string | string[]): void {
   if (!errs.length) {

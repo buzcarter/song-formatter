@@ -124,7 +124,7 @@ const Settings = Object.seal({
      * to prevent overlapping.
      */
     autoFixOverlaps: true,
-    debugVerbose: true,
+    debugVerbose: false,
   } as BooleanDict,
 
   /**

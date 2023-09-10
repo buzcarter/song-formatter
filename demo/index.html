@@ -184,10 +184,35 @@ And those that should not
 </footer>
 <script src="../dist/song-formatter.bundle.js"></script>
 <script type="text/javascript">
-/**
- *  Put your code here to change any of UkeGeek's default settings.
- */
+(() => {
+  /**
+   *  Put your code here to change any of UkeGeek's default settings.
+   */
+  const ukeGeeks = window.ukeGeeks;;
+
+  /**
+   * For demo purposes: allows one to turn on/off the inlineDiagrams
+   * via query string `?inline=true`.
+   */
+  function checkUrlOpts() {
+    const regEx = /[?&]inline=(1|true|on|yes)/i;
+    if (regEx.test(`${window.location}`)) {
+      ukeGeeks.settings.inlineDiagrams = true;
+    }
+  }
+
+  /**
+   * Here we've added a call to checkUrlOpts in what's otherwise a
+   * very "standard" way to run Scriptasaurus.
+   */
+  function run() {
+    checkUrlOpts();
+    ukeGeeks.init();
+    ukeGeeks.run();
+  }
+
+  run();
+})();
 </script>
-<script type="text/javascript" src="./js/startup.js"></script>
 </body>
 </html>
