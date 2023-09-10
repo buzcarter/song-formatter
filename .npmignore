@@ -3,6 +3,7 @@ __tests__
 .editorconfig
 .eslintignore
 .eslintrc.cjs
+.github
 .gitignore
 .lib
 .npmrc
@@ -10,12 +11,11 @@ __tests__
 .vscode
 *.tgz
 coverage
-docs
 jest
 jest.config.cjs
 src
 tsconfig.json
-webpack.config.cjs
+webpack.config**.*
 # until I fix WebPack CSS script
 /dist/song-formatter.js
 /dist/song-formatter.js.map
