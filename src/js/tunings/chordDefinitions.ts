@@ -3,7 +3,7 @@
  */
 import { retune, RetuneMap } from './transpose';
 import { integer } from '../tools';
-import { chordNameAliases, InstrumentTunings, settings } from '../configs';
+import { chordNameAliases, InstrumentTunings } from '../configs';
 import { Chord, runBlock } from '../cpmImporter';
 
 /**
@@ -26,10 +26,10 @@ export const addInstrument = (definitions: string | string[]): number => instrum
 
 /** Choose which instrument's chord dictionary is used used for chord diagrams. */
 export function useInstrument(offset: integer | string) {
-  useInstrumentBOOOGERS(InstrumentTunings.none, offset);
+  setInstrument(InstrumentTunings.none, offset);
 }
 
-export function useInstrumentBOOOGERS(instrumentIndex: integer, offset: integer | string = 0) {
+export function setInstrument(instrumentIndex: integer, offset: integer | string = 0) {
   globalOffset = typeof offset === 'string' ? parseInt(offset, 10) : offset;
   if (globalOffset > 0) {
     retuneMap = retune(globalOffset);
@@ -41,7 +41,6 @@ export function useInstrumentBOOOGERS(instrumentIndex: integer, offset: integer 
   }
 
   const instrument = runBlock(text);
-  settings.tuning = instrument.tuning;
   setChords(instrument.chords);
 }
 

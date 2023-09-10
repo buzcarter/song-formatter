@@ -29,8 +29,6 @@ export const SongStyles = Object.freeze({
   NewPage:         'ugsNewPage',
 });
 
-// export default {
-//   ...PageStyles,
-//   ...ChordsStyles,
-//   ...SongStyles,
-// };
+export const SvgChordStyles = {
+  CHORD_IMG: 'ugs-diagrams--chord-img',
+};

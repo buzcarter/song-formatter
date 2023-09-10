@@ -10,10 +10,10 @@ import { settings, InstrumentTunings, sopranoUkuleleGcea } from './configs';
 import { Song } from './cpmImporter';
 
 export function init(options?: JsonData): void {
-  const { addInstrument, useInstrumentBOOOGERS } = definitions;
+  const { addInstrument, setInstrument } = definitions;
 
   const instrumentIndex = addInstrument(<string>options?.definitions || sopranoUkuleleGcea);
-  useInstrumentBOOOGERS(instrumentIndex, InstrumentTunings.none);
+  setInstrument(instrumentIndex, InstrumentTunings.none);
   // if (settings.defaultInstrument !== InstrumentTunings.none) {
   //   useInstrument(settings.defaultInstrument);
   // }

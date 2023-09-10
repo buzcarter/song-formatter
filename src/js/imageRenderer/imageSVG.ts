@@ -103,7 +103,9 @@ function renderLayers(layers: SVGLayer[]): string {
   }, '');
 }
 
-function toSVGString(image: SVGImage): string {
+// TODO: let's not do this
+/** used by src/js/htmlBeast/svgPlot.ts */
+export function toSVGString(image: SVGImage): string {
   const { width, height } = image.dimensions;
   return ('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" '
       + `viewBox="0 0 ${width} ${height}" `
@@ -114,14 +116,4 @@ function toSVGString(image: SVGImage): string {
 
 export function toString(image: ImageBuilder): string {
   return toSVGString(image.getData());
-}
-
-export function appendChild(element: HTMLElement, image: ImageBuilder, className: string): HTMLElement {
-  const wrapper = document.createElement('span');
-  if (className) {
-    wrapper.classList.add(className);
-  }
-  wrapper.innerHTML = toSVGString(image.getData());
-  element.appendChild(wrapper);
-  return wrapper;
 }

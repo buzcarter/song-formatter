@@ -3,6 +3,7 @@
  * text written in CPM syntax (looks for instrument, tuning, and define statements).
  */
 
+import { settings } from '../configs';
 import { pack } from '../tools';
 import Instrument from '../tunings/classes/Instrument';
 import { runLines } from './chordParser';
@@ -48,9 +49,13 @@ export function runBlock(text: string): Instrument {
 
   const name = getInstrument(text) || '';
   const tuning = getTuning(text) || [];
+
+  // TODO: want to pass this dependency, not set -- unexpected sideeffect!!
+  settings.tuning = tuning;
+
   const chords = runLines(lines);
   return new Instrument(
-    getKey(name || '', tuning || []),
+    getKey(name, tuning),
     name,
     tuning,
     chords,

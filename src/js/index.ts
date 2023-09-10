@@ -7,8 +7,7 @@
 
 import { Chord, runLine } from './cpmImporter';
 import { definitions, shift, shiftChords } from './tunings';
-import { Fix } from './htmlBeast';
-import { plot } from './imageRenderer';
+import { Fix, plot } from './htmlBeast';
 import { settings, InstrumentTunings } from './configs';
 import scriptasaurus from './scriptasaurus';
 
