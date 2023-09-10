@@ -3,7 +3,7 @@ name: Publish Demo Site
 on:
   push:
     branches: [ "master" ]
-
+  workflow_dispatch:
 jobs:
   build-node:
     name: Install, Build, Test, & Deploy
