@@ -1,3 +1,5 @@
+export type integer = number;
+
 export type Primitive = string | number | boolean;
 
 export interface JsonData {

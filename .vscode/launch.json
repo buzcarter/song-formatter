@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Jest",
+    "internalConsoleOptions": "openOnSessionStart",
+    "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+    "request": "launch",
+    "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v18.15.0/bin/node",
+    "type": "node",
+    "args": [
+      "-i"
+    ]
+  }, {
+    "name": "One Jest Module",
+    "internalConsoleOptions": "openOnSessionStart",
+    "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+    "request": "launch",
+    "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v18.15.0/bin/node",
+    "type": "node",
+    "args": [
+      "-i",
+      "chordBrush.test.js"
+    ]
+  }, {
+    "name": "App/Server Startup",
+    "request": "launch",
+    "type": "node",
+    "envFile": "${workspaceRoot}/.vscode-launch-envrc",
+    "program": "${workspaceRoot}/testTransform.js",
+    "args": []
+  }]
+}

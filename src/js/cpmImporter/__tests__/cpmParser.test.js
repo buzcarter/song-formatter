@@ -1,13 +1,6 @@
 import * as cpmParser from '../cpmParser';
 
 describe('cpmParser', () => {
-  describe.skip('init', () => {
-    const { init } = cpmParser;
-    it('should (Happy Path)', () => {
-      expect(init).toBeUndefined();
-    });
-  });
-
   describe('parse', () => {
     const { parseCPM: parse } = cpmParser;
     it('should (Happy Path)', () => {

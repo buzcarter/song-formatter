@@ -5,8 +5,8 @@ import HTMLHandles from './classes/HTMLHandles';
 import { RefDiagramsStyles as Styles } from './Styles';
 
 import { get } from '../tunings';
-import { plot } from '../imageRenderer';
 import { settings } from '../configs';
+import { plot } from './svgPlot';
 
 const RegExes = {
   /** Ignore "tacet" or "no chord" chords */

@@ -138,9 +138,7 @@ const Settings = Object.seal({
    */
   numFrets: 5,
 
-  /**
-   * Array of string names, changes between baritone and soprano
-   */
+  /** Array of string names (letters) */
   tuning: ['G', 'C', 'E', 'A'] as string[],
 
   /**
@@ -150,7 +148,6 @@ const Settings = Object.seal({
    */
   getNumStrings() {
     return Settings.tuning.length;
-    // export const NUM_STRINGS = 4;
   },
 
   /**
@@ -163,9 +160,9 @@ const Settings = Object.seal({
   },
 
   /**
-   * The initial tuning when page first loads, used in scriptasaurus.init.
+   * The initial tuning when page first loads
    */
-  defaultInstrument: InstrumentTunings.sopranoUke,
+  defaultInstrument: InstrumentTunings.none,
 
   tabs: {
     lineSpacing: 16,

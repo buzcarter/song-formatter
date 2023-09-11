@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>UkeGees: Song Formatter Demos</title>
+  <title>UkeGeeks: Song Formatter Demos</title>
   <link rel="shortcut icon" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="../dist/song-formatter.bundle.css" />
 </head>
@@ -10,7 +10,7 @@
 <section>
   <header>
     <hgroup>
-      <h1>UkeGees: Song Formatter Demos</h1>
+      <h1>UkeGeeks: Song Formatter Demos</h1>
     </hgroup>
   </header>
   <div class="metaInfo"></div>
@@ -184,10 +184,35 @@ And those that should not
 </footer>
 <script src="../dist/song-formatter.bundle.js"></script>
 <script type="text/javascript">
-/**
- *  Put your code here to change any of UkeGeek's default settings.
- */
+(() => {
+  /**
+   *  Put your code here to change any of UkeGeek's default settings.
+   */
+  const ukeGeeks = window.ukeGeeks;;
+
+  /**
+   * For demo purposes: allows one to turn on/off the inlineDiagrams
+   * via query string `?inline=true`.
+   */
+  function checkUrlOpts() {
+    const regEx = /[?&]inline=(1|true|on|yes)/i;
+    if (regEx.test(`${window.location}`)) {
+      ukeGeeks.settings.inlineDiagrams = true;
+    }
+  }
+
+  /**
+   * Here we've added a call to checkUrlOpts in what's otherwise a
+   * very "standard" way to run Scriptasaurus.
+   */
+  function run() {
+    checkUrlOpts();
+    ukeGeeks.init();
+    ukeGeeks.run();
+  }
+
+  run();
+})();
 </script>
-<script type="text/javascript" src="./js/startup.js"></script>
 </body>
 </html>

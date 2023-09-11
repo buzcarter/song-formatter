@@ -7,8 +7,7 @@
 
 import { Chord, runLine } from './cpmImporter';
 import { definitions, shift, shiftChords } from './tunings';
-import { Fix } from './htmlBeast';
-import { plot } from './imageRenderer';
+import { Fix, plot } from './htmlBeast';
 import { settings, InstrumentTunings } from './configs';
 import scriptasaurus from './scriptasaurus';
 
@@ -26,6 +25,7 @@ class ChordBrush extends Chord {
  * Reads song text, parses, draws choard diagrams.
  */
 const publicInterface = {
+  ...scriptasaurus,
   chordBrush: ChordBrush, // legacy
   ChordBrush,
   chordImport: {
@@ -39,7 +39,7 @@ const publicInterface = {
     Fix,
   },
   settings,
-  scriptasaurus,
+  scriptasaurus, // legacy
   toolsLite: {
     addClass(ele: HTMLDivElement, className: string) {
       ele.classList.add(className);

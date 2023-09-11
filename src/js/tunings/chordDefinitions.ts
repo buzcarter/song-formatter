@@ -1,12 +1,14 @@
 /**
  * Defines chords and provides simple lookup (find) tools.
  */
-
 import { retune, RetuneMap } from './transpose';
-
+import { integer } from '../tools';
 import { chordNameAliases, InstrumentTunings } from '../configs';
 import { Chord, runBlock } from '../cpmImporter';
 
+/**
+ * Block of CPM text, expects to find these tags: `instrument`, `tuning`, and one or more `define` statements.
+ */
 const instruments: string[] = [];
 
 /**
@@ -19,23 +21,27 @@ let retuneMap: RetuneMap[] = [];
 
 /**
  * Define an instrument's chord dictionary, this makes this instrument avaiable for showing its chord diagrams.
- * @param definitions Block of CPM text -- specifically looks for instrument, tuning, and define statements.
- * @returns new instruments length
  */
-export const addInstrument = (definitions: string | string[]): number => instruments.push(Array.isArray(definitions) ? definitions.join('\n') : definitions);
+export const addInstrument = (definitions: string | string[]): number => instruments.push(Array.isArray(definitions) ? definitions.join('\n') : definitions) - 1;
 
-/**
- * Choose which instrument's chord dictionary you want used for the chord
- * diagrams. NOTE: .
- * @param offset {int} (optional) default 0. Number of semitones to shift the tuning.
- */
-export function useInstrument(offset: number | string) {
-  offset = (arguments.length > 0) ? offset : InstrumentTunings.sopranoUke;
+/** Choose which instrument's chord dictionary is used used for chord diagrams. */
+export function useInstrument(offset: integer | string) {
+  setInstrument(InstrumentTunings.none, offset);
+}
+
+export function setInstrument(instrumentIndex: integer, offset: integer | string = 0) {
   globalOffset = typeof offset === 'string' ? parseInt(offset, 10) : offset;
   if (globalOffset > 0) {
     retuneMap = retune(globalOffset);
   }
-  setChords(runBlock(instruments[0]).chords);
+  const text = instruments[instrumentIndex];
+  if (!text) {
+    // TODO: log error!!!
+    return;
+  }
+
+  const instrument = runBlock(text);
+  setChords(instrument.chords);
 }
 
 /**
@@ -99,7 +105,7 @@ function underscoreGet(chordName: string): Chord | null {
   );
 }
 
-export function add(chords: Chord[]): number {
+export function add(chords: Chord[]): integer {
   if (chords.length) {
     for (let i = 0; i < chords.length; i++) {
       userChords.push(chords[i]);
@@ -108,7 +114,7 @@ export function add(chords: Chord[]): number {
   return userChords.length;
 }
 
-export function replace(chords: Chord[]): number {
+export function replace(chords: Chord[]): integer {
   userChords = [];
   return add(chords);
 }

@@ -2,7 +2,7 @@
  * Can shift a single chord or list of chords up/down by a series of steps. Hangles
  * finding equivalent chord names (i.e. A# is same as Bb)
  */
-import { getChords } from './definitions';
+import { getChords } from './chordDefinitions';
 
 import { NumberDict } from '../tools';
 

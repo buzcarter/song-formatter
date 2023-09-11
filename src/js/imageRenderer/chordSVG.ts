@@ -1,38 +1,12 @@
 import { Position } from './interfaces/SVGImage';
 import FretBox from './interfaces/FretBox';
 import ImageBuilder from './classes/ImageBuilder';
-import { appendChild as appendSvgChild } from './imageSVG';
 
-import { StringDict } from '../tools';
+import { StringDict, integer } from '../tools';
 import { Chord, Dot } from '../cpmImporter';
 import { settings } from '../configs';
 
-const Styles = {
-  CHORD_IMG: 'ugs-diagrams--chord-img',
-};
-
-/**
- * Puts a new Canvas within ChordBox and draws the chord diagram on it.
- * @param chordBox Handle to the DOM element where the chord is to be drawn.
- * @param chord Chord Diagram to be drawn.
- * @param fretBox Appropriate ukeGeeks.settings.fretBox -- either "fretBox" or "inlineFretBox"
- * @param fontSettings (optional) Defaults to settings.fonts
- * @param colorSettings (optional) Defaults to settings.colors
- */
-export function plot(chordBox: HTMLElement, chord: Chord, fretBox: FretBox, fontSettings: StringDict, colorSettings: StringDict): void {
-  const img = generateChordSvg(chord, fretBox, fontSettings, colorSettings);
-  if (!img) {
-    return;
-  }
-  appendSvgChild(chordBox, img, Styles.CHORD_IMG);
-}
-
 export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: StringDict, colorSettings: StringDict): ImageBuilder | null {
-  const img = new ImageBuilder().newImage(fretBox.width, fretBox.height);
-  if (!img) {
-    return null;
-  }
-
   if (!fontSettings) {
     fontSettings = settings.fonts;
   }
@@ -40,37 +14,45 @@ export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: S
     colorSettings = settings.colors;
   }
 
+  const { numFrets = 5 } = settings;
+  const { dotRadius } = fretBox;
+
   // starting top-left position for chord diagram
   const pos = {
     x: fretBox.topLeftPos.x,
     y: fretBox.topLeftPos.y,
   };
-  drawFretboard(img, pos, fretBox, colorSettings.fretLines);
+
+  const img = newFretboard(pos, fretBox, settings.getNumStrings(), numFrets, colorSettings.fretLines);
+
   // find where the circle centers should be:
   const centers = {
     x: pos.x,
-    y: pos.y + fretBox.dotRadius,
+    y: pos.y + dotRadius,
   };
 
   // find the vertical shift by dividing the freespace between top and bottom (freespace is the row height less circle diameter)
-  const fudgeY = (fretBox.fretSpace - 2 * fretBox.dotRadius) / 2;
+  const fudgeY = (fretBox.fretSpace - 2 * dotRadius) / 2;
   const fretRange = getFretRange(chord.dots);
-  const firstFret = (fretRange.last <= 5) ? 1 : fretRange.last - 4;
+  const firstFret = fretRange.last <= numFrets ? 1 : fretRange.last - (numFrets - 1);
 
   if (Array.isArray(chord.dots)) {
     // now add Dots (with finger numbers, if present)
     chord.dots.forEach((dot) => {
-      const s = dot.string || 0;
-      const p = {
-        x: (centers.x + s * fretBox.stringSpace),
+      const stringNbr = dot.string || 0;
+
+      const dotPos = {
+        x: (centers.x + stringNbr * fretBox.stringSpace),
         y: (fudgeY + centers.y + ((dot.fret ? dot.fret : 0) - firstFret) * fretBox.fretSpace),
       };
-      img.circle(p.x, p.y, fretBox.dotRadius).setStyle({
+
+      img.circle(dotPos.x, dotPos.y, dotRadius).setStyle({
         fillColor: colorSettings.dots,
       });
+
       // check that the dot's radius isn't stupidly small
-      if (dot.finger && dot.finger > 0 && fretBox.showText && fretBox.dotRadius > 4) {
-        img.text(p.x, p.y + 5, dot.finger.toString()).setStyle({
+      if (dot.finger && dot.finger > 0 && fretBox.showText && dotRadius > 4) {
+        img.text(dotPos.x, dotPos.y + 5, dot.finger.toString()).setStyle({
           fillColor: colorSettings.dotText,
           fontFamily: fontSettings.dot,
         });
@@ -80,12 +62,12 @@ export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: S
 
   // If the chord is above the normal first 5 frets we need to add labels for the first and last frets
   if (firstFret !== 1) {
-    // Label the starting and ending frets (0-12). It's assumed that the fretboard covers frets 1-5.
+    // Label the starting and ending frets (0-12). It's assumed that the fretboard covers frets 1-5 (or `numFrets`).
     // If instead the top fret is 6, say, well, this is the method called to add that "6".
     // The Y position calculation is a bit klunky. How big of a fret range is present in the chord?
     const txtPos = {
       x: 0,
-      y: pos.y + fretBox.fretSpace * (0.96 * (5.0 - (fretRange.last - fretRange.first))),
+      y: pos.y + fretBox.fretSpace * (0.96 * (numFrets - (fretRange.last - fretRange.first))),
       // Old Y caculcation: pos.y + (0.8 * fretBox.fretSpace)
     };
     img.text(txtPos.x, txtPos.y, fretRange.first.toString()).setStyle({
@@ -119,44 +101,67 @@ export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: S
   return img;
 }
 
-function drawFretboard(img: ImageBuilder, pos: Position, fretBox: FretBox, fretColor: string = '#000'): void {
-  // width offset, a "subpixel" adjustment
-  const offset = fretBox.lineWidth / 2;
-  const stringHeight = settings.numFrets * fretBox.fretSpace;
-  const fretWidth = 3 * fretBox.stringSpace;
+/** When requested diminsions won't accomodate other settings force adjustments. Allow for padding for text above and on sides. */
+function adjustDimensions(width: number, height: number, numStrings: integer, numFrets: integer, fretSpace: integer, stringSpace: integer): {
+    width: number,
+    height: number,
+  } {
+  const requiredWidth = (numStrings + 0.9) * stringSpace;
+  const requiredHeight = (numFrets + 1.3) * fretSpace;
 
-  const fretboard = img
+  return {
+    width: requiredWidth < width ? width : requiredWidth,
+    height: requiredHeight < height ? height : requiredHeight,
+  };
+}
+
+function newFretboard(
+  { x: topX, y: topY }: Position,
+  { width, height, lineWidth, fretSpace, stringSpace }: FretBox,
+  numStrings: integer,
+  numFrets: integer,
+  fretColor: string = '#000',
+): ImageBuilder {
+  // width offset, a "subpixel" adjustment
+  const offset = lineWidth / 2;
+  const stringLinesHeight = numFrets * fretSpace;
+  const fretLinesWidth = (numStrings - 1) * stringSpace;
+
+  const newDims = adjustDimensions(width, height, numStrings, numFrets, fretSpace, stringSpace);
+
+  const fretboard = new ImageBuilder()
+    .newImage(newDims.width, newDims.height)
     .newGroup('fretboard')
     .setStyle({
       fillColor: 'none',
       strokeColor: fretColor,
-      strokeWidth: fretBox.lineWidth.toString(),
+      strokeWidth: lineWidth.toString(),
     });
 
-  // add "C" & "E" strings
-  for (let i = 1; i < 3; i++) {
-    const x = pos.x + i * fretBox.stringSpace + offset;
-    fretboard.vLine(x, pos.y + offset, stringHeight);
+  // add middle strings
+  for (let i = 1; i < numStrings - 1; i++) {
+    const lineX = topX + i * stringSpace + offset;
+    fretboard.vLine(lineX, topY + offset, stringLinesHeight);
   }
   // add frets
-  for (let i = 1; i < settings.numFrets; i++) {
-    const y = pos.y + i * fretBox.fretSpace + offset;
-    fretboard.hLine(pos.x + offset, y, fretWidth);
+  for (let i = 1; i < numFrets; i++) {
+    const lineX = topY + i * fretSpace + offset;
+    fretboard.hLine(topX + offset, lineX, fretLinesWidth);
   }
 
-  fretboard
-    .rectangle(pos.x + offset, pos.y + offset, fretWidth, stringHeight)
+  // The border/rectangle takes care of first & last strings & frets
+  return fretboard
+    .rectangle(topX + offset, topY + offset, fretLinesWidth, stringLinesHeight)
     .endGroup();
 }
 
-/**
- * TODO: Loop over the muted array, dropping X's whenever a string position is `true`
- * @param muted    Is this string "muted"?
- * @param strokeColor Valid CSS hex color (shorthand not recommended)
- */
+/** TODO: Loop over the muted array, dropping X's whenever a string position is `true` */
 function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | null, strokeColor: string): void {
-  const x = fretBox.topLeftPos.x + fretBox.lineWidth / 2;
-  const y = fretBox.topLeftPos.y + fretBox.lineWidth / 4;
+  const { lineWidth, topLeftPos } = fretBox;
+
+  const x = topLeftPos.x + lineWidth / 2;
+  const y = topLeftPos.y + lineWidth / 4;
+
   muted?.forEach((isMuted, i: number) => {
     if (isMuted) {
       drawX(img, {
@@ -167,14 +172,11 @@ function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | nu
   });
 }
 
-/**
- * Plots an "X" centered at POSITION
- * @param  {JSON} fretBox  See Settings.fretBox
- * @param  {string} strokeColor Valid CSS hex color (shorthand not recommended)
- */
+/** Plots an "X" centered at POSITION */
 function drawX(img: ImageBuilder, pos: Position, fretBox: FretBox, strokeColor: string): void {
-  const x = pos.x - fretBox.xWidth / 2;
-  const y = pos.y - fretBox.xWidth / 2;
+  const { xWidth } = fretBox;
+  const x = pos.x - xWidth / 2;
+  const y = pos.y - xWidth / 2;
 
   img
     .newGroup('X')
@@ -182,14 +184,12 @@ function drawX(img: ImageBuilder, pos: Position, fretBox: FretBox, strokeColor: 
       strokeColor: strokeColor || 'black',
       strokeWidth: fretBox.xStroke.toString(),
     })
-    .line(x, y, x + fretBox.xWidth, y + fretBox.xWidth)
-    .line(x, y + fretBox.xWidth, x + fretBox.xWidth, y)
+    .line(x, y, x + xWidth, y + xWidth)
+    .line(x, y + xWidth, x + xWidth, y)
     .endGroup();
 }
 
-/**
- * Returns first & last frets, 0 if none found.
- */
+/** Returns first & last frets, 0 if none found. */
 function getFretRange(dots: Dot[]): {
   first: number,
   last: number
@@ -211,3 +211,7 @@ function getFretRange(dots: Dot[]): {
     last: (max > 0) ? max : 0,
   };
 }
+
+export const __test__ = {
+  newFretboard,
+};
