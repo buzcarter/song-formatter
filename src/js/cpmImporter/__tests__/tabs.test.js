@@ -1,13 +1,16 @@
+import { settings } from '../../configs';
 import TestData from './data/tabs.data';
 const { __test__ } = require('../tabs');
 
-describe('chordBrush', () => {
+describe('tabs', () => {
   describe('getFretNumbers', () => {
-    const { getFretNumbers } = __test__;
+    const { getFretNumbers, verifyNumStrings } = __test__;
     Object.keys(TestData)
       .forEach((name) => {
-        const { frets, tabStrings } = TestData[name];
+        const { tuning, frets, tabStrings } = TestData[name];
         it(`should parse values for ${name} correctly`, () => {
+          settings.tuning = tuning;
+          expect(verifyNumStrings()).toBe(tuning.length);
           const result = getFretNumbers(tabStrings);
           expect(result).toEqual(frets);
         });
@@ -18,8 +21,9 @@ describe('chordBrush', () => {
     const { getGuideLine } = __test__;
     Object.keys(TestData)
       .forEach((name) => {
-        const { guide, symbols, minLength } = TestData[name];
-        it(`should summarize ${name} correctly`, () => {
+        const { tuning, guide, symbols, minLength } = TestData[name];
+        it(`should generate Guide ${name} correctly (${tuning})`, () => {
+          settings.tuning = tuning;
           const result = getGuideLine(symbols, minLength);
           expect(result).toEqual(guide);
         });
@@ -30,8 +34,9 @@ describe('chordBrush', () => {
     const { getMinLineLength } = __test__;
     Object.keys(TestData)
       .forEach((name) => {
-        const { minLength, tabStrings } = TestData[name];
+        const { tuning, minLength, tabStrings } = TestData[name];
         it(`should calculate shortest required length ${name} correctly`, () => {
+          settings.tuning = tuning;
           const result = getMinLineLength(tabStrings);
           expect(result).toEqual(minLength);
         });
@@ -42,10 +47,13 @@ describe('chordBrush', () => {
     const { getPackedLines } = __test__;
     Object.keys(TestData)
       .forEach((name) => {
-        const { frets, symbols, guide, minLength, tabs } = TestData[name];
-        it(`should complete tabs for ${name} correctly`, () => {
-          const result = getPackedLines(frets, symbols, guide, minLength);
-          expect(result).toEqual(tabs);
+        const { tuning, frets, symbols, guide, minLength, tabs } = TestData[name];
+        settings.tuning = tuning;
+        const result = getPackedLines(frets, symbols, guide, minLength);
+        result.forEach((expectedLine, lineNbr) => {
+          it(`should complete tabs for ${name} (${lineNbr}) correctly`, () => {
+            expect(expectedLine).toEqual(tabs[lineNbr]);
+          });
         });
       });
   });
@@ -54,8 +62,9 @@ describe('chordBrush', () => {
     const { getSymbols } = __test__;
     Object.keys(TestData)
       .forEach((name) => {
-        const { symbols, tabStrings } = TestData[name];
+        const { tuning, symbols, tabStrings } = TestData[name];
         it(`should tokenize ${name} correctly`, () => {
+          settings.tuning = tuning;
           const result = getSymbols(tabStrings);
           expect(result).toEqual(symbols);
         });
