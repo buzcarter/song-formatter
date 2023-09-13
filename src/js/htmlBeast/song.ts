@@ -54,6 +54,9 @@ function songBlocksToHTML(songBlocks: SongBlockArray, options?: {
         case BlockTypes.Album:
           html += `<h3 class="${Styles.Album}">${firstLine}</h3>${nl}`;
           break;
+        case BlockTypes.Artist:
+          html += `<h3 class="${Styles.Artist}">${firstLine}</h3>${nl}`;
+          break;
         case BlockTypes.UkeGeeksMeta:
           html += `<h3 class="${Styles.UgsMeta}">${firstLine}</h3>${nl}`;
           break;
