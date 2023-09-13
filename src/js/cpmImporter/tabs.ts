@@ -168,8 +168,6 @@ function getPackedLines(frets: StringArray[], symbols: StringArray, guide: strin
   return packed;
 }
 
-const verifyNumStrings = () => getNumStrings();
-
 export const __test__ = {
   getFretNumbers,
   getGuideLine,
@@ -177,5 +175,4 @@ export const __test__ = {
   getPackedLines,
   getSymbols,
   stripStringLabels,
-  verifyNumStrings,
 };

@@ -4,13 +4,12 @@ const { __test__ } = require('../tabs');
 
 describe('tabs', () => {
   describe('getFretNumbers', () => {
-    const { getFretNumbers, verifyNumStrings } = __test__;
+    const { getFretNumbers } = __test__;
     Object.keys(TestData)
       .forEach((name) => {
         const { tuning, frets, tabStrings } = TestData[name];
         it(`should parse values for ${name} correctly`, () => {
           settings.tuning = tuning;
-          expect(verifyNumStrings()).toBe(tuning.length);
           const result = getFretNumbers(tabStrings);
           expect(result).toEqual(frets);
         });
