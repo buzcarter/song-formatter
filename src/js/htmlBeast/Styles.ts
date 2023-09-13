@@ -14,6 +14,10 @@ export const RefDiagramsStyles = Object.freeze({
 
 /** All of the CSS classnames used by UkeGeeks JavaScript */
 export const SongStyles = Object.freeze({
+  Title:           '',
+  Subtitle:        '',
+  Album:           'ugsAlbum',
+  UgsMeta:         '',
   Comment:         'ugsComment',
   Tabs:            'ugsTabs',
   Chorus:          'ugsChorus',
