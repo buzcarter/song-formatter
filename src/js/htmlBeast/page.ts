@@ -1,5 +1,5 @@
 import { settings } from '../configs';
-import { Song, parseCPM } from '../cpmImporter';
+import { BlockTypes, Song, parseCPM } from '../cpmImporter';
 
 import { getErrors, init, show, showInline } from './referenceDiagrams';
 import HTMLHandles from './classes/HTMLHandles';
@@ -13,13 +13,27 @@ let errList: string[] = [];
  * read Music, find chords, generate HTML version of song
  */
 export function processSong(handles: HTMLHandles | null): Song | null {
-  const { text, wrap } = handles || {};
-  if (!handles || !handles.diagrams || !text || !wrap) {
+  const { meta, text, wrap } = handles || {};
+  if (!handles?.diagrams || !text || !wrap) {
     return null;
   }
 
+  const metaBlockTypes = [
+    BlockTypes.Title,
+    BlockTypes.Subtitle,
+    BlockTypes.Album,
+    BlockTypes.Artist,
+    BlockTypes.UkeGeeksMeta,
+  ];
+
   const song = parseCPM(text.innerHTML);
-  text.innerHTML = songToHTML(song);
+  text.innerHTML = songToHTML(song, { exclude: metaBlockTypes });
+  if (meta) {
+    meta.innerHTML = songToHTML(song, {
+      include: metaBlockTypes,
+      blocksOnly: true,
+    });
+  }
 
   init(handles);
   show(song.chordNames);

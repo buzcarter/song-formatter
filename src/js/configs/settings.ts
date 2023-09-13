@@ -77,27 +77,40 @@ const Settings = Object.seal({
     },
   } as FretBox,
 
+  /* eslint-disable key-spacing */
   /**
-   * ID's of key HTML page elements
+   * ID's of key HTML page elements, the "buckets" into which generated
+   * HTML markup will be placed
+   * @todo sync naming with the `wrapClasses`
+   * @see `wrapClasses`
    */
   ids: {
-    /* eslint-disable key-spacing */
-    songText: 'ukeSongText', // element holding the song's text
-    canvas: 'ukeChordsCanvas', // canvas
-    container: 'ukeSongContainer', // wraps BOTH Song Text and Chord Canvas
-    /* eslint-enable key-spacing */
+    /** "Meta" includes song Title, Subtitle, Album, Artist */
+    songMeta:     'ukeSongMeta',
+    /** element holding the song's text */
+    songText:     'ukeSongText',
+    /** Chord Diagrams */
+    canvas:       'ukeChordsCanvas',
+    /** wraps BOTH Song Text and Chord Canvas */
+    container:    'ukeSongContainer',
   } as StringDict,
 
   /**
-   * CSS Class names used to find page elements-- be careful if renaming!
+   * Magic CSS Class names used to find page elements-- be careful if renaming!
+   * @todo update with `js-` prefix!
+   * @see `ids`
    */
   wrapClasses: {
-    /* eslint-disable key-spacing */
-    wrap: '.ugs-song-wrap', // wraps BOTH Song Text and Chord Canvas
-    diagrams: '.ugs-diagrams-wrap', // canvas
-    text: '.ugs-source-wrap', // element holding the song's text
-    /* eslint-enable key-spacing */
+    /** "Meta" includes song Title, Subtitle, Album, Artist */
+    songMeta:     'ugs-song-meta',
+    /** wraps BOTH Song Text and Chord Canvas */
+    wrap:         '.ugs-song-wrap',
+    /** Chord Diagrams */
+    diagrams:     '.ugs-diagrams-wrap',
+    /** element holding the song's text */
+    text:         '.ugs-source-wrap',
   } as StringDict,
+  /* eslint-enable key-spacing */
 
   /**
    * Options (Features) you can turn on or off

@@ -131,10 +131,6 @@
   margin-top: 2.5em;
 }
 
-.ie .ugs-source-wrap pre {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
 /* CHORUS BLOCK
   ------------------------------ */
 .ugs-song-wrap .ugsChorus {
@@ -146,7 +142,6 @@
   margin-left: 1em;
 }
 
-.ie .ugsChorus h6,
 .ugsChorus>h6 {
   font-size: 1.2em;
   text-indent: .4em;
@@ -209,24 +204,13 @@
   margin: 0 -3px;
 }
 
-.ie .ugsChords {
-  line-height: 2.6;
-}
-
-.ie code strong,
-.ie code em {
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* SHOW CHORD NAMES INLINE
   ------------------------------ */
 .ugs-song-wrap .ugsInline,
 .ugs-song-wrap .ugsInline pre,
 .ugs-song-wrap.ugsInline pre
-
-/* added for Editor Plus -- required? */
-  {
+{
+  /* added for Editor Plus -- required? */
   line-height: 1.8;
 }
 
