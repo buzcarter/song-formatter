@@ -3,18 +3,29 @@
  * Creates "packed" versions of the tabs, including a "key line" that's comprised
  * only of '-' and '*' -- the asterisks denoting where a dot will eventually be placed.
  */
-
 import { StringArray, ExpandedTabs, TabBlock } from './interfaces/SongBlock';
+import { BlockTypes } from './interfaces/BlockTypesEnum';
 
 import { getLastStringName, getNumStrings } from '../configs';
-import { BlockTypes } from './interfaces/BlockTypesEnum';
+
+const RegExes = Object.freeze({
+  /* eslint-disable key-spacing */
+  INT:              /(\d+)/g,
+
+  TWO_DIGITS:       /(\d{2})/g,
+  ONE_DIGIT:        /(\d)/g,
+
+  DOUBLE_DASH:      /--/g,
+  SINGLE_DASH:      / -/g,
+  TRAILING_DASH:    /-+$/g,
+  /* eslint-enable key-spacing */
+});
 
 /**
  * This is insanely long, insanely kludgy, but, insanely, it works. This will read break a block of text into
  * four lines (the ukulele strings), then find which frets are used by each. Then, the hard part, pack un-needed
  * dashes. Once it's done that a 2-dimentional array (strings X frets) is created and returned.
- * @param tabStrings {array<string>} Block of tablbabure to be parsed
- * @return {2-dimentional array}
+ * @param tabStrings Block of tablbabure to be parsed
  */
 export function readTabs(tabStrings: StringArray): TabBlock {
   const hasLabels = tabStrings[getNumStrings() - 1][0] === getLastStringName();
@@ -37,9 +48,10 @@ export function readTabs(tabStrings: StringArray): TabBlock {
  * Processes tabStrings stripping the first character from each line
  */
 function stripStringLabels(tabStrings: StringArray): void {
-  for (let i = 0; i < getNumStrings(); i++) {
-    tabStrings[i] = tabStrings[i].substr(1);
-  }
+  tabStrings
+    .forEach((string, i) => {
+      tabStrings[i] = string.substr(1);
+    });
 }
 
 /**
@@ -48,11 +60,9 @@ function stripStringLabels(tabStrings: StringArray): void {
  * in use, for each line.
  */
 function getFretNumbers(tabStrings: StringArray): StringArray[] {
-  // first, get the frets
-  const integerRegEx = /([0-9]+)/g;
   const frets = [];
   for (let i = 0; i < getNumStrings(); i++) {
-    frets[i] = tabStrings[i].match(integerRegEx) || [];
+    frets[i] = tabStrings[i].match(RegExes.INT) || [];
   }
   return frets;
 }
@@ -62,18 +72,14 @@ function getFretNumbers(tabStrings: StringArray): StringArray[] {
  * This helps us pack because "12" and "7" now occupy the same space horizontally.
  */
 function getSymbols(tabStrings: StringArray): StringArray {
-  // convert to symbols
-  const twoDigitRegEx = /([0-9]{2})/g;
-  const singleDigitRegex = /([0-9])/g;
-  const symbols = [];
-
-  // TODO: verify why using getNumStrings() instead of tabStrings.length (appears in other methods, again, do you recall why?)
-  for (let i = 0; i < getNumStrings(); i++) {
-    symbols[i] = tabStrings[i]
-      .replace(twoDigitRegEx, '-*')
-      .replace(singleDigitRegex, '*');
-  }
-  return symbols;
+  return tabStrings
+    .slice(0, getNumStrings())
+    .reduce((symbols: StringArray, sym) => {
+      symbols.push(sym
+        .replace(RegExes.TWO_DIGITS, '-*')
+        .replace(RegExes.ONE_DIGIT, '*'));
+      return symbols;
+    }, []);
 }
 
 /**
@@ -82,16 +88,15 @@ function getSymbols(tabStrings: StringArray): StringArray {
  * this gets a TODO: get max!
  */
 function getMinLineLength(tabStrings: StringArray): number {
-  let minLength = 0;
-  const trailingDashesRegEx = /-+$/gi;
-
-  for (let i = 0; i < tabStrings.length; i++) {
-    const line = tabStrings[i].trim().replace(trailingDashesRegEx, '');
-    if (line.length > minLength) {
-      minLength = line.length;
-    }
-  }
-  return minLength;
+  return tabStrings
+    .slice(0, getNumStrings())
+    .reduce((minLength, line) => {
+      line = line.trim().replace(RegExes.TRAILING_DASH, '');
+      if (line.length > minLength) {
+        minLength = line.length;
+      }
+      return minLength;
+    }, 0);
 }
 
 /**
@@ -107,17 +112,15 @@ function getGuideLine(symbols: StringArray, minLength: number): string {
     if (symbols[0][i] === '|') {
       guide += '|';
     } else {
-      // TODO: assumes 4 strings, use getNumStrings()
-      guide += ((symbols[0][i] === '*') || (symbols[1][i] === '*') || (symbols[2][i] === '*') || (symbols[3][i] === '*')) ? '*' : '-';
+      guide += symbols.some((sym) => sym[i] === '*') ? '*' : '-';
     }
   }
-  const doubleDashRegEx = /--/g;
-  guide = guide.replace(doubleDashRegEx, '- ');
-  const singleDashReg = / -/g;
+
+  guide = guide.replace(RegExes.DOUBLE_DASH, '- ');
   let lastGuide = guide;
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    guide = guide.replace(singleDashReg, '  ');
+    guide = guide.replace(RegExes.SINGLE_DASH, '  ');
     if (guide === lastGuide) {
       break;
     }
@@ -133,33 +136,35 @@ function getGuideLine(symbols: StringArray, minLength: number): string {
  * a "12" occupies no more horizontal space than a "5".
  */
 function getPackedLines(frets: StringArray[], symbols: StringArray, guide: string, minLength: number): ExpandedTabs {
-  // pack it!
-  const packed: ExpandedTabs = [];
+  const packed = Array(getNumStrings()).fill('*').map((): string[] => []);
+  packed
+    .forEach((string, stringIdx) => {
+      // index to single line within packed array (along a string)
+      let lineIdx = 0;
 
-  for (let stringIdx = 0; stringIdx < getNumStrings(); stringIdx++) {
-    packed.push([]);
-  }
+      // fret marker counter
+      let fretCount = 0;
 
-  for (let stringIdx = 0; stringIdx < getNumStrings(); stringIdx++) { // loop over lines
-    // index to single line within packed array (along a string)
-    let lineIdx = 0;
-    // fret marker counter
-    let fretCount = 0;
-    for (let guideIdx = 0; guideIdx < minLength; guideIdx++) { // loop over guide
-      if (guide[guideIdx] !== ' ') {
-        // a temp variable to hold the 'note'
-        let chrNote = '';
-        if (symbols[stringIdx][guideIdx] === '*') {
-          chrNote = frets[stringIdx][fretCount];
-          fretCount++;
-        } else {
-          chrNote = ((guide[guideIdx] === '|')) ? '|' : '-';
-        }
-        packed[stringIdx][lineIdx] = chrNote;
-        lineIdx++;
-      }
-    }
-  }
+      guide
+        .split('')
+        .slice(0, minLength)
+        .forEach((char, guideIdx) => {
+          if (char === ' ') {
+            return;
+          }
+          // a temp variable to hold the 'note'
+          let chrNote = '';
+          if (symbols[stringIdx][guideIdx] === '*') {
+            chrNote = frets[stringIdx][fretCount];
+            fretCount++;
+          } else {
+            chrNote = char === '|' ? '|' : '-';
+          }
+          packed[stringIdx][lineIdx] = chrNote;
+          lineIdx++;
+        });
+    });
+
   return packed;
 }
 

@@ -57,40 +57,39 @@ function drawNotes(img: ImageBuilder, pos: Position, tabs: ExpandedTabs, lineWid
     y: pos.y,
   };
 
-  tabs.forEach((tab, strIdx) => {
-    if (strIdx > 3) {
-      return;
-    }
-
-    center.x = pos.x;
-    tab.forEach((c, chrIdx) => {
-      // (c !== '-'){
-      if (c === '|') {
-        const jnum = chrIdx; // parseInt(chrIdx, 10);
-        const heavy = (((jnum + 1) < (tab.length - 1)) && (tab[jnum + 1] === '|')) || ((jnum === (tab.length - 1)) && (tab[jnum - 1] === '|'));
-        drawMeasure(img, {
-          x: (chrIdx === tab.length - 1) ? pos.x + lineWidth : center.x,
-          y: pos.y,
-        }, heavy);
+  const numberOfStrings = settings.getNumStrings();
+  tabs
+    .filter((tab, stringIndex) => stringIndex < numberOfStrings)
+    .forEach((tab) => {
+      center.x = pos.x;
+      tab.forEach((char, charIndex) => {
+        // (c !== '-'){
+        if (char === '|') {
+          const jnum = charIndex; // parseInt(chrIdx, 10);
+          const heavy = (((jnum + 1) < (tab.length - 1)) && (tab[jnum + 1] === '|')) || ((jnum === (tab.length - 1)) && (tab[jnum - 1] === '|'));
+          drawMeasure(img, {
+            x: (charIndex === tab.length - 1) ? pos.x + lineWidth : center.x,
+            y: pos.y,
+          }, heavy);
         // eslint-disable-next-line no-restricted-globals
-      } else if (!isNaN(parseInt(c, 10))) {
-        img
-          .circle(center.x, center.y, tabSettings.dotRadius)
-          .setStyle({
-            fillColor: tabSettings.dotColor,
-          });
-        img
-          .text(center.x, center.y + 0.5 * tabSettings.dotRadius, c)
-          .setStyle({
-            fontFamily: tabSettings.textFont,
-            fillColor: tabSettings.textColor,
-          });
-      }
-      center.x += tabSettings.noteSpacing;
-    });
+        } else if (!isNaN(parseInt(char, 10))) {
+          img
+            .circle(center.x, center.y, tabSettings.dotRadius)
+            .setStyle({
+              fillColor: tabSettings.dotColor,
+            });
+          img
+            .text(center.x, center.y + 0.5 * tabSettings.dotRadius, char)
+            .setStyle({
+              fontFamily: tabSettings.textFont,
+              fillColor: tabSettings.textColor,
+            });
+        }
+        center.x += tabSettings.noteSpacing;
+      });
 
-    center.y += tabSettings.lineSpacing;
-  });
+      center.y += tabSettings.lineSpacing;
+    });
 }
 
 /**
@@ -107,10 +106,10 @@ function drawMeasure(img: ImageBuilder, pos: Position, isHeavyStroke: boolean): 
 }
 
 /**
- * Adds the string letters on the left-side of the canvas, before the tablature string lines
+ * Adds the string letters on the left-side of the canvas, before the tablature
+ * string lines, ex. ['A','E','C','G'];
  */
 function drawLabels(img: ImageBuilder, pos: Position): void {
-  // ['A','E','C','G'];
   const labels = settings.tuning.slice(0).reverse();
   for (let i = 0; i < getNumStrings(); i++) {
     img.text(1, (pos.y + (i + 0.3) * tabSettings.lineSpacing), labels[i]).setStyle({
