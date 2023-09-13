@@ -60,7 +60,6 @@ function stripStringLabels(tabStrings: StringArray): void {
  * in use, for each line.
  */
 function getFretNumbers(tabStrings: StringArray): StringArray[] {
-  // first, get the frets
   const frets = [];
   for (let i = 0; i < getNumStrings(); i++) {
     frets[i] = tabStrings[i].match(RegExes.INT) || [];
@@ -90,6 +89,7 @@ function getSymbols(tabStrings: StringArray): StringArray {
  */
 function getMinLineLength(tabStrings: StringArray): number {
   return tabStrings
+    .slice(0, getNumStrings())
     .reduce((minLength, line) => {
       line = line.trim().replace(RegExes.TRAILING_DASH, '');
       if (line.length > minLength) {
