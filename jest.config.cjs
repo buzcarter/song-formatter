@@ -6,6 +6,7 @@ module.exports = {
     '<rootDir>/src/js/**/*.ts',
   ],
   coveragePathIgnorePatterns: [
+    '/.built/',
     '/__tests__/',
     '/data/',
     '/interfaces/',

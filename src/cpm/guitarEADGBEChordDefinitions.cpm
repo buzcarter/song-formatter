@@ -1,0 +1,42 @@
+# -------------------------------------------------------
+#   **** Experimental, Need Guitar Chord Dictionary ***
+# -------------------------------------------------------
+# This chord dictionary defines all the "built-in" chords
+# the app knows. It's certainly not exhaustive, just all
+# of the ones I've regularly encountered.
+#
+# Required tags:
+#    * Instrument Name,
+#    * Tuning,
+#    * Chord definitions
+# -------------------------------------------------------
+
+{instrument: Guitar}
+{tuning: E A D G B E}
+
+#  Major Chords
+# -------------------------------------------------------
+{define: A frets 00000 fingers 00000}
+{define: A# frets 00000 fingers 00000}
+{define: B frets 00000 fingers 00000}
+{define: C frets 00000 fingers 00000}
+{define: C# frets 00000 fingers 00000}
+{define: D frets X X 0 2 3 2 fingers 0 0 0 1 2 3}
+{define: D# frets 00000 fingers 00000}
+{define: E frets 00000 fingers 00000}
+{define: F frets 00000 fingers 00000}
+{define: F# frets 00000 fingers 00000}
+{define: G frets 310000 fingers 2 1 0 0 0 3}
+{define: G# frets 00000 fingers 00000}
+
+#  Minor
+# -------------------------------------------------------
+{define: Em frets 00000 fingers 00000}
+
+#  7ths
+# -------------------------------------------------------
+{define: B7 frets 00000 fingers 00000}
+
+#  Minor 7ths
+# -------------------------------------------------------
+{define: Em7 frets 00000 fingers 00000}

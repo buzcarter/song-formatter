@@ -5,10 +5,10 @@ import standardChordsExpectedResults from './data/chordBrush.standardChords';
 import guitarLiteDef from './data/definitions.guitarLite';
 
 import { generateChordSvg, toString } from '../imageRenderer';
-import { InstrumentTunings, settings, sopranoUkuleleGcea } from '../configs';
+import { InstrumentTunings, settings } from '../configs';
 import { runLine } from '../cpmImporter';
 import { definitions, get } from '../tunings';
-
+import sopranoUkuleleGcea from '../.built/sopranoUkuleleGCEAChordDefinitions';
 const { addInstrument, setInstrument } = definitions;
 
 const ukuleleIndex = addInstrument(sopranoUkuleleGcea);

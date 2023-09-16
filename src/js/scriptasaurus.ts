@@ -6,13 +6,14 @@ import {
 } from './htmlBeast';
 import { definitions } from './tunings';
 import { JsonData, integer, logger } from './tools';
-import { settings, InstrumentTunings, sopranoUkuleleGcea } from './configs';
+import { settings, InstrumentTunings } from './configs';
 import { Song } from './cpmImporter';
+import defaultInstrument from './.built/sopranoUkuleleGCEAChordDefinitions.js';
 
 export function init(options?: JsonData): void {
   const { addInstrument, setInstrument } = definitions;
 
-  const instrumentIndex = addInstrument(<string>options?.definitions || sopranoUkuleleGcea);
+  const instrumentIndex = addInstrument(<string>options?.definitions || defaultInstrument);
   setInstrument(instrumentIndex, InstrumentTunings.none);
 }
 

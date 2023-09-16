@@ -15,16 +15,18 @@
   },
   "homepage": "https://github.com/buzcarter/song-formatter#readme",
   "scripts": {
-    "build": "npm run build:clean && npm run build:bundles",
-    "build:clean": "rimraf dist .tmp",
-    "build:bundles": "webpack --mode production",
+    "build": "webpack --mode production",
+    "build:clean": "rimraf dist .tmp && rimraf dist src/js/.built",
+    "build:convert": "node ./tasks/npmPreBuildTask",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:ts": "eslint . --ext .ts",
-    "start": "webpack --mode development --watch",
-    "test": "jest --silent --config ./jest.config.cjs",
-    "test:watch": "npm test -- --watch",
-    "test:cover": "npm test -- --coverage"
+    "postinstall": "npm run build:clean && npm run build:convert",
+    "prebuild": "npm run build:clean && npm run build:convert",
+    "start": "npm run build:clean && npm run build:convert && webpack --mode development --watch",
+    "test": "npm run build:clean && npm run build:convert && jest --silent --config ./jest.config.cjs",
+    "test:cover": "npm test -- --coverage",
+    "test:watch": "npm test -- --watch"
   },
   "keywords": [
     "chordpro",
