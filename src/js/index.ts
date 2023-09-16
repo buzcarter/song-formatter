@@ -1,10 +1,3 @@
-/*!
- * Document   : UkeGeeks Song Formatter Scripts
- * Created on : Sep 15, 2012, 7:51:38 AM
- * Author     : Courts
- * Homepage   : https://github.com/buzcarter/song-formatter#readme
- */
-
 import { Chord, runLine } from './cpmImporter';
 import { definitions, shift, shiftChords } from './tunings';
 import { Fix, plot } from './htmlBeast';

@@ -15,10 +15,9 @@
   },
   "homepage": "https://github.com/buzcarter/song-formatter#readme",
   "scripts": {
-    "build": "npm run build:clean && npm run build:js && npm run build:css",
+    "build": "npm run build:clean && npm run build:bundles",
     "build:clean": "rimraf dist .tmp",
-    "build:js": "webpack --mode production",
-    "build:css": "webpack --config webpack.config.css.cjs --mode production",
+    "build:bundles": "webpack --mode production",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:ts": "eslint . --ext .ts",
