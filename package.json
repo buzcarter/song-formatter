@@ -1,6 +1,6 @@
 {
   "name": "@ukegeeks/song-formatter",
-  "version": "0.0.3-alpha",
+  "version": "0.0.4-alpha",
   "description": "Convert ChordPro markup text to HTML with chord fingering diagrams",
   "main": "./dist/song-formatter.bundle.js",
   "type": "module",

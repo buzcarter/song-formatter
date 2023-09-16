@@ -11,7 +11,7 @@ const preamble = `/**!
 * @author ${author}
 * @license ${license}
 * @link ${homepage}
-* @copyright Copyright (C) 2012-2023 ${name}
+* @copyright Copyright (C) 2012-2023 ${author}
 *
 * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 *

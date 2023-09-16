@@ -1,7 +1,7 @@
 import { Chord, runLine } from './cpmImporter';
 import { definitions, shift, shiftChords } from './tunings';
 import { Fix, plot } from './htmlBeast';
-import { settings, InstrumentTunings } from './configs';
+import { settings } from './configs';
 import scriptasaurus from './scriptasaurus';
 
 class ChordBrush extends Chord {
@@ -19,31 +19,17 @@ class ChordBrush extends Chord {
  */
 const publicInterface = {
   ...scriptasaurus,
-  chordBrush: ChordBrush, // legacy
   ChordBrush,
   chordImport: {
     runLine,
   },
   definitions: {
     ...definitions,
-    instrument: InstrumentTunings,
   },
   overlapFixer: {
     Fix,
   },
   settings,
-  scriptasaurus, // legacy
-  toolsLite: {
-    addClass(ele: HTMLDivElement, className: string) {
-      ele.classList.add(className);
-    },
-    removeClass(ele: HTMLDivElement, className: string) {
-      ele.classList.remove(className);
-    },
-    setClass(ele: HTMLDivElement, className: string, toggle: boolean) {
-      ele.classList.toggle(className, toggle);
-    },
-  },
   transpose: {
     shift,
     shiftChords,

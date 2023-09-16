@@ -5,7 +5,7 @@ export default interface FretBox {
   [index: string]: any;
 
   /**
-   * True if chord name and finger "number" are to be drawn on canvas.
+   * True if chord name and finger "number" are to be include in SVG.
    * By default normal chord diagrams have text (`true`) whereas inlineDiagrams
    * (i.e. chord diagrams shown above lyrics) do NOT as they are too small
    * (thus inlineFretbox.showText is `false`)

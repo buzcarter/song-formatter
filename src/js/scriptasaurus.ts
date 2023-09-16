@@ -6,7 +6,7 @@ import {
 } from './htmlBeast';
 import { definitions } from './tunings';
 import { JsonData, integer, logger } from './tools';
-import { settings, InstrumentTunings } from './configs';
+import { settings } from './configs';
 import { Song } from './cpmImporter';
 import defaultInstrument from './.built/sopranoUkuleleGCEAChordDefinitions.js';
 
@@ -14,7 +14,7 @@ export function init(options?: JsonData): void {
   const { addInstrument, setInstrument } = definitions;
 
   const instrumentIndex = addInstrument(<string>options?.definitions || defaultInstrument);
-  setInstrument(instrumentIndex, InstrumentTunings.none);
+  setInstrument(instrumentIndex, 0);
 }
 
 /**
@@ -27,11 +27,7 @@ export function run(): Song | null {
     return null;
   }
   showUnknownChordErrors(getUnknownChordErrors());
-
-  // TODO: for legacy API
-  return Object.assign(song, {
-    chords: song.chordNames,
-  });
+  return song;
 }
 
 /**
@@ -45,10 +41,6 @@ export function runByClasses(): Song[] {
     if (!song) {
       return;
     }
-    // TODO: for legacy API
-    Object.assign(song, {
-      chords: song.chordNames,
-    });
     songs.push(song);
   });
   return songs;
@@ -56,7 +48,7 @@ export function runByClasses(): Song[] {
 
 /**
  * @todo: still nececessary?
- * @param {number} offset default 0. Number of semitones to shift the tuning. See ukeGeeks.definitions.instrument.
+ * @param {number} offset default 0. Number of semitones to shift the tuning.
  */
 export const setTuningOffset = (offset: integer): void => definitions.useInstrument(offset);
 

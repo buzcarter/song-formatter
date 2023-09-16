@@ -82,7 +82,7 @@ export function show(chordNames: string[]): void {
 
 /**
  * Plots chords "inline" with the lyrics. Searches for `<code data-chordName="Am7"></code>;`.
- * When found adds canvas element and draws chord named in data-chordName attribute
+ * When found draws chord named in data-chordName attribute
  */
 export function showInline(chordNames: string[]): void {
   const elements = handles.text.querySelectorAll('code');

@@ -2,9 +2,19 @@
  * Defines chords and provides simple lookup (find) tools.
  */
 import { retune, RetuneMap } from './transpose';
-import { integer } from '../tools';
-import { chordNameAliases, InstrumentTunings } from '../configs';
+import { integer, StringDict } from '../tools';
 import { Chord, runBlock } from '../cpmImporter';
+
+/**
+ * local substitions (replacements for identical chord shapes)
+ */
+export const chordNameAliases: StringDict = Object.freeze({
+  'A#': 'Bb',
+  Db: 'C#',
+  'D#': 'Eb',
+  Gb: 'F#',
+  Ab: 'G#',
+});
 
 /**
  * Block of CPM text, expects to find these tags: `instrument`, `tuning`, and one or more `define` statements.
@@ -26,7 +36,7 @@ export const addInstrument = (definitions: string | string[]): number => instrum
 
 /** Choose which instrument's chord dictionary is used used for chord diagrams. */
 export function useInstrument(offset: integer | string) {
-  setInstrument(InstrumentTunings.none, offset);
+  setInstrument(0, offset);
 }
 
 export function setInstrument(instrumentIndex: integer, offset: integer | string = 0) {

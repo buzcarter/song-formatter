@@ -5,7 +5,7 @@ import standardChordsExpectedResults from './data/chordBrush.standardChords';
 import guitarLiteDef from './data/definitions.guitarLite';
 
 import { generateChordSvg, toString } from '../imageRenderer';
-import { InstrumentTunings, settings } from '../configs';
+import { settings } from '../configs';
 import { runLine } from '../cpmImporter';
 import { definitions, get } from '../tunings';
 import sopranoUkuleleGcea from '../.built/sopranoUkuleleGCEAChordDefinitions';
@@ -16,13 +16,13 @@ const guitarIndex = addInstrument(guitarLiteDef);
 
 describe('chordSVG & imageRenderer', () => {
   describe('plot, standard GCEA Chords', () => {
-    setInstrument(ukuleleIndex, InstrumentTunings.none);
+    setInstrument(ukuleleIndex, 0);
     definitions
       .getChords()
       .map(({ name }) => get(name))
       .forEach((chord) => {
         it(`should render built-in chords "${chord.name}"`, () => {
-          setInstrument(ukuleleIndex, InstrumentTunings.none);
+          setInstrument(ukuleleIndex, 0);
           const expected = standardChordsExpectedResults[chord.name];
 
           const img = generateChordSvg(chord, settings.fretBox, settings.fonts, settings.colors);
@@ -35,7 +35,7 @@ describe('chordSVG & imageRenderer', () => {
 
   describe('plot, Chords With Muted Strings', () => {
     beforeEach(() => {
-      setInstrument(ukuleleIndex, InstrumentTunings.none);
+      setInstrument(ukuleleIndex, 0);
     });
 
     mutedStringsTests.forEach(({ definition, expectedResult, name }) => {
@@ -51,7 +51,7 @@ describe('chordSVG & imageRenderer', () => {
 
   describe('plot, Custom Chords', () => {
     beforeEach(() => {
-      setInstrument(ukuleleIndex, InstrumentTunings.none);
+      setInstrument(ukuleleIndex, 0);
     });
 
     defineExtraChordsTests.forEach(({ definition, expectedResult, name }) => {
@@ -67,13 +67,13 @@ describe('chordSVG & imageRenderer', () => {
 
   describe('plot, Guitar chords', () => {
     describe('plot, predefined Chords', () => {
-      setInstrument(guitarIndex, InstrumentTunings.none);
+      setInstrument(guitarIndex, 0);
       definitions
         .getChords()
         .map(({ name }) => get(name))
         .forEach((chord) => {
           it(`should render built-in chords "${chord.name}"`, () => {
-            setInstrument(guitarIndex, InstrumentTunings.none);
+            setInstrument(guitarIndex, 0);
             const expected = GuitarPredfinedChordsTests[chord.name];
 
             const img = generateChordSvg(chord, settings.fretBox, settings.fonts, settings.colors);

@@ -1,5 +1,5 @@
+/* eslint-disable key-spacing */
 import { TabSettings } from './interfaces/Settings';
-import { InstrumentTunings } from './globalConsts';
 
 import { BooleanDict, StringDict } from '../tools';
 import { FretBox } from '../imageRenderer';
@@ -15,7 +15,7 @@ const Settings = Object.seal({
    * Chord Diagram Font styles -- font size, font-weight, font-face stack, etc.
    */
   fonts: {
-    dot: '9pt Arial Black,Arial',
+    dot:  '9pt Arial Black,Arial',
     text: 'bold 14pt Arial',
     fret: 'bold 13pt Arial',
   } as StringDict,
@@ -24,15 +24,13 @@ const Settings = Object.seal({
    * Chord Diagram Colors for fretboard's grid lines and text.
    */
   colors: {
-    /* eslint-disable key-spacing */
-    fretLines: '#003366',
-    dots: '#ff0000',
-    dotText: '#ffffff',
-    text: '#000000',
-    fretText: '#4a4a4a',
+    fretLines:  '#003366',
+    dots:       '#ff0000',
+    dotText:    '#ffffff',
+    text:       '#000000',
+    fretText:   '#4a4a4a',
     /* a muted string's 'X' stroke color */
-    xStroke: '#444444',
-    /* eslint-enable key-spacing */
+    xStroke:    '#444444',
   } as StringDict,
 
   fretBox: {
@@ -71,13 +69,12 @@ const Settings = Object.seal({
     xWidth: 0.7 * 7,
     xStroke: 1.4 * 1,
     fonts: {
-      dot: '8pt Arial',
+      dot:  '8pt Arial',
       text: '8pt Arial',
       fret: '8pt Arial',
     },
   } as FretBox,
 
-  /* eslint-disable key-spacing */
   /**
    * ID's of key HTML page elements, the "buckets" into which generated
    * HTML markup will be placed
@@ -90,27 +87,25 @@ const Settings = Object.seal({
     /** element holding the song's text */
     songText:     'ukeSongText',
     /** Chord Diagrams */
-    canvas:       'ukeChordsCanvas',
-    /** wraps BOTH Song Text and Chord Canvas */
+    diagrams:     'ukeChordDiagrams',
+    /** wraps BOTH Song Text and Chord Diagrams */
     container:    'ukeSongContainer',
   } as StringDict,
 
   /**
    * Magic CSS Class names used to find page elements-- be careful if renaming!
-   * @todo update with `js-` prefix!
    * @see `ids`
    */
   wrapClasses: {
     /** "Meta" includes song Title, Subtitle, Album, Artist */
-    songMeta:     'ugs-song-meta',
-    /** wraps BOTH Song Text and Chord Canvas */
-    wrap:         '.ugs-song-wrap',
+    songMeta:     '.js-ugs-song-meta',
+    /** wraps BOTH Song Text and Chord Diagrams */
+    wrap:         '.js-ugs-song-wrap',
     /** Chord Diagrams */
-    diagrams:     '.ugs-diagrams-wrap',
+    diagrams:     '.js-ugs-diagrams-wrap',
     /** element holding the song's text */
-    text:         '.ugs-source-wrap',
+    text:         '.js-ugs-source-wrap',
   } as StringDict,
-  /* eslint-enable key-spacing */
 
   /**
    * Options (Features) you can turn on or off
@@ -164,18 +159,16 @@ const Settings = Object.seal({
   },
 
   /**
-   * Last String Name (Note), as above, on Ukulele is a "G".
-   * @todo Here for other instruments.
+   * Last String Name (Note), as above, ex. on Ukulele this is a "G".
    */
   getLastStringName() {
     return Settings.tuning[0];
-    // export const LAST_STRING_NAME = 'G';
   },
 
   /**
    * The initial tuning when page first loads
    */
-  defaultInstrument: InstrumentTunings.none,
+  defaultInstrument: 0,
 
   tabs: {
     lineSpacing: 16,

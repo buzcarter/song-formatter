@@ -22,7 +22,7 @@ export function getHandlesFromClass(wrap: HTMLElement): HTMLHandles | null {
 export function getHandlesFromId(): HTMLHandles | null {
   const { ids } = settings;
   const wrap = document.getElementById(ids.container);
-  const diagrams = document.getElementById(ids.canvas);
+  const diagrams = document.getElementById(ids.diagrams);
   const text = document.getElementById(ids.songText);
   const meta = document.getElementById(ids.songMeta);
 

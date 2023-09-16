@@ -2,19 +2,8 @@
   Document   : basic-page-layout
   Created on : Jan, 2010
   Author     : Buz
-  Description:
-      Page structure and elements not unique or required by UkeGeeks.
+  Description: Page structure and elements not unique or required by UkeGeeks.
 */
-
-/* HTML5 love*/
-header,
-footer,
-section,
-article,
-aside,
-canvas {
-  display: block;
-}
 
 /*bsic html */
 body {

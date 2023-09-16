@@ -28,7 +28,8 @@ function drawStaff(img: ImageBuilder, pos: Position, length: number): void {
 }
 
 /**
- * @param isTruncate If `true` returns the length of the line, allowing for a terminating "|" character, othwrwise, it's for canvas width
+ * @param isTruncate If `true` returns the length of the line, allowing
+ * for a terminating "|" character, othwrwise, it's for image width
  */
 function getWidth(tabs: ExpandedTabs, labelOffset: number, isTruncate: boolean): number {
   if (!isTruncate) {
@@ -47,7 +48,7 @@ function getWidth(tabs: ExpandedTabs, labelOffset: number, isTruncate: boolean):
 }
 
 /**
- * Loop over the normalized tabs emitting the dots/fingers on the passed in canvase
+ * Loop over the normalized tabs emitting the dots/fingers on the passed in SVG
  * @param tabs {array} Array of normalized string data -- space (character) or int (fret number)
  * @param lineWidth Length in pixels (used only when line ends with a measure mark)
  */
@@ -106,8 +107,8 @@ function drawMeasure(img: ImageBuilder, pos: Position, isHeavyStroke: boolean): 
 }
 
 /**
- * Adds the string letters on the left-side of the canvas, before the tablature
- * string lines, ex. ['A','E','C','G'];
+ * Adds the string letters on the left-side of the chord diagram, before
+ * the tablature string lines, ex. ['A','E','C','G'];
  */
 function drawLabels(img: ImageBuilder, pos: Position): void {
   const labels = settings.tuning.slice(0).reverse();

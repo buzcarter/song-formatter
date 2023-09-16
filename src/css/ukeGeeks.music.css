@@ -35,12 +35,6 @@
   background-color: transparent;
 }
 
-/*
-,
-.ugs-song-wrap canvas,
-.ugs-song-wrap div
-*/
-
 /* old skool clearfix */
 .ugs-grouped:after {
   content: ".";
@@ -78,13 +72,12 @@
   margin-left: 250px;
 }
 
-.ugs-diagrams-wrap .ugs-diagrams--chord-img,
-.ugs-diagrams-wrap .ugs-diagrams-wrap canvas {
+.ugs-diagrams-wrap .ugs-diagrams--chord-img {
   float: left;
   margin-right: 5px;
 }
 
-/* CHORD CANVAS (BLOCKS)
+/* CHORD Diagrams (BLOCKS)
   ------------------------------ */
 .ugs-diagrams--chord-img svg {
   max-width: 100%;
@@ -163,8 +156,7 @@
   padding: 0;
 }
 
-.ugsTabs svg,
-.ugsTabs canvas {
+.ugsTabs svg {
   max-width: 100%;
 }
 
@@ -303,8 +295,7 @@
   /* actually, not sure what setting this fixes/triggers, `cetp it works */
 }
 
-.ugsChords code svg,
-.ugsChords code canvas {
+.ugsChords code svg {
   left: 0;
   position: absolute;
   top: -60px;

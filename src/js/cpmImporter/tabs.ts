@@ -1,5 +1,5 @@
 /**
- * Tablature renderer -- reads tab data and draws canvas elements.
+ * Tablature renderer -- reads tab data and generates SVGs.
  * Creates "packed" versions of the tabs, including a "key line" that's comprised
  * only of '-' and '*' -- the asterisks denoting where a dot will eventually be placed.
  */

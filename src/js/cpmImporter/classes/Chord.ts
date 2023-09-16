@@ -1,7 +1,7 @@
 import Dot from './Dot';
 
 /**
- * Chord info sutiable for plotting on Canvas; has name and dot positions
+ * Chord info sutiable for rendering SVGs; has name and dot positions
  */
 export default class Chord {
   constructor(name: string) {
