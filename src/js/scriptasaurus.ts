@@ -29,11 +29,7 @@ export function run(markup?: string): Song | null {
     return null;
   }
   showUnknownChordErrors(getUnknownChordErrors());
-
-  // TODO: for legacy API
-  return Object.assign(song, {
-    chords: song.chordNames,
-  });
+  return song;
 }
 
 /**
@@ -41,36 +37,29 @@ export function run(markup?: string): Song | null {
  */
 export function runByClasses(): Song[] {
   const songs: Song[] = [];
-  const songWraps = document.querySelectorAll(settings.wrapClasses.wrap);
+  // the <HTMLElement> says what kind of elements we expect, instead of casting each one later
+  const songWraps = document.querySelectorAll<HTMLElement>(settings.wrapClasses.wrap);
   songWraps.forEach((wrap) => {
-    const song = processSong(getHandlesFromClass(wrap as HTMLElement));
-    if (!song) {
-      return;
+    const song = processSong(getHandlesFromClass(wrap));
+    if (song) {
+      songs.push(song);
     }
-    // TODO: for legacy API
-    Object.assign(song, {
-      chords: song.chordNames,
-    });
-    songs.push(song);
   });
   return songs;
 }
 
 /**
- * @todo: still nececessary?
+ * Still needed: the Songbook's editor calls it when you choose a tuning.
  * @param {number} offset default 0. Number of semitones to shift the tuning. See ukeGeeks.definitions.instrument.
  */
 export const setTuningOffset = (offset: integer): void => definitions.useInstrument(offset);
 
-function showUnknownChordErrors(errs: string | string[]): void {
+function showUnknownChordErrors(errs: string[]): void {
   if (!errs.length) {
     return;
   }
-  const errStr = typeof errs === 'string'
-    ? errs
-    : errs.join(', ');
   // eslint-disable-next-line no-alert
-  alert(`Forgive me, but I don't know the following chords: ${errStr}`);
+  alert(`Forgive me, but I don't know the following chords: ${errs.join(', ')}`);
 }
 
 export default {

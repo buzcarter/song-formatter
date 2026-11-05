@@ -2,14 +2,15 @@
  * Defines chords and provides simple lookup (find) tools.
  */
 import { retune, RetuneMap } from './transpose';
-import { integer } from '../tools';
-import { chordNameAliases, InstrumentTunings } from '../configs';
+import { integer, logger } from '../tools';
+import { chordNameAliases, settings } from '../configs';
 import { Chord, runBlock } from '../cpmImporter';
 
 /**
  * Block of CPM text, expects to find these tags: `instrument`, `tuning`, and one or more `define` statements.
  */
 const instruments: string[] = [];
+const FIRST_INSTRUMENT = 0;
 
 /**
  * Array of "user" defined chords, in compactChord format. Use "Add" method.
@@ -24,9 +25,14 @@ let retuneMap: RetuneMap[] = [];
  */
 export const addInstrument = (definitions: string | string[]): number => instruments.push(Array.isArray(definitions) ? definitions.join('\n') : definitions) - 1;
 
-/** Choose which instrument's chord dictionary is used used for chord diagrams. */
+/**
+ * Re-tunes the first instrument added (the soprano dictionary, from scriptasaurus.init()):
+ * `offset` is semitones, see InstrumentTunings. The old library also always used the first.
+ * (This passed `InstrumentTunings.none` as the instrument number; it worked because that
+ * tuning offset happens to be 0, the first index.)
+ */
 export function useInstrument(offset: integer | string) {
-  setInstrument(InstrumentTunings.none, offset);
+  setInstrument(FIRST_INSTRUMENT, offset);
 }
 
 export function setInstrument(instrumentIndex: integer, offset: integer | string = 0) {
@@ -37,11 +43,13 @@ export function setInstrument(instrumentIndex: integer, offset: integer | string
   }
   const text = instruments[instrumentIndex];
   if (!text) {
-    // TODO: log error!!!
+    logger.warn(`setInstrument: no instrument ${instrumentIndex}; call addInstrument() first`);
     return;
   }
 
   const instrument = runBlock(text);
+  // the rest of the library (tabs, diagrams) reads the number of strings from here
+  settings.tuning = instrument.tuning;
   setChords(instrument.chords);
 }
 
@@ -64,16 +72,16 @@ export function get(chordName: string): Chord | null {
   // but get the fingering from the mapping
   const name = getAlias(chordName);
 
-  return retuneMap
+  // The first mapping that has a shape wins, as in the old library. (This was a filter/map/
+  // reduce whose reduce ignored its accumulator, so the LAST match won.)
+  const shape = retuneMap
     .filter((t) => name === t.original)
     .map((t) => underscoreGet(t.transposed))
-    .filter(Boolean)
-    .reduce((acc, c) => Object.assign(
-      new Chord(chordName),
-      c && {
-        dots: c.dots,
-        muted: c.muted,
-      }), null) || null;
+    .find((c): c is Chord => c !== null);
+
+  return shape
+    ? Object.assign(new Chord(chordName), { dots: shape.dots, muted: shape.muted })
+    : null;
 }
 
 /**
@@ -107,11 +115,7 @@ function underscoreGet(chordName: string): Chord | null {
 }
 
 export function add(chords: Chord[]): integer {
-  if (chords.length) {
-    for (let i = 0; i < chords.length; i++) {
-      userChords.push(chords[i]);
-    }
-  }
+  userChords.push(...chords);
   return userChords.length;
 }
 

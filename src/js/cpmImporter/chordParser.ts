@@ -10,7 +10,10 @@ const RegExes = Object.freeze({
   KEYWORDS_SPLIT:    /(\bdefine\s*:\s*|\bfrets\b|\bfingers\b|\badd\s*:\s*\b)/,
   SPACES_SPLIT:      /\s+/,
 
-  KEYWORDS:          /.*(define|frets|fingers|add).*/g,
+  // No `g` flag: a /g regex remembers where its last test() stopped (`lastIndex`) and starts
+  // the next test() there, even on a different string. It only worked because the
+  // replace() that followed each successful test() happened to reset it.
+  KEYWORDS:          /.*(define|frets|fingers|add).*/,
 
   TRIM:              /^\s*{\s*|\s*}\s*$/g,
 
@@ -20,118 +23,140 @@ const RegExes = Object.freeze({
 
 const MUTED_CHAR = 'x';
 
-/** Pass in integer arrays, frets is list of frets, plus corresponding fingers array */
-export function toDots(frets: (number | string)[], fingers: string[]): Dot[] {
-  const { tuning } = settings;
+/** One value from a `frets` or `fingers` list: a number, or "x" for a muted string */
+type FretValue = number | typeof MUTED_CHAR;
 
-  return tuning
-    .reduce((dots, ignoreMe, index) => {
-      const value = frets[index];
-      const fretNumber = typeof value === 'string' ? parseInt(value, 10) : value;
-      if (fretNumber > 0) {
-        const finger = (fingers.length - 1 >= index) ? parseInt(fingers[index], 10) : 0;
-        dots.push(new Dot(index, fretNumber, finger));
-      }
-      return dots;
-    }, [] as Dot[]);
+/** What a `{define: ...}` line holds, before it becomes a Chord */
+interface ChordDefinition {
+  name: string,
+  frets: FretValue[],
+  fingers: FretValue[],
+  add: Dot[],
 }
 
+/** The keywords in a `{define}` line that are followed by a list of values */
+type ListKeyword = 'frets' | 'fingers';
+
+/** The keywords in an `add:` clause, e.g. `add: string 1 fret 1 finger 1` */
+type AddInKeyword = 'string' | 'fret' | 'finger';
+
+/**
+ * One Dot per string that has a fret above 0 (0 is an open string, "x" a muted one).
+ * @param frets one value per string
+ * @param fingers one value per string; may be shorter, or empty, meaning "no finger number"
+ * @param numStrings how many strings the instrument has
+ */
+export function toDots(frets: FretValue[], fingers: FretValue[], numStrings: number = settings.getNumStrings()): Dot[] {
+  const dots: Dot[] = [];
+  for (let index = 0; index < numStrings; index++) {
+    const fret = frets[index];
+    if (typeof fret === 'number' && fret > 0) {
+      const finger = fingers[index];
+      dots.push(new Dot(index, fret, typeof finger === 'number' ? finger : 0));
+    }
+  }
+  return dots;
+}
+
+/**
+ * Reads `string 1 fret 1 finger 1` into a Dot. Strings are written 1-based but stored
+ * 0-based. A missing value stays `null`, as before.
+ */
 function getAddIn(input: string): Dot {
-  const pairs = input.split(RegExes.ADD_SPLIT);
-  let key: string | null = null;
-  return pairs
-    .reduce((result, value) => {
-      value = value.trim();
-      if (!key && RegExes.ADD_SPLIT.test(value)) {
-        key = value.toLowerCase();
-      } else {
-        if (key && value) {
-          // @ts-ignore-next-line
-          result[key] = parseInt(value, 10) + (key === 'string' ? -1 : 0);
-        }
-        key = null;
-      }
-      return result;
-    }, {
-      string: null,
-      fret: null,
-      finger: null,
-    });
+  const values: Record<AddInKeyword, number | null> = {
+    string: null,
+    fret: null,
+    finger: null,
+  };
+  let key: AddInKeyword | null = null;
+  input.split(RegExes.ADD_SPLIT).forEach((part) => {
+    const value = part.trim();
+    if (!key && RegExes.ADD_SPLIT.test(value)) {
+      key = value.toLowerCase() as AddInKeyword; // the regex only matches the three keywords
+      return;
+    }
+    if (key && value) {
+      values[key] = parseInt(value, 10) + (key === 'string' ? -1 : 0);
+    }
+    key = null;
+  });
+  return new Dot(values.string, values.fret, values.finger);
 }
 
-function getValues(input: string): (number|string)[] {
+/**
+ * Reads a list of frets or fingers: "2 1 0 0", or without spaces, "2100", when the
+ * instrument's strings each take one character.
+ */
+function getValues(input: string, numStrings: number): FretValue[] {
   let split = input
     .toLowerCase()
     .split(RegExes.SPACES_SPLIT);
 
-  if (split[0].length === input.length && input.length === settings.getNumStrings()) {
+  if (split[0]?.length === input.length && input.length === numStrings) {
     split = input.split('');
   }
   return split.map((value) => (value === MUTED_CHAR ? MUTED_CHAR : parseInt(value, 10)));
 }
 
-export function runLine(line: string): Chord | null {
+/**
+ * Reads a `{define: ...}` line, e.g. `{define: Bb frets 3 2 1 1 fingers 3 2 1 1}`.
+ * @param numStrings how many strings the instrument has; default: the current tuning's
+ * @returns the chord, or `null` if the line isn't a define or has no chord name
+ */
+export function runLine(line: string, numStrings: number = settings.getNumStrings()): Chord | null {
   if (!RegExes.HAS_DEFINE_TAG.test(`${line}`)) {
     return null;
   }
   line = `${line || ''}`.replace(RegExes.TRIM, '');
-  const pairs = line.split(RegExes.KEYWORDS_SPLIT);
 
-  let key: string | null = null;
-
-  const chordArrays = pairs.reduce((result, value) => {
-    value = value.trim();
-
-    if (!key && RegExes.KEYWORDS.test(value)) {
-      key = value.replace(RegExes.KEYWORDS, '$1').toLowerCase();
-    } else {
-      if (key && value) {
-        switch (key) {
-          case 'add': {
-            const addIn = getAddIn(value);
-            if (addIn) {
-              // @ts-ignore-next-line
-              result.add.push(addIn);
-            }
-            break;
-          }
-          case 'define':
-            result.name = value;
-            break;
-          default:
-            // @ts-ignore-next-line
-            result[key] = getValues(value);
-            break;
-        }
-      }
-      key = null;
-    }
-
-    return result;
-  }, {
+  const definition: ChordDefinition = {
     name: '',
     frets: [],
     fingers: [],
     add: [],
+  };
+  // The split keeps the keywords, so the parts alternate: keyword, its value, keyword...
+  let key: string | null = null;
+  line.split(RegExes.KEYWORDS_SPLIT).forEach((part) => {
+    const value = part.trim();
+    if (!key && RegExes.KEYWORDS.test(value)) {
+      key = value.replace(RegExes.KEYWORDS, '$1').toLowerCase();
+      return;
+    }
+    if (key && value) {
+      switch (key) {
+        case 'add':
+          definition.add.push(getAddIn(value));
+          break;
+        case 'define':
+          definition.name = value;
+          break;
+        default:
+          definition[key as ListKeyword] = getValues(value, numStrings); // KEYWORDS only matches these
+          break;
+      }
+    }
+    key = null;
   });
 
-  if (!chordArrays.name) {
+  if (!definition.name) {
     log(`bad "define" instruction: chord name not found: ${line}`);
     return null;
   }
 
   return {
-    name: chordArrays.name,
+    name: definition.name,
     dots: [
-      ...toDots(chordArrays.frets, chordArrays.fingers),
-      ...chordArrays.add.map(({ string, fret, finger }) => new Dot(string, fret, finger)),
+      ...toDots(definition.frets, definition.fingers, numStrings),
+      ...definition.add,
     ],
-    muted: chordArrays.frets.map((fret) => fret === MUTED_CHAR),
+    muted: definition.frets.map((fret) => fret === MUTED_CHAR),
   };
 }
 
-export function runLines(lines: string[]): Chord[] {
+/** Reads every `{define}` line; other lines are skipped */
+export function runLines(lines: string[], numStrings?: number): Chord[] {
   return lines
-    .map((line) => runLine(line))
-    .filter(Boolean) as Chord[];
+    .map((line) => runLine(line, numStrings))
+    .filter((chord): chord is Chord => chord !== null);
 }

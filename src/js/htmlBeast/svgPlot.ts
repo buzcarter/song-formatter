@@ -1,5 +1,5 @@
 import { Chord } from '../cpmImporter';
-import { FretBox, ImageBuilder, generateChordSvg, toSVGString } from '../imageRenderer';
+import { FretBox, ImageBuilder, generateChordSvg, toString } from '../imageRenderer';
 import { StringDict } from '../tools';
 import { SvgChordStyles } from './Styles';
 
@@ -8,15 +8,16 @@ function appendChild(element: HTMLElement, image: ImageBuilder, className: strin
   if (className) {
     wrapper.classList.add(className);
   }
-  wrapper.innerHTML = toSVGString(image.getData());
+  wrapper.innerHTML = toString(image);
   element.appendChild(wrapper);
   return wrapper;
 }
 
-export function plot(chordBox: HTMLElement, chord: Chord, fretBox: FretBox, fontSettings: StringDict, colorSettings: StringDict): void {
-  const img = generateChordSvg(chord, fretBox, fontSettings, colorSettings);
-  if (!img) {
-    return;
-  }
-  appendChild(chordBox, img, SvgChordStyles.CHORD_IMG);
+/**
+ * Adds a chord diagram to the end of `chordBox`
+ * @param fontSettings default: `settings.fonts`
+ * @param colorSettings default: `settings.colors`
+ */
+export function plot(chordBox: HTMLElement, chord: Chord, fretBox: FretBox, fontSettings?: StringDict, colorSettings?: StringDict): void {
+  appendChild(chordBox, generateChordSvg(chord, fretBox, fontSettings, colorSettings), SvgChordStyles.CHORD_IMG);
 }

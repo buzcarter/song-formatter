@@ -46,7 +46,8 @@ export function readTabBlock(lines: StringArray): TabBlock {
  * @param tabStrings One staff: exactly one line per string
  */
 export function readTabs(tabStrings: StringArray): TabStaff {
-  const hasLabels = tabStrings[getNumStrings() - 1][0] === getLastStringName();
+  // The bottom line starts with the lowest string's name, e.g. "G|--", if there are labels
+  const hasLabels = tabStrings[getNumStrings() - 1]?.[0] === getLastStringName();
   if (hasLabels) {
     stripStringLabels(tabStrings);
   }
@@ -79,7 +80,7 @@ function stripStringLabels(tabStrings: StringArray): void {
 function getFretNumbers(tabStrings: StringArray): StringArray[] {
   const frets = [];
   for (let i = 0; i < getNumStrings(); i++) {
-    frets[i] = tabStrings[i].match(RegExes.INT) || [];
+    frets[i] = tabStrings[i]?.match(RegExes.INT) || [];
   }
   return frets;
 }
@@ -100,9 +101,9 @@ function getSymbols(tabStrings: StringArray): StringArray {
 }
 
 /**
- * Run through all of the strings (array) and return the length of the shortest one.
- * would prefer the max length, but then I'd need to pad the shorter ones and ... well, it's complicated.
- * this gets a TODO: get max!
+ * Despite the name, this returns the LONGEST line's length (trailing dashes don't count),
+ * so the TODO that used to be here, "get max!", is done. Shorter lines don't need padding:
+ * getPackedLines() treats the missing end of a line as dashes.
  */
 function getMinLineLength(tabStrings: StringArray): number {
   return tabStrings
@@ -126,7 +127,7 @@ function getGuideLine(symbols: StringArray, minLength: number): string {
   // Build a master pattern "guide" and eliminate double dashes
   let guide = '';
   for (let i = 0; i < minLength; i++) {
-    if (symbols[0][i] === '|') {
+    if (symbols[0]?.[i] === '|') {
       guide += '|';
     } else {
       guide += symbols.some((sym) => sym[i] === '*') ? '*' : '-';
@@ -155,7 +156,7 @@ function getGuideLine(symbols: StringArray, minLength: number): string {
 function getPackedLines(frets: StringArray[], symbols: StringArray, guide: string, minLength: number): ExpandedTabs {
   const packed = Array(getNumStrings()).fill('*').map((): string[] => []);
   packed
-    .forEach((string, stringIdx) => {
+    .forEach((line, stringIdx) => {
       // index to single line within packed array (along a string)
       let lineIdx = 0;
 
@@ -171,13 +172,13 @@ function getPackedLines(frets: StringArray[], symbols: StringArray, guide: strin
           }
           // a temp variable to hold the 'note'
           let chrNote = '';
-          if (symbols[stringIdx][guideIdx] === '*') {
-            chrNote = frets[stringIdx][fretCount];
+          if (symbols[stringIdx]?.[guideIdx] === '*') {
+            chrNote = frets[stringIdx]?.[fretCount] ?? '';
             fretCount++;
           } else {
             chrNote = char === '|' ? '|' : '-';
           }
-          packed[stringIdx][lineIdx] = chrNote;
+          line[lineIdx] = chrNote;
           lineIdx++;
         });
     });

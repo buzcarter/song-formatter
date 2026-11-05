@@ -1,4 +1,4 @@
-import { NumberDict, StringDict } from '../tools';
+import { StringDict } from '../tools';
 
 /**
  * local substitions (replacements for identical chord shapes)
@@ -14,8 +14,9 @@ export const chordNameAliases: StringDict = Object.freeze({
 /**
  * Predefined ukuele instrument tunings
  * Actually this is just offset, default is 0;
+ * (No `NumberDict` type here, so `InstrumentTunings.baritonUke` is a compile error.)
  */
-export const InstrumentTunings: NumberDict = Object.freeze({
+export const InstrumentTunings = Object.freeze({
   none: 0,
   /** GCEA */
   sopranoUke: 0,

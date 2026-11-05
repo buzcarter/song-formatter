@@ -31,14 +31,17 @@ function drawStaff(img: ImageBuilder, pos: Position, length: number): void {
  * @param isTruncate If `true` returns the length of the line, allowing for a terminating "|" character, othwrwise, it's for canvas width
  */
 function getWidth(tabs: ExpandedTabs, labelOffset: number, isTruncate: boolean): number {
+  const firstLine = tabs[0] ?? [];
   if (!isTruncate) {
-    return (tabSettings.noteSpacing * tabs[0].length) + labelOffset + tabSettings.dotRadius;
+    return (tabSettings.noteSpacing * firstLine.length) + labelOffset + tabSettings.dotRadius;
   }
 
-  let len = tabs[0].length;
+  let len = firstLine.length;
   let plusDot = tabSettings.dotRadius;
-  if (tabs[0][len - 1] === '|') {
-    // TODO: too much??? retest
+  if (firstLine[len - 1] === '|') {
+    // A line that ends with a bar "|": stop the staff lines at that bar instead of a note's
+    // width past it (drawNotes() puts the final bar at exactly this width). The parity tests
+    // check these lines against the old library: identical.
     len -= 1;
     plusDot = 0;
   }
@@ -57,9 +60,8 @@ function drawNotes(img: ImageBuilder, pos: Position, tabs: ExpandedTabs, lineWid
     y: pos.y,
   };
 
-  const numberOfStrings = settings.getNumStrings();
   tabs
-    .filter((tab, stringIndex) => stringIndex < numberOfStrings)
+    .slice(0, settings.getNumStrings())
     .forEach((tab) => {
       center.x = pos.x;
       tab.forEach((char, charIndex) => {
@@ -112,7 +114,7 @@ function drawMeasure(img: ImageBuilder, pos: Position, isHeavyStroke: boolean): 
 function drawLabels(img: ImageBuilder, pos: Position): void {
   const labels = settings.tuning.slice(0).reverse();
   for (let i = 0; i < getNumStrings(); i++) {
-    img.text(1, (pos.y + (i + 0.3) * tabSettings.lineSpacing), labels[i]).setStyle({
+    img.text(1, (pos.y + (i + 0.3) * tabSettings.lineSpacing), labels[i] ?? '').setStyle({
       fontFamily: tabSettings.labelFont,
       fillColor: tabSettings.lineColor,
       textAlign: 'left',

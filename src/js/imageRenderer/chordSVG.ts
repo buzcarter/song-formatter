@@ -6,14 +6,17 @@ import { StringDict, integer } from '../tools';
 import { Chord, Dot } from '../cpmImporter';
 import { settings } from '../configs';
 
-export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: StringDict, colorSettings: StringDict): ImageBuilder | null {
-  if (!fontSettings) {
-    fontSettings = settings.fonts;
-  }
-  if (!colorSettings) {
-    colorSettings = settings.colors;
-  }
-
+/**
+ * Draws a chord diagram.
+ * @param fontSettings default: `settings.fonts`
+ * @param colorSettings default: `settings.colors`
+ */
+export function generateChordSvg(
+  chord: Chord,
+  fretBox: FretBox,
+  fontSettings: StringDict = settings.fonts,
+  colorSettings: StringDict = settings.colors,
+): ImageBuilder {
   const { numFrets = 5 } = settings;
   const { dotRadius } = fretBox;
 
@@ -89,7 +92,9 @@ export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: S
     }
   }
 
-  // TODO: top offset
+  // The chord name sits 5px above the fretboard, centred 1.5 string-spaces in: the middle
+  // of FOUR strings. (On a 6-string guitar the middle would be 2.5; kept as the old library
+  // drew it until the guitar layout is settled.)
   if (fretBox.showText) {
     img.text((pos.x + 1.5 * fretBox.stringSpace), (pos.y - 5), chord.name).setStyle({
       fontFamily: fontSettings.text,
@@ -164,8 +169,8 @@ function newFretboard(
     .endGroup();
 }
 
-/** TODO: Loop over the muted array, dropping X's whenever a string position is `true` */
-function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | null, strokeColor: string): void {
+/** Draws an X above each muted string (where `muted[i]` is `true`) */
+function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | null, strokeColor?: string): void {
   const { lineWidth, topLeftPos } = fretBox;
 
   const x = topLeftPos.x + lineWidth / 2;
@@ -182,7 +187,7 @@ function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | nu
 }
 
 /** Plots an "X" centered at POSITION */
-function drawX(img: ImageBuilder, pos: Position, fretBox: FretBox, strokeColor: string): void {
+function drawX(img: ImageBuilder, pos: Position, fretBox: FretBox, strokeColor?: string): void {
   const { xWidth } = fretBox;
   const x = pos.x - xWidth / 2;
   const y = pos.y - xWidth / 2;

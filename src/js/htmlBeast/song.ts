@@ -2,8 +2,7 @@ import { markupChords } from './chords';
 import { SongStyles as Styles } from './Styles';
 
 import {
-  BaseSongBlock,
-  BlockTypes, Song, SongBlock, SongBlockArray, TabBlock,
+  BlockTypes, Song, SongBlock, TabBlock, isSongBlock, isTabBlock,
 } from '../cpmImporter';
 import { generateTabSvg } from '../imageRenderer';
 
@@ -15,10 +14,6 @@ interface SongBlockOptions {
   /** chords get room for mini-diagrams above them; default `settings.inlineDiagrams` */
   inlineDiagrams?: boolean
 }
-
-// TS type guards
-const isSongBlock = (block: BaseSongBlock): block is SongBlock => block.type !== BlockTypes.TabBlock;
-const isTabBlock = (block: BaseSongBlock): block is TabBlock => !isSongBlock(block);
 
 function isIncluded(type: BlockTypes, options?: SongBlockOptions): boolean {
   if (!options || type === BlockTypes.TextBlock) {
@@ -33,8 +28,20 @@ function isIncluded(type: BlockTypes, options?: SongBlockOptions): boolean {
   return true;
 }
 
-function songBlocksToHTML(songBlocks: SongBlockArray, options?: SongBlockOptions): string {
-  let nextType;
+/**
+ * A list of blocks to render: the song's top-level blocks, or the `lines` of a text or
+ * chorus block. By the time we render, those lines have all become SongBlocks, but their
+ * type still says `string | SongBlock`, so strings are allowed (and skipped) here rather
+ * than cast away.
+ */
+type Renderable = SongBlock | TabBlock | string;
+
+function songBlocksToHTML(songBlocks: Renderable[], options?: SongBlockOptions): string {
+  /** The type of the block at `index`, or Undefined past either end */
+  const typeAt = (index: number): BlockTypes => {
+    const block = songBlocks[index];
+    return typeof block === 'object' ? block.type : BlockTypes.Undefined;
+  };
 
   // Excluded blocks are skipped here rather than filtered out first: the <pre> logic below
   // looks at the blocks either side (`songBlocks[i - 1]`, `songBlocks[i + 1]`), and those
@@ -42,8 +49,8 @@ function songBlocksToHTML(songBlocks: SongBlockArray, options?: SongBlockOptions
   // counted the filtered list but looked up the unfiltered one, so lines were split into
   // separate <pre>s, or a <pre> was opened and never closed (nested <pre>s).
   return songBlocks
-    .reduce((html: string, block: BaseSongBlock, i: number) => {
-      if (!isIncluded(block.type, options)) {
+    .reduce((html: string, block: Renderable, i: number) => {
+      if (typeof block === 'string' || !isIncluded(block.type, options)) {
         return html;
       }
       if (isTabBlock(block)) {
@@ -83,7 +90,6 @@ function songBlocksToHTML(songBlocks: SongBlockArray, options?: SongBlockOptions
         case BlockTypes.ChordText:
         case BlockTypes.PlainText:
         case BlockTypes.ChordOnlyText: {
-          // TODO: beware undefined's!!!
           // Repack the text, only open/close <pre> tags when type changes
           // problem: exacerbates WebKit browsers' first chord position bug.
           if (!firstLine) {
@@ -94,21 +100,19 @@ function songBlocksToHTML(songBlocks: SongBlockArray, options?: SongBlockOptions
           if (type === BlockTypes.ChordOnlyText) {
             preClasses += ` ${Styles.NoLyrics}`;
           }
-          const currentType = type;
-          const lastType = ((i - 1) >= 0) ? songBlocks[i - 1].type : BlockTypes.Undefined;
-          nextType = ((i + 1) < songBlocks.length) ? nextType = songBlocks[i + 1].type : BlockTypes.Undefined;
-          html += lastType !== currentType ? `<pre class="${preClasses}">` : '\n';
+          // open a <pre> unless the previous line is the same kind; close it unless the next is
+          html += typeAt(i - 1) !== type ? `<pre class="${preClasses}">` : '\n';
           html += firstLine;
-          html += nextType !== currentType ? '</pre>\n' : '';
+          html += typeAt(i + 1) !== type ? '</pre>\n' : '';
         }
           break;
         case BlockTypes.ChorusBlock:
           html += `<div class="${Styles.Chorus}">\n`;
-          html += songBlocksToHTML(lines as SongBlockArray, options);
+          html += songBlocksToHTML(lines, options);
           html += '</div>\n';
           break;
         case BlockTypes.TextBlock:
-          html += songBlocksToHTML(lines as SongBlockArray, options);
+          html += songBlocksToHTML(lines, options);
           break;
         case BlockTypes.ColumnBreak:
           html += `</div><div class="${Styles.Column}">`;

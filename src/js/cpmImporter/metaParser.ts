@@ -3,7 +3,6 @@
  * text written in CPM syntax (looks for instrument, tuning, and define statements).
  */
 
-import { settings } from '../configs';
 import { pack } from '../tools';
 import Instrument from '../tunings/classes/Instrument';
 import { runLines } from './chordParser';
@@ -18,7 +17,7 @@ const RegExes = Object.freeze({
 
 function getInstrument(text: string): string | null {
   const matches = text.match(RegExes.INSTRUMENT);
-  return matches ? pack(matches[1]) : null;
+  return matches ? pack(matches[1] ?? '') : null;
 }
 
 function getTuning(text: string): string[] | null {
@@ -26,7 +25,7 @@ function getTuning(text: string): string[] | null {
   if (!matches) {
     return null;
   }
-  return matches[1].split(/\s+/);
+  return (matches[1] ?? '').split(/\s+/);
 }
 
 function getKey(name: string, tuning: string[]): string {
@@ -41,19 +40,20 @@ function getKey(name: string, tuning: string[]): string {
  * @param text Multiline text block containing definition, instrument, and tuning statements.
  */
 export function runBlock(text: string): Instrument {
-  // TODO: newlines get lost in strings, do I always rely on "{"?
+  // Usually one instruction per line. If the text has no line breaks (they can get lost along
+  // the way), split before each "{" instead. The (?=...) "lookahead" splits without removing
+  // the "{": runLine() needs it, and a plain split('{') dropped it, so no chords were found.
   let lines = text.split('\n');
   if (lines.length < 2) {
-    lines = text.split('{');
+    lines = text.split(/(?=\{)/);
   }
 
   const name = getInstrument(text) || '';
   const tuning = getTuning(text) || [];
 
-  // TODO: want to pass this dependency, not set -- unexpected sideeffect!!
-  settings.tuning = tuning;
-
-  const chords = runLines(lines);
+  // The chords are read for this instrument's number of strings. (This used to set
+  // `settings.tuning` here, a side effect of parsing; setInstrument() does that now.)
+  const chords = runLines(lines, tuning.length);
   return new Instrument(
     getKey(name, tuning),
     name,

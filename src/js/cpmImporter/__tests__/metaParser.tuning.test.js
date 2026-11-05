@@ -1,4 +1,4 @@
-import { __test__ } from '../metaParser';
+import { __test__, runBlock } from '../metaParser';
 
 describe('cpmParser', () => {
   describe('getTuning', () => {
@@ -30,6 +30,16 @@ describe('cpmParser', () => {
           expect(results).toEqual(expect.objectContaining(expectedResult));
         }
       });
+    });
+  });
+
+  describe('runBlock', () => {
+    it('should read the same chords whether or not the block has line breaks', () => {
+      const lines = ['{instrument: Tiny Uke}', '{tuning: G C E A}', '{define: A frets 2 1 0 0}', '{define: Am frets 2 0 0 0}'];
+      const multiLine = runBlock(lines.join('\n'));
+      const oneLine = runBlock(lines.join(''));
+      expect(multiLine.chords.map(({ name }) => name)).toEqual(['A', 'Am']);
+      expect(oneLine).toEqual(multiLine);
     });
   });
 });

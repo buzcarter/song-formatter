@@ -1,9 +1,12 @@
 import { StringDict } from '../../tools';
 
+/**
+ * The size and spacing of a chord diagram. `settings.fretBox` is the big reference diagram,
+ * `settings.inlineFretBox` the mini-diagram above lyrics.
+ * (This had `[index: string]: any`, which let any property name through unchecked, so a typo
+ * like `fretbox.dotRadus` compiled. Only scaleSettings needed it, to loop over the keys.)
+ */
 export default interface FretBox {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [index: string]: any;
-
   /**
    * True if chord name and finger "number" are to be drawn on canvas.
    * By default normal chord diagrams have text (`true`) whereas inlineDiagrams
@@ -52,7 +55,9 @@ export default interface FretBox {
    */
   xStroke: number,
 
+  /** dot, text and fret fonts for the inline diagram; the reference diagram uses `settings.fonts` */
   fonts: StringDict,
 
+  // ESLint's core `semi` rule misreads `export default interface` and wants a ";" after it
   // eslint-disable-next-line semi
 }
