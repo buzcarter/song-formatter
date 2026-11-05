@@ -81,6 +81,15 @@ function buildComparisons() {
     actual[name].runMarkup = runOne(null, readSong(name));
   });
 
+  // Debugging aid: `PARITY_DUMP=some/dir npm run test:parity` writes what song-formatter
+  // produced, in the same layout as expected/songs, so the two folders can be diffed.
+  if (process.env.PARITY_DUMP) {
+    fs.mkdirSync(process.env.PARITY_DUMP, { recursive: true });
+    songNames.forEach((name) => {
+      fs.writeFileSync(path.join(process.env.PARITY_DUMP, path.basename(expectedFile(name))), `${JSON.stringify(actual[name], null, 1)}\n`);
+    });
+  }
+
   songNames.forEach((name) => {
     const expected = readJson(expectedFile(name));
     const configs = [...CONFIGS.map(({ id }) => [id, actual[name].configs[id], expected.configs[id]]), ['runMarkup', actual[name].runMarkup, expected.runMarkup]];
