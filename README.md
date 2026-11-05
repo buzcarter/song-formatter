@@ -4,12 +4,9 @@
 
 Convert ChordPro marked-up text to HTML, complete with chord fingering diagrams.
 
-**Important:** *This is early stages of updating the UkeGeek's Scriptasaurus Song Editor, as such,
-this is an alpha test release: the final API is likely to change greatly.*
-
-##### Status Update
-
-> *Currently converting dozens of manual tests to automated tests and adding support for other stringed instrument support (yup, finally guitars, not just ukuleles). On track to have full 1.0 release October 2023.*
+**Status: 1.0.0 beta.** Song Formatter is the successor to the UkeGeeks Scriptasaurus library, and it
+renders the same songs the same way (its parity tests check this against the old library). The
+[UkeGeeks Songbook](https://github.com/buzcarter/UkeGeeks) uses it. The API may still change before 1.0.0.
 
 ##### Songsheets Perfect For Clubs 
 
@@ -20,7 +17,7 @@ this is an alpha test release: the final API is likely to change greatly.*
 With Node Package Manager (npm)
 
 ```
-npm install @ukegeeks/song-formatter
+npm install @ukegeeks/song-formatter@beta
 ```
 
 ## Features
@@ -101,6 +98,11 @@ as the old UkeGeeks library on `window.ukeGeeks`:
 </script>
 ```
 
+`song-formatter.bundle.css` also has a CSS reset and a simple page layout. A page with its own
+layout can load just the song styles instead: `dist/css/ukeGeeks.music.css`, plus
+`dist/css/ukeGeeks.musicPrint.css` for printing (also `@ukegeeks/song-formatter/css/…`).
+
 ## Demo/Test
 
-##### Coming Soon
+Try it at https://buzcarter.github.io/song-formatter/ (published from `master` by
+`.github/workflows/publishDemo.yml`). Locally: `npm run build`, then open `demo/index.html`.

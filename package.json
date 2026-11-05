@@ -1,6 +1,6 @@
 {
   "name": "@ukegeeks/song-formatter",
-  "version": "0.0.3-alpha",
+  "version": "1.0.0-beta.1",
   "description": "Convert ChordPro markup text to HTML with chord fingering diagrams",
   "type": "module",
   "main": "./dist/song-formatter.cjs",
@@ -19,6 +19,7 @@
     },
     "./browser": "./dist/song-formatter.bundle.js",
     "./css": "./dist/song-formatter.bundle.css",
+    "./css/*": "./dist/css/*",
     "./package.json": "./package.json"
   },
   "unpkg": "./dist/song-formatter.bundle.js",
@@ -38,7 +39,7 @@
     "build:clean": "node -e \"for (const dir of ['dist', '.tmp', '.site']) require('fs').rmSync(dir, { recursive: true, force: true })\"",
     "build:js": "webpack --mode production",
     "build:types": "dts-bundle-generator --project tsconfig.build.json --out-file dist/song-formatter.d.ts src/js/index.ts && node scripts/finish-types.cjs",
-    "build:css": "webpack --config webpack.config.css.cjs --mode production",
+    "build:css": "webpack --config webpack.config.css.cjs --mode production && node scripts/copy-css.cjs",
     "build:site": "node scripts/build-site.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
