@@ -1,15 +1,13 @@
-import { TabSettings } from './interfaces/Settings';
+import { Settings } from './interfaces/Settings';
 import { InstrumentTunings } from './globalConsts';
-
-import { BooleanDict, StringDict } from '../tools';
-import { FretBox } from '../imageRenderer';
 
 /**
  * Customize your installation. This JSON object controls appearance and
  * HTML element names. It's divided into four sections: graphics, ids, layout,
  * and "options".
  */
-const Settings = Object.seal({
+// Object.seal: properties can be changed but not added or removed
+const settings: Settings = Object.seal({
 
   /**
    * Chord Diagram Font styles -- font size, font-weight, font-face stack, etc.
@@ -18,7 +16,7 @@ const Settings = Object.seal({
     dot: '9pt Arial Black,Arial',
     text: 'bold 14pt Arial',
     fret: 'bold 13pt Arial',
-  } as StringDict,
+  },
 
   /**
    * Chord Diagram Colors for fretboard's grid lines and text.
@@ -33,7 +31,7 @@ const Settings = Object.seal({
     /* a muted string's 'X' stroke color */
     xStroke: '#444444',
     /* eslint-enable key-spacing */
-  } as StringDict,
+  },
 
   fretBox: {
     showText: true,
@@ -50,7 +48,7 @@ const Settings = Object.seal({
     xWidth: 0.45 * 20,
     xStroke: 1.6 * 1.6,
     fonts: {},
-  } as FretBox,
+  },
 
   /**
    * Layout of Chord Digrams when inlineFredBoxes are being used. Identical in
@@ -75,7 +73,7 @@ const Settings = Object.seal({
       text: '8pt Arial',
       fret: '8pt Arial',
     },
-  } as FretBox,
+  },
 
   /* eslint-disable key-spacing */
   /**
@@ -93,7 +91,7 @@ const Settings = Object.seal({
     canvas:       'ukeChordsCanvas',
     /** wraps BOTH Song Text and Chord Canvas */
     container:    'ukeSongContainer',
-  } as StringDict,
+  },
 
   /**
    * Magic CSS Class names used to find page elements-- be careful if renaming!
@@ -109,7 +107,7 @@ const Settings = Object.seal({
     diagrams:     '.ugs-diagrams-wrap',
     /** element holding the song's text */
     text:         '.ugs-source-wrap',
-  } as StringDict,
+  },
   /* eslint-enable key-spacing */
 
   /**
@@ -138,7 +136,7 @@ const Settings = Object.seal({
      */
     autoFixOverlaps: true,
     debugVerbose: false,
-  } as BooleanDict,
+  },
 
   /**
    * If `true` the Chord Digram is drawn ABOVE lyrics
@@ -152,7 +150,7 @@ const Settings = Object.seal({
   numFrets: 5,
 
   /** Array of string names (letters) */
-  tuning: ['G', 'C', 'E', 'A'] as string[],
+  tuning: ['G', 'C', 'E', 'A'],
 
   /**
    * Number of Strings (dashed lines of tablature notation) expected. (For now
@@ -160,7 +158,7 @@ const Settings = Object.seal({
    * @todo Making a variable to help support port for other instruments.
    */
   getNumStrings() {
-    return Settings.tuning.length;
+    return settings.tuning.length;
   },
 
   /**
@@ -168,7 +166,7 @@ const Settings = Object.seal({
    * @todo Here for other instruments.
    */
   getLastStringName() {
-    return Settings.tuning[0];
+    return settings.tuning[0];
     // export const LAST_STRING_NAME = 'G';
   },
 
@@ -189,12 +187,12 @@ const Settings = Object.seal({
     textFont: 'bold 12pt Arial, Helvetica, Verdana, Geneva, sans-serif',
     textColor: '#000000',
     bottomPadding: 10,
-  } as TabSettings,
+  },
 
   /**
    * List of common chords to be "ignored" (won't show master chord diagrams)
    */
-  commonChords: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'Am'] as string[],
+  commonChords: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'Am'],
 });
 
-export default Settings;
+export default settings;
