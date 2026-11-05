@@ -1,0 +1,2367 @@
+{
+ "source": "UkeGeeks 1.5.1 (3a3336c) js/ukeGeeks.scriptasaurus.merged.js",
+ "configs": {
+  "soprano": {
+   "song": {
+    "title": "南山南",
+    "st": "",
+    "st2": "",
+    "album": "",
+    "artist": "馬頔",
+    "key": "Cmaj7",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+    "defs": []
+   },
+   "alerts": ["Forgive me, but I don't know the following chords: D/F#"],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":55,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"},
+      {"x":82,"y":75,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":62,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":55,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":62,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":95,"r":8,"color":"#ff0000"},
+      {"x":62,"y":75,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":62,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":42,"y":100,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [],
+     "texts": [{"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":75,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":62,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":75,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [{"text":"G/B","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":75,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["Am7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["Am7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G7",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["C",0],
+    ["G",0],
+    ["Bm7",0],
+    ["C",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["C",0],
+    ["G",0],
+    ["D7",0],
+    ["G",0]
+   ],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+  },
+  "soprano-inline": {
+   "song": {
+    "title": "南山南",
+    "st": "",
+    "st2": "",
+    "album": "",
+    "artist": "馬頔",
+    "key": "Cmaj7",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+    "defs": []
+   },
+   "alerts": ["Forgive me, but I don't know the following chords: D/F#"],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":55,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"},
+      {"x":82,"y":75,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":62,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":55,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":62,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":95,"r":8,"color":"#ff0000"},
+      {"x":62,"y":75,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":62,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":42,"y":100,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [],
+     "texts": [{"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":75,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":62,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":75,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [{"text":"G/B","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":75,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["Am7",1],
+    ["G/B",1],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G7",1],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["Am7",1],
+    ["G/B",1],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G7",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["C",1],
+    ["G",1],
+    ["Bm7",1],
+    ["C",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["C",1],
+    ["G",1],
+    ["D7",1],
+    ["G",1]
+   ],
+   "inlineImages": {
+    "Cmaj7": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":31,"y":15.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "D7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":24.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Bm7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Em": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":17,"y":33.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":24.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Am7": {
+     "width": 40,
+     "height": 50,
+     "dots": [],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":24.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G/B": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":24.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "C": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":31,"y":24.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    }
+   },
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code><span class=\"ugsInlineSpacer\">&nbsp;</span><code data-chordname=\"G/B\"><strong> <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code><span class=\"ugsInlineSpacer\">&nbsp;</span><code data-chordname=\"G/B\"><strong> <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn"]
+  },
+  "baritone": {
+   "song": {
+    "title": "南山南",
+    "st": "",
+    "st2": "",
+    "album": "",
+    "artist": "馬頔",
+    "key": "Cmaj7",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+    "defs": []
+   },
+   "alerts": ["Forgive me, but I don't know the following chords: G/B, D/F#"],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":42,"y":55,"r":8,"color":"#ff0000"},{"x":82,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":75,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":75,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":62,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["Am7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["Am7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G7",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["C",0],
+    ["G",0],
+    ["Bm7",0],
+    ["C",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["C",0],
+    ["G",0],
+    ["D7",0],
+    ["G",0]
+   ],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+  },
+  "baritone-inline": {
+   "song": {
+    "title": "南山南",
+    "st": "",
+    "st2": "",
+    "album": "",
+    "artist": "馬頔",
+    "key": "Cmaj7",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+    "defs": []
+   },
+   "alerts": ["Forgive me, but I don't know the following chords: G/B, D/F#"],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":55,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":42,"y":55,"r":8,"color":"#ff0000"},{"x":82,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":75,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":75,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":62,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["Am7",1],
+    ["G/B",0],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G7",1],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["Am7",1],
+    ["G/B",0],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G7",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["C",1],
+    ["G",1],
+    ["Bm7",1],
+    ["C",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["C",1],
+    ["G",1],
+    ["D7",1],
+    ["G",1]
+   ],
+   "inlineImages": {
+    "Cmaj7": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":42.5,"r":3,"color":"#ff0000"},{"x":17,"y":42.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "D7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":15.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Bm7": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":17,"y":15.5,"r":3,"color":"#ff0000"},{"x":31,"y":15.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Em": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":15.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Am7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":24.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":31,"y":24.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G7": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":31,"y":6.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "C": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":15.5,"r":3,"color":"#ff0000"},{"x":24,"y":6.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    }
+   },
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code><span class=\"ugsInlineSpacer\">&nbsp;</span><code data-chordname=\"G/B\"><strong> <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code><span class=\"ugsInlineSpacer\">&nbsp;</span><code data-chordname=\"G/B\"><strong> <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn"]
+  },
+  "adfb": {
+   "song": {
+    "title": "南山南",
+    "st": "",
+    "st2": "",
+    "album": "",
+    "artist": "馬頔",
+    "key": "Cmaj7",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+    "defs": []
+   },
+   "alerts": ["Forgive me, but I don't know the following chords: G/B, D/F#"],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [],
+     "texts": [{"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":62,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":75,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":42,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":75,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":22,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["Am7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["Am7",0],
+    ["Cmaj7",0],
+    ["D7",0],
+    ["Bm7",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["Am7",0],
+    ["D7",0],
+    ["G",0],
+    ["G7",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["C",0],
+    ["G",0],
+    ["Bm7",0],
+    ["C",0],
+    ["G",0],
+    ["D/F#",0],
+    ["Em",0],
+    ["C",0],
+    ["G",0],
+    ["D7",0],
+    ["G",0]
+   ],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+  },
+  "adfb-inline": {
+   "song": {
+    "title": "南山南",
+    "st": "",
+    "st2": "",
+    "album": "",
+    "artist": "馬頔",
+    "key": "Cmaj7",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+    "defs": []
+   },
+   "alerts": ["Forgive me, but I don't know the following chords: G/B, D/F#"],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":82,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [],
+     "texts": [{"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":62,"y":35,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":55,"r":8,"color":"#ff0000"},
+      {"x":42,"y":75,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":42,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [
+      {"x":22,"y":75,"r":8,"color":"#ff0000"},
+      {"x":42,"y":55,"r":8,"color":"#ff0000"},
+      {"x":62,"y":35,"r":8,"color":"#ff0000"},
+      {"x":82,"y":35,"r":8,"color":"#ff0000"}
+     ],
+     "texts": [
+      {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":82,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"3","x":22,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["Am7",1],
+    ["G/B",0],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G7",1],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["Am7",1],
+    ["G/B",0],
+    ["Cmaj7",1],
+    ["D7",1],
+    ["Bm7",1],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["Am7",1],
+    ["D7",1],
+    ["G",1],
+    ["G7",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["C",1],
+    ["G",1],
+    ["Bm7",1],
+    ["C",1],
+    ["G",1],
+    ["D/F#",0],
+    ["Em",1],
+    ["C",1],
+    ["G",1],
+    ["D7",1],
+    ["G",1]
+   ],
+   "inlineImages": {
+    "Cmaj7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":6.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "D7": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":31,"y":6.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Bm7": {
+     "width": 40,
+     "height": 50,
+     "dots": [],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Em": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "Am7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":6.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":15.5,"r":3,"color":"#ff0000"},{"x":24,"y":6.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "G7": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":24.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "C": {
+     "width": 40,
+     "height": 50,
+     "dots": [
+      {"x":10,"y":24.5,"r":3,"color":"#ff0000"},
+      {"x":17,"y":15.5,"r":3,"color":"#ff0000"},
+      {"x":24,"y":6.5,"r":3,"color":"#ff0000"},
+      {"x":31,"y":6.5,"r":3,"color":"#ff0000"}
+     ],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    }
+   },
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code><span class=\"ugsInlineSpacer\">&nbsp;</span><code data-chordname=\"G/B\"><strong> <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code><span class=\"ugsInlineSpacer\">&nbsp;</span><code data-chordname=\"G/B\"><strong> <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn"]
+  }
+ },
+ "runMarkup": {
+  "song": {
+   "title": "南山南",
+   "st": "",
+   "st2": "",
+   "album": "",
+   "artist": "馬頔",
+   "key": "Cmaj7",
+   "hasChords": true,
+   "ugsMeta": [],
+   "chords": ["Cmaj7","D7","Bm7","Em","Am7","G","G/B","D/F#","G7","C"],
+   "defs": []
+  },
+  "alerts": ["Forgive me, but I don't know the following chords: D/F#"],
+  "referenceDiagrams": [
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [{"x":82,"y":55,"r":8,"color":"#ff0000"}],
+    "texts": [
+     {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"Cmaj7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [
+     {"x":22,"y":55,"r":8,"color":"#ff0000"},
+     {"x":42,"y":55,"r":8,"color":"#ff0000"},
+     {"x":62,"y":55,"r":8,"color":"#ff0000"},
+     {"x":82,"y":55,"r":8,"color":"#ff0000"},
+     {"x":82,"y":75,"r":8,"color":"#ff0000"}
+    ],
+    "texts": [
+     {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":62,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"2","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"D7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [
+     {"x":22,"y":55,"r":8,"color":"#ff0000"},
+     {"x":42,"y":55,"r":8,"color":"#ff0000"},
+     {"x":62,"y":55,"r":8,"color":"#ff0000"},
+     {"x":82,"y":55,"r":8,"color":"#ff0000"}
+    ],
+    "texts": [
+     {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":62,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"Bm7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [
+     {"x":42,"y":95,"r":8,"color":"#ff0000"},
+     {"x":62,"y":75,"r":8,"color":"#ff0000"},
+     {"x":82,"y":55,"r":8,"color":"#ff0000"}
+    ],
+    "texts": [
+     {"text":"1","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"2","x":62,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"3","x":42,"y":100,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"Em","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [],
+    "texts": [{"text":"Am7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [
+     {"x":42,"y":55,"r":8,"color":"#ff0000"},
+     {"x":62,"y":75,"r":8,"color":"#ff0000"},
+     {"x":82,"y":55,"r":8,"color":"#ff0000"}
+    ],
+    "texts": [
+     {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"2","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"3","x":62,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"G","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [
+     {"x":42,"y":55,"r":8,"color":"#ff0000"},
+     {"x":62,"y":75,"r":8,"color":"#ff0000"},
+     {"x":82,"y":55,"r":8,"color":"#ff0000"}
+    ],
+    "texts": [{"text":"G/B","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [
+     {"x":42,"y":55,"r":8,"color":"#ff0000"},
+     {"x":62,"y":35,"r":8,"color":"#ff0000"},
+     {"x":82,"y":55,"r":8,"color":"#ff0000"}
+    ],
+    "texts": [
+     {"text":"1","x":62,"y":40,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"2","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"3","x":82,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"G7","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [{"x":82,"y":75,"r":8,"color":"#ff0000"}],
+    "texts": [
+     {"text":"3","x":82,"y":80,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"C","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   }
+  ],
+  "ignoredChords": null,
+  "inlineChords": [
+   ["Cmaj7",0],
+   ["D7",0],
+   ["Bm7",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["Am7",0],
+   ["Cmaj7",0],
+   ["D7",0],
+   ["Bm7",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["G",0],
+   ["D/F#",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["G",0],
+   ["D/F#",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["G7",0],
+   ["Cmaj7",0],
+   ["D7",0],
+   ["Bm7",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["Am7",0],
+   ["Cmaj7",0],
+   ["D7",0],
+   ["Bm7",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["G",0],
+   ["D/F#",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["G",0],
+   ["D/F#",0],
+   ["Em",0],
+   ["Am7",0],
+   ["D7",0],
+   ["G",0],
+   ["G7",0],
+   ["G",0],
+   ["D/F#",0],
+   ["Em",0],
+   ["C",0],
+   ["G",0],
+   ["Bm7",0],
+   ["C",0],
+   ["G",0],
+   ["D/F#",0],
+   ["Em",0],
+   ["C",0],
+   ["G",0],
+   ["D7",0],
+   ["G",0]
+  ],
+  "inlineImages": {},
+  "tabs": [],
+  "bodyHtml": "<h6 class=\"ugsComment\">B1</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>飛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>如春 <code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>睛 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>完一場<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>夢</pre>\n<h6 class=\"ugsComment\">A1段</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>不再和誰<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>談論相逢的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 因為<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>心裡早已<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>荒無人<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>煙\n他的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>心裡再裝<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>不下一個<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>家 <code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>做一個只對<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>自己說謊的<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>啞巴<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">B2</h6>\n<pre class=\"ugsChords\">他說你<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>任何為人稱道<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>的美麗 不及他<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>第一次遇見<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>時光苟<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>延殘喘無可<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>奈何<code data-chordname=\"Am7\"><strong> <em>Am7</em>   <em>G/B</em> </strong></code>\n如果<code data-chordname=\"Cmaj7\"><strong> <em>Cmaj7</em> </strong></code>所有土地連<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>在一起 走上一<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>生只為擁抱<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>你\n喝醉<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>了他的<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>夢，晚<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>安</pre>\n<h6 class=\"ugsComment\">A2</h6>\n<pre class=\"ugsChords\">他<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>聽見有人<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>唱着古老的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>歌 唱着<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>今天還在<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>遠方發生<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>的\n就<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>在他眼睛裡<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>看到的<code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>孤島 沒有<code data-chordname=\"Am7\"><strong> <em>Am7</em> </strong></code>悲傷但也<code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>沒有<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>花朵<code data-chordname=\"G7\"><strong> <em>G7</em> </strong></code></pre>\n<h6 class=\"ugsComment\">回到B1兩邊</h6>\n<h6 class=\"ugsComment\">C</h6>\n<pre class=\"ugsChords\"><code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北秋<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>悲 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南山<code data-chordname=\"Bm7\"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>堆\n<code data-chordname=\"G\"><strong> <em>G</em> </strong></code>南風<code data-chordname=\"D/F#\"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname=\"Em\"><strong> <em>Em</em> </strong></code>北海<code data-chordname=\"C\"><strong> <em>C</em> </strong></code>北 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>北海 <code data-chordname=\"D7\"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname=\"G\"><strong> <em>G</em> </strong></code>碑</pre>\n",
+  "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+ }
+}

@@ -1,0 +1,626 @@
+{
+ "source": "UkeGeeks 1.5.1 (3a3336c) js/ukeGeeks.scriptasaurus.merged.js",
+ "configs": {
+  "soprano": {
+   "song": {
+    "title": "Chords with Muted Strings",
+    "st": "How to define a chord with muted (unplayed) strings",
+    "st2": "",
+    "album": "",
+    "artist": "Power Rocker Bob",
+    "key": "D5",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["D5","F5"],
+    "defs": [
+     {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+     {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+    ]
+   },
+   "alerts": [],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [["D5",0],["F5",0]],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+  },
+  "soprano-inline": {
+   "song": {
+    "title": "Chords with Muted Strings",
+    "st": "How to define a chord with muted (unplayed) strings",
+    "st2": "",
+    "album": "",
+    "artist": "Power Rocker Bob",
+    "key": "D5",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["D5","F5"],
+    "defs": [
+     {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+     {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+    ]
+   },
+   "alerts": [],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [["D5",1],["F5",1]],
+   "inlineImages": {
+    "D5": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":15.5,"r":3,"color":"#ff0000"},{"x":17,"y":15.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":22.05,"y1":-0.2,"x2":26.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":22.05,"y1":4.7,"x2":26.95,"y2":-0.2,"color":"#444444","width":1.4},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":29.05,"y1":-0.2,"x2":33.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":29.05,"y1":4.7,"x2":33.95,"y2":-0.2,"color":"#444444","width":1.4}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "F5": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":42.5,"r":3,"color":"#ff0000"},{"x":17,"y":42.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":22.05,"y1":-0.2,"x2":26.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":22.05,"y1":4.7,"x2":26.95,"y2":-0.2,"color":"#444444","width":1.4},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":29.05,"y1":-0.2,"x2":33.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":29.05,"y1":4.7,"x2":33.95,"y2":-0.2,"color":"#444444","width":1.4}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    }
+   },
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn"]
+  },
+  "baritone": {
+   "song": {
+    "title": "Chords with Muted Strings",
+    "st": "How to define a chord with muted (unplayed) strings",
+    "st2": "",
+    "album": "",
+    "artist": "Power Rocker Bob",
+    "key": "D5",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["D5","F5"],
+    "defs": [
+     {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+     {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+    ]
+   },
+   "alerts": [],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [["D5",0],["F5",0]],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+  },
+  "baritone-inline": {
+   "song": {
+    "title": "Chords with Muted Strings",
+    "st": "How to define a chord with muted (unplayed) strings",
+    "st2": "",
+    "album": "",
+    "artist": "Power Rocker Bob",
+    "key": "D5",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["D5","F5"],
+    "defs": [
+     {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+     {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+    ]
+   },
+   "alerts": [],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [["D5",1],["F5",1]],
+   "inlineImages": {
+    "D5": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":15.5,"r":3,"color":"#ff0000"},{"x":17,"y":15.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":22.05,"y1":-0.2,"x2":26.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":22.05,"y1":4.7,"x2":26.95,"y2":-0.2,"color":"#444444","width":1.4},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":29.05,"y1":-0.2,"x2":33.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":29.05,"y1":4.7,"x2":33.95,"y2":-0.2,"color":"#444444","width":1.4}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "F5": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":42.5,"r":3,"color":"#ff0000"},{"x":17,"y":42.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":22.05,"y1":-0.2,"x2":26.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":22.05,"y1":4.7,"x2":26.95,"y2":-0.2,"color":"#444444","width":1.4},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":29.05,"y1":-0.2,"x2":33.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":29.05,"y1":4.7,"x2":33.95,"y2":-0.2,"color":"#444444","width":1.4}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    }
+   },
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn"]
+  },
+  "adfb": {
+   "song": {
+    "title": "Chords with Muted Strings",
+    "st": "How to define a chord with muted (unplayed) strings",
+    "st2": "",
+    "album": "",
+    "artist": "Power Rocker Bob",
+    "key": "D5",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["D5","F5"],
+    "defs": [
+     {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+     {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+    ]
+   },
+   "alerts": [],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [["D5",0],["F5",0]],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+  },
+  "adfb-inline": {
+   "song": {
+    "title": "Chords with Muted Strings",
+    "st": "How to define a chord with muted (unplayed) strings",
+    "st2": "",
+    "album": "",
+    "artist": "Power Rocker Bob",
+    "key": "D5",
+    "hasChords": true,
+    "ugsMeta": [],
+    "chords": ["D5","F5"],
+    "defs": [
+     {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+     {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+    ]
+   },
+   "alerts": [],
+   "referenceDiagrams": [
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    },
+    {
+     "width": 100,
+     "height": 150,
+     "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+     "texts": [
+      {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+      {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+     ],
+     "lines": [
+      {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+      {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+      {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+      {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+      {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+      {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+     ],
+     "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+    }
+   ],
+   "ignoredChords": null,
+   "inlineChords": [["D5",1],["F5",1]],
+   "inlineImages": {
+    "D5": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":15.5,"r":3,"color":"#ff0000"},{"x":17,"y":15.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":22.05,"y1":-0.2,"x2":26.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":22.05,"y1":4.7,"x2":26.95,"y2":-0.2,"color":"#444444","width":1.4},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":29.05,"y1":-0.2,"x2":33.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":29.05,"y1":4.7,"x2":33.95,"y2":-0.2,"color":"#444444","width":1.4}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    },
+    "F5": {
+     "width": 40,
+     "height": 50,
+     "dots": [{"x":10,"y":42.5,"r":3,"color":"#ff0000"},{"x":17,"y":42.5,"r":3,"color":"#ff0000"}],
+     "texts": [],
+     "lines": [
+      {"x1":10.5,"y1":11.5,"x2":31.5,"y2":11.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":20.5,"x2":31.5,"y2":20.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":29.5,"x2":31.5,"y2":29.5,"color":"#003366","width":1},
+      {"x1":10.5,"y1":38.5,"x2":31.5,"y2":38.5,"color":"#003366","width":1},
+      {"x1":17.5,"y1":2.5,"x2":17.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":22.05,"y1":-0.2,"x2":26.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":22.05,"y1":4.7,"x2":26.95,"y2":-0.2,"color":"#444444","width":1.4},
+      {"x1":24.5,"y1":2.5,"x2":24.5,"y2":47.5,"color":"#003366","width":1},
+      {"x1":29.05,"y1":-0.2,"x2":33.95,"y2":4.7,"color":"#444444","width":1.4},
+      {"x1":29.05,"y1":4.7,"x2":33.95,"y2":-0.2,"color":"#444444","width":1.4}
+     ],
+     "rects": [{"x":10.5,"y":2.5,"w":21,"h":45,"color":"#003366","width":1}]
+    }
+   },
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn"]
+  }
+ },
+ "runMarkup": {
+  "song": {
+   "title": "Chords with Muted Strings",
+   "st": "How to define a chord with muted (unplayed) strings",
+   "st2": "",
+   "album": "",
+   "artist": "Power Rocker Bob",
+   "key": "D5",
+   "hasChords": true,
+   "ugsMeta": [],
+   "chords": ["D5","F5"],
+   "defs": [
+    {"name":"D5","dots":[[0,2,1],[1,2,1]],"muted":[false,false,true,true]},
+    {"name":"F5","dots":[[0,5,1],[1,5,1]],"muted":[false,false,true,true]}
+   ]
+  },
+  "alerts": [],
+  "referenceDiagrams": [
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [{"x":22,"y":55,"r":8,"color":"#ff0000"},{"x":42,"y":55,"r":8,"color":"#ff0000"}],
+    "texts": [
+     {"text":"1","x":22,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":42,"y":60,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"D5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+     {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+     {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   },
+   {
+    "width": 100,
+    "height": 150,
+    "dots": [{"x":22,"y":115,"r":8,"color":"#ff0000"},{"x":42,"y":115,"r":8,"color":"#ff0000"}],
+    "texts": [
+     {"text":"1","x":22,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"1","x":42,"y":120,"font":"9pt Arial Black,Arial","color":"#ffffff","align":"center"},
+     {"text":"F5","x":52,"y":20,"font":"bold 14pt Arial","color":"#000000","align":"center"}
+    ],
+    "lines": [
+     {"x1":22.8,"y1":105.8,"x2":82.8,"y2":105.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":45.8,"x2":82.8,"y2":45.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":65.8,"x2":82.8,"y2":65.8,"color":"#003366","width":1.6},
+     {"x1":22.8,"y1":85.8,"x2":82.8,"y2":85.8,"color":"#003366","width":1.6},
+     {"x1":42.8,"y1":25.8,"x2":42.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":58.3,"y1":20.9,"x2":67.3,"y2":29.9,"color":"#444444","width":2.56},
+     {"x1":58.3,"y1":29.9,"x2":67.3,"y2":20.9,"color":"#444444","width":2.56},
+     {"x1":62.8,"y1":25.8,"x2":62.8,"y2":125.8,"color":"#003366","width":1.6},
+     {"x1":78.3,"y1":20.9,"x2":87.3,"y2":29.9,"color":"#444444","width":2.56},
+     {"x1":78.3,"y1":29.9,"x2":87.3,"y2":20.9,"color":"#444444","width":2.56}
+    ],
+    "rects": [{"x":22.8,"y":25.8,"w":60,"h":100,"color":"#003366","width":1.6}]
+   }
+  ],
+  "ignoredChords": null,
+  "inlineChords": [["D5",0],["F5",0]],
+  "inlineImages": {},
+  "tabs": [],
+  "bodyHtml": "<h6 class=\"ugsComment\">View Song Source</h6>\n<pre class=\"ugsChords\">Sometimes a <code data-chordname=\"D5\"><strong> <em>D5</em> </strong></code>chord only <code data-chordname=\"F5\"><strong> <em>F5</em> </strong></code>requires two or three notes.</pre>\n<pre class=\"ugsPlain\">So we need a notation\nThat'll allow us to show\nThose strings that should played,\nAnd those that should not</pre>\n",
+  "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn"]
+ }
+}
