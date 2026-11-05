@@ -6,14 +6,17 @@ import { StringDict, integer } from '../tools';
 import { Chord, Dot } from '../cpmImporter';
 import { settings } from '../configs';
 
-export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: StringDict, colorSettings: StringDict): ImageBuilder | null {
-  if (!fontSettings) {
-    fontSettings = settings.fonts;
-  }
-  if (!colorSettings) {
-    colorSettings = settings.colors;
-  }
-
+/**
+ * Draws a chord diagram.
+ * @param fontSettings default: `settings.fonts`
+ * @param colorSettings default: `settings.colors`
+ */
+export function generateChordSvg(
+  chord: Chord,
+  fretBox: FretBox,
+  fontSettings: StringDict = settings.fonts,
+  colorSettings: StringDict = settings.colors,
+): ImageBuilder {
   const { numFrets = 5 } = settings;
   const { dotRadius } = fretBox;
 

@@ -23,10 +23,10 @@ export interface ReferenceDiagrams {
   ignoredChords: string[],
 }
 
-/** One chord diagram, wrapped in the `<span>` the CSS expects; '' if it can't be drawn */
+/** One chord diagram, wrapped in the `<span>` the CSS expects */
 export function chordDiagramHtml(chord: Chord, fretBox: FretBox, fonts: StringDict, colors: StringDict): string {
   const img = generateChordSvg(chord, fretBox, fonts, colors);
-  return img ? `<span class="${SvgChordStyles.CHORD_IMG}">${toString(img)}</span>` : '';
+  return `<span class="${SvgChordStyles.CHORD_IMG}">${toString(img)}</span>`;
 }
 
 /**

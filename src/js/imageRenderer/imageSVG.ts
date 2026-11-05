@@ -3,57 +3,40 @@
  * Limits: no checks for unique Ids.
  */
 
-import {
-  LayerTypes,
-  StyleDef,
-  SVGImage, SVGLayer,
-  CircleSVGLayer, GroupSVGLayer, LineSVGLayer, RectangleSVGLayer, TextSVGLayer,
-} from './interfaces/SVGImage';
+import { LayerTypes, StyleDef, SVGImage, SVGLayer } from './interfaces/SVGImage';
 import { ImageBuilder } from './classes/ImageBuilder';
 
-function getStyle(type: LayerTypes, style: StyleDef): string | null {
-  if (!style) {
-    return null;
+/** SVG anchors for StyleDef's textAlign */
+const TEXT_ANCHORS: Record<NonNullable<StyleDef['textAlign']>, string> = {
+  left: 'start',
+  center: 'middle',
+  right: 'end',
+};
+
+/** The CSS property and value for one StyleDef entry, or `null` to leave it out */
+function toCss(key: keyof StyleDef, value: string): [string, string] | null {
+  switch (key) {
+    case 'fillColor':
+      return ['fill', value];
+    case 'fontFamily':
+      return ['font', value];
+    case 'textAlign':
+      return ['text-anchor', TEXT_ANCHORS[value as keyof typeof TEXT_ANCHORS] || 'middle'];
+    case 'strokeColor':
+      return ['stroke', value];
+    case 'strokeWidth':
+      return ['stroke-width', value];
+    default:
+      return null;
   }
+}
 
-  let result = Object.keys(style)
-    .reduce((acc, key) => {
-      let property: string | null;
-      let value: string | null;
-      value = style[key];
-      switch (key) {
-        case 'fillColor':
-          property = 'fill';
-          break;
-        case 'fontFamily':
-          property = 'font';
-          break;
-        case 'textAlign':
-          property = 'text-anchor';
-          switch (value) {
-            case 'right':
-              value = 'end';
-              break;
-            case 'left':
-              value = 'start';
-              break;
-            default:
-              value = 'middle';
-          }
-          break;
-        case 'strokeColor':
-          property = 'stroke';
-          break;
-        case 'strokeWidth':
-          property = 'stroke-width';
-          break;
-        default:
-          property = null;
-      }
-
-      return (property && value)
-        ? `${acc}${property}:${value};`
-        : acc;
+function getStyle(type: LayerTypes, style: StyleDef): string {
+  // Object.entries() loses the key types (an object can have extra keys at runtime), hence the cast
+  let result = (Object.entries(style) as [keyof StyleDef, string | undefined][])
+    .reduce((acc, [key, value]) => {
+      const css = value ? toCss(key, value) : null;
+      return css ? `${acc}${css[0]}:${css[1]};` : acc;
     }, '');
 
   if (type === LayerTypes.TEXT && !style.textAlign) {
@@ -63,35 +46,28 @@ function getStyle(type: LayerTypes, style: StyleDef): string | null {
   return result;
 }
 
-// type guards
-const isCircle = (shape: SVGLayer): shape is CircleSVGLayer => shape.type === LayerTypes.CIRCLE;
-const isGroup = (shape: SVGLayer): shape is GroupSVGLayer => shape.type === LayerTypes.GROUP;
-const isLine = (shape: SVGLayer): shape is LineSVGLayer => shape.type === LayerTypes.LINE;
-const isRectangle = (shape: SVGLayer): shape is RectangleSVGLayer => shape.type === LayerTypes.RECTANGLE;
-const isText = (shape: SVGLayer): shape is TextSVGLayer => shape.type === LayerTypes.TEXT;
-
 function renderLayer(layer: SVGLayer): string {
   let style = layer.style ? getStyle(layer.type, layer.style) : '';
   style = style ? `style="${style}"` : '';
 
-  if (isCircle(layer)) {
-    return `<circle cx="${layer.center.x}" cy="${layer.center.y}" r="${layer.radius}" ${style} />`;
+  // `layer.type` tells TypeScript which kind of layer this is, so each case can use its fields
+  switch (layer.type) {
+    case LayerTypes.CIRCLE:
+      return `<circle cx="${layer.center.x}" cy="${layer.center.y}" r="${layer.radius}" ${style} />`;
+    case LayerTypes.LINE:
+      return `<line x1="${layer.endPoints[0].x}" y1="${layer.endPoints[0].y}" x2="${layer.endPoints[1].x}" y2="${layer.endPoints[1].y}" ${style} />`;
+    case LayerTypes.RECTANGLE:
+      return `<rect x="${layer.pos.x}" y="${layer.pos.y}" width="${layer.width}" height="${layer.height}" ${style} />`;
+    case LayerTypes.TEXT:
+      return `<text x="${layer.pos.x}" y="${layer.pos.y}" ${style}>${layer.text}</text>`;
+    default:
+      return '';
   }
-  if (isLine(layer)) {
-    return `<line x1="${layer.endPoints[0].x}" y1="${layer.endPoints[0].y}" x2="${layer.endPoints[1].x}" y2="${layer.endPoints[1].y}" ${style} />`;
-  }
-  if (isRectangle(layer)) {
-    return `<rect x="${layer.pos.x}" y="${layer.pos.y}" width="${layer.width}" height="${layer.height}" ${style} />`;
-  }
-  if (isText(layer)) {
-    return `<text x="${layer.pos.x}" y="${layer.pos.y}" ${style}>${layer.text}</text>`;
-  }
-  return '';
 }
 
 function renderLayers(layers: SVGLayer[]): string {
   return layers.reduce((acc: string, layer) => {
-    if (isGroup(layer)) {
+    if (layer.type === LayerTypes.GROUP) {
       const { name } = layer;
       const style = layer.style ? getStyle(LayerTypes.GROUP, layer.style) : '';
       // TODO: what was intent 15 years ago, bud? "renderLayers(layer.layers, layer.style)"
