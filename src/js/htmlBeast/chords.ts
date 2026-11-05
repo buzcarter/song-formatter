@@ -8,9 +8,9 @@ import { ChordsStyles as Styles } from './Styles';
  * (private) methods in correct order.
  * Returns the HTML block with wrapped chords: &lt;code&gt;&lt;strong&gt;&lt;em&gt;
  */
-export function markupChords(chordNames: string[], text: string): string {
+export function markupChords(chordNames: string[], text: string, inlineDiagrams: boolean = settings.inlineDiagrams): string {
   text = encloseChords(chordNames, text);
-  text = packChords(text);
+  text = packChords(text, inlineDiagrams);
   return text;
 }
 
@@ -50,8 +50,8 @@ function encloseChords(chordNames: string[], text: string): string {
  * Looks for consecutive chords and strips the whitespace between them -- thus "packing" the
  * chords against each other with only a single space separating them.
  */
-function packChords(text: string): string {
-  if (settings.inlineDiagrams) {
+function packChords(text: string, inlineDiagrams: boolean): string {
+  if (inlineDiagrams) {
     /* TODO: problem with packing */
     const regEx = /(<\/strong><\/code>)[ \t]*(<code data-chordName="[^"]*"><strong>)/ig;
     return text.replace(regEx, `$1<span class="${Styles.INLINE_SPACER}">&nbsp;</span>$2`);
