@@ -12,7 +12,7 @@ const { listSongs, mountSong, readSong } = require('./lib/dom.cjs');
 
 window.alert = () => {};
 
-const ugs = require('../../src/js/index').default;
+const ugs = require('../../src/js/ukeGeeks').default;
 const { get } = require('../../src/js/tunings');
 const { generateChordSvg, toString } = require('../../src/js/imageRenderer');
 

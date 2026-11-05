@@ -53,7 +53,53 @@ npm install @ukegeeks/song-formatter
 
 ## Usage
 
-...
+### In Node, or with a bundler
+
+`renderSong()` turns ChordPro text into HTML strings, with SVG chord diagrams. It needs no
+browser, so it works on a server too.
+
+```js
+import { renderSong } from '@ukegeeks/song-formatter';
+
+const { song, html, metaHtml, diagramsHtml, unknownChords } = renderSong(chordProText);
+// song.title, song.key, song.chordNames ...
+// html:         the lyrics with chords, comments and tabs
+// metaHtml:     title, subtitle, artist, album
+// diagramsHtml: the chord diagrams
+```
+
+The text is treated as plain text and HTML-escaped first, so it can't add tags of its own.
+Pass `{ isHtml: true }` if it's already HTML, or `{ inlineDiagrams: true }` for
+mini-diagrams above the lyrics. Add the stylesheet, `@ukegeeks/song-formatter/css`, to the
+page that shows the result.
+
+CommonJS works too: `const { renderSong } = require('@ukegeeks/song-formatter');`.
+TypeScript types are included.
+
+Other tuning: `definitions.useInstrument(InstrumentTunings.baritoneUke)` (DGBE) or
+`InstrumentTunings.alternateUke` (ADF#B). The parser (`parseCPM`), the SVG drawing
+(`generateChordSvg`, `generateTabSvg`) and transposing (`shift`, `shiftChords`) are exported
+as well.
+
+### In a web page
+
+`dist/song-formatter.bundle.js` (also `@ukegeeks/song-formatter/browser`) puts the same API
+as the old UkeGeeks library on `window.ukeGeeks`:
+
+```html
+<link rel="stylesheet" href="song-formatter.bundle.css" />
+<div id="ukeSongContainer">
+  <aside id="ukeChordsCanvas"></aside>
+  <article id="ukeSongText"><pre>{title: My Song}
+[C]Hello [G7]there</pre></article>
+</div>
+<script src="song-formatter.bundle.js"></script>
+<script>
+  ukeGeeks.scriptasaurus.init();
+  ukeGeeks.scriptasaurus.run();          // render the song on the page
+  // ukeGeeks.scriptasaurus.run(text);   // or render this text instead (an editor, say)
+</script>
+```
 
 ## Demo/Test
 
