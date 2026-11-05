@@ -1,33 +1,55 @@
+# Build the bundles and publish the demo site (.site/, see scripts/build-site.cjs) to GitHub Pages.
+# Pull requests are checked by runTests.yml.
+#
+# One-time setting: Settings -> Pages -> Source: "GitHub Actions"
+# (it used to deploy to the gh-pages branch, which is no longer needed).
+
 name: Publish Demo Site
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [master]
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build-node:
-    name: Install, Build, Test, & Deploy
+  build:
+    name: Install, Test & Build
     runs-on: ubuntu-latest
-    container: node:24
     steps:
-      - run: node --version
-        name: Check Node Version 🔦
-      - run: npm --version
-        name: Check NPM Version 🩺
-      - uses: actions/checkout@v4
-        name: Checkout Main branch 🧺
-      - run: npm ci
-        name: Install NPM Packages 🔧
-      - run: npm run test
-        name: Run unit tests 🧪
-      - run: npm run build && npm run build:site
-        name: Build distribution bundles and demo site 📦
-      - name: Install rsync 📚
-        run: |
-          apt-get update && apt-get install -y rsync
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
         with:
-          folder: .site
-          branch: gh-pages
-          clean: true
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm test
+      - run: npm run build && npm run build:site
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

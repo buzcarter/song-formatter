@@ -102,6 +102,7 @@ export type Settings = {
   tuning: string[],
   getNumStrings(): number,
   getLastStringName(): string,
+  scale(multiplier: number): void,
   defaultInstrument: number,
   tabs: TabSettings,
   commonChords: string[],
