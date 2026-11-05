@@ -1,8 +1,7 @@
 __tests__
 .babelrc
 .editorconfig
-.eslintignore
-.eslintrc.cjs
+eslint.config.js
 .github
 .gitignore
 .lib
@@ -18,6 +17,7 @@ jest.config.cjs
 src
 test
 tsconfig.json
+tsconfig.build.json
 webpack.config**.*
 # until I fix WebPack CSS script
 /dist/song-formatter.js

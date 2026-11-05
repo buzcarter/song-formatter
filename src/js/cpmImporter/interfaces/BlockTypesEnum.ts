@@ -1,4 +1,4 @@
-/* eslint-disable no-multi-spaces, no-shadow */
+/* eslint-disable no-multi-spaces */
 
 /**
  * Enumeration defining the types of nodes used within this class to parse CPM

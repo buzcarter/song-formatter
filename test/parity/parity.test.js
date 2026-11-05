@@ -122,7 +122,7 @@ const isEqual = (a, b) => {
   try {
     expect(a).toEqual(b);
     return true;
-  } catch (err) {
+  } catch {
     return false;
   }
 };
