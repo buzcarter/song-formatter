@@ -1,71 +1,39 @@
-/*!
- * Document   : UkeGeeks Song Formatter Scripts
- * Created on : Sep 15, 2012, 7:51:38 AM
- * Author     : Courts
- * Homepage   : https://github.com/buzcarter/song-formatter#readme
- */
-
-import { Chord, runLine } from './cpmImporter';
-import { definitions, shift, shiftChords } from './tunings';
-import { Fix, plot } from './htmlBeast';
-import { settings, InstrumentTunings } from './configs';
-import scriptasaurus from './scriptasaurus';
-import { escapeHtml, pack, trim } from './tools';
-
-class ChordBrush extends Chord {
-  // @ts-ignore-next-line
-  // eslint-disable-next-line class-methods-use-this
-  plot(...args): void {
-    // @ts-ignore-next-line
-    plot(...args);
-  }
-}
-
 /**
- * Finds page HTML elements & creates ukeGeek objects;
- * Reads song text, parses, draws choard diagrams.
+ * Entry point for Node and bundlers (`import ... from '@ukegeeks/song-formatter'`).
+ *
+ * Everything here works without a DOM, except the `ukeGeeks` object's browser methods
+ * (`scriptasaurus.run()` and friends), which need a page.
+ *
+ *   import { renderSong } from '@ukegeeks/song-formatter';
+ *   const { html, metaHtml, diagramsHtml } = renderSong(chordProText);
  */
-const publicInterface = {
-  ...scriptasaurus,
-  chordBrush: ChordBrush, // legacy
-  ChordBrush,
-  chordImport: {
-    runLine,
-  },
-  definitions: {
-    ...definitions,
-    instrument: InstrumentTunings,
-  },
-  overlapFixer: {
-    Fix,
-  },
-  settings,
-  scriptasaurus, // legacy
-  /** The old library's helpers that the Songbook's editor still calls */
-  toolsLite: {
-    escapeHtml,
-    pack,
-    trim,
-    hasClass(ele: HTMLElement, className: string) {
-      return ele.classList.contains(className);
-    },
-    addClass(ele: HTMLDivElement, className: string) {
-      ele.classList.add(className);
-    },
-    removeClass(ele: HTMLDivElement, className: string) {
-      ele.classList.remove(className);
-    },
-    setClass(ele: HTMLDivElement, className: string, toggle: boolean) {
-      ele.classList.toggle(className, toggle);
-    },
-  },
-  transpose: {
-    shift,
-    shiftChords,
-  },
-};
 
-// @ts-ignore-next-line
-window.ukeGeeks = Object.assign(window.ukeGeeks || {}, publicInterface);
+// Render a whole song to HTML strings
+export { renderSong } from './htmlBeast/renderSong';
+export type { RenderOptions, RenderedSong } from './htmlBeast/renderSong';
+export { referenceDiagrams, addInlineDiagrams, chordDiagramHtml } from './htmlBeast/diagrams';
+export type { ReferenceDiagrams } from './htmlBeast/diagrams';
+export { songToHTML } from './htmlBeast/song';
 
-export default publicInterface;
+// Parse ChordPro
+export {
+  BlockTypes, Chord, Dot, Song, parseCPM, runBlock, runLine,
+} from './cpmImporter';
+export type {
+  BaseSongBlock, ExpandedTabs, SongBlock, SongBlockArray, TabBlock, TabStaff,
+} from './cpmImporter';
+
+// Draw SVG
+export {
+  ImageBuilder, generateChordSvg, generateTabSvg, toString as imageToSvg,
+} from './imageRenderer';
+export type { FretBox } from './imageRenderer';
+
+// Chord dictionary, tunings, transposing
+export { definitions, Instrument, shift, shiftChords } from './tunings';
+export { InstrumentTunings, settings, sopranoUkuleleGcea } from './configs';
+
+export { escapeHtml } from './tools';
+
+// The old library's API, as found on `window.ukeGeeks` in the browser bundle
+export { default as ukeGeeks } from './ukeGeeks';

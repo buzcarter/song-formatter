@@ -6,7 +6,7 @@
  */
 window.alert = () => {};
 
-const ugs = require('../src/js/index').default;
+const ugs = require('../src/js/ukeGeeks').default;
 
 const PAGE = ''
   + '<div id="ukeSongContainer" class="ugs-song-wrap">'

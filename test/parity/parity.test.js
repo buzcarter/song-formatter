@@ -27,7 +27,7 @@ const alerts = [];
 window.alert = (msg) => alerts.push(String(msg));
 
 // importing the library sets `window.ukeGeeks`, as the browser bundle does
-const ugs = require('../../src/js/index').default;
+const ugs = require('../../src/js/ukeGeeks').default;
 
 const songNames = listSongs();
 const expectedFile = (name) => path.join(EXPECTED_DIR, 'songs', `${name.replace(/\.cpm\.txt$/, '')}.json`);

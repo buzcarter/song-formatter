@@ -1,0 +1,8 @@
+{
+  // Used by `npm run build:types` (dts-bundle-generator) to write dist/song-formatter.d.ts
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "./src/js/**/__tests__/**"
+  ]
+}

@@ -12,6 +12,8 @@ interface SongBlockOptions {
   exclude?: BlockTypes[]
   /** if `true` bypass Column Wrap & Chord HTML */
   blocksOnly?: boolean
+  /** chords get room for mini-diagrams above them; default `settings.inlineDiagrams` */
+  inlineDiagrams?: boolean
 }
 
 // TS type guards
@@ -131,5 +133,5 @@ export function songToHTML(song: Song, options?: SongBlockOptions) {
       + '</div>';
   }
 
-  return markupChords(song.chordNames, html);
+  return markupChords(song.chordNames, html, options?.inlineDiagrams);
 }
