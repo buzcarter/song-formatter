@@ -504,7 +504,7 @@ Tootsie <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</e
 
 exports[`making-it-fit-with-columns.buz.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<div class="ugsWrap ugsColumnCount2"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <h6 class="ugsComment">The Goal</h6>
 <pre class="ugsChords">Frequently <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>you'll get</pre>
@@ -545,7 +545,7 @@ Tootsie <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</e
 
 exports[`my-little-grass-shack-in-kealakekua.cpm.txt soprano 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em>   <em>Gm</em>   <em>Dm</em>   <em>Gm</em>   <em>D7</em> </strong></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong></code>wypas.</pre>
@@ -559,14 +559,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong></code></pre>
 </div>
-</pre></pre></div></div>",
+</pre></pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`my-little-grass-shack-in-kealakekua.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>wypas.</pre>
@@ -580,14 +580,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 </div>
-</pre></pre></div></div>",
+</pre></pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`snow-by-irving-berlin.cpm.txt soprano 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em>   <em>Gm</em>   <em>Dm</em>   <em>Gm</em>   <em>D7</em> </strong></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong></code>wypas.</pre>
@@ -619,14 +619,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong></code></pre>
 </div>
-</div></div>",
+",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`snow-by-irving-berlin.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>wypas.</pre>
@@ -658,14 +658,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 </div>
-</div></div>",
+",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`space-oddity-bowie.cpm.txt soprano 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em>   <em>Gm</em>   <em>Dm</em>   <em>Gm</em>   <em>D7</em> </strong></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong></code>wypas.</pre>
@@ -679,14 +679,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong></code></pre>
 </div>
-</pre></pre></div></div>",
+</pre></pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`space-oddity-bowie.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>wypas.</pre>
@@ -700,14 +700,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 </div>
-</pre></pre></div></div>",
+</pre></pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`the-state-im-in-dog-on-wheels.cpm.txt soprano 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em>   <em>Gm</em>   <em>Dm</em>   <em>Gm</em>   <em>D7</em> </strong></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong></code>wypas.</pre>
@@ -722,14 +722,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong></code></pre>
 </div>
-</pre></div></div>",
+</pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`the-state-im-in-dog-on-wheels.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">Intro</h6>
+  "body": "<h6 class="ugsComment">Intro</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <h6 class="ugsComment">Verse 1</h6>
 <pre class="ugsChords">Topping <code data-chordname="Dm" style="padding-right: 0px;"><strong> <em>Dm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>applicake <code data-chordname="Am" style="padding-right: 0px;"><strong> <em>Am</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>gingerbread <code data-chordname="Gm" style="padding-right: 0px;"><strong> <em>Gm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>wypas.</pre>
@@ -744,14 +744,14 @@ Muffin <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> 
 Pudding <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>pudding jelly marzipan.
 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>Liquorice sugar <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>plum <code data-chordname="F" style="padding-right: 0px;"><strong> <em>F</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 </div>
-</pre></div></div>",
+</pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`倔強（五月天） - 小楓.cpm.txt soprano 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><pre class="ugsChords ugsNoLyrics"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em>   <em>D</em>   <em>C</em>   <em>Em</em>   <em>Bm</em> </strong></code></pre>
+  "body": "<pre class="ugsChords ugsNoLyrics"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em>   <em>D</em>   <em>C</em>   <em>Em</em>   <em>Bm</em> </strong></code></pre>
 <h6 class="ugsComment">節奏</h6>
 <h6 class="ugsComment">前奏</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em>   <em>G</em>   <em>G</em>   <em>G</em> </strong></code></pre>
@@ -764,14 +764,14 @@ exports[`倔強（五月天） - 小楓.cpm.txt soprano 1`] = `
 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>我和我最<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong></code>後的倔強<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>握緊雙手<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong></code>絶對不放
 <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>下一站是<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong></code>不是天堂 就<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>算失望不<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong></code>能絶望
 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>我和我驕<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong></code>傲的倔強<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>我在風<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong></code>中大聲的唱
-<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>這一次為<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong></code>自己瘋狂 就<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>這一次我<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong></code>和我的倔<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>強 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em>   <em>G</em> </strong></code></pre></pre></div></div>",
+<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>這一次為<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong></code>自己瘋狂 就<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>這一次我<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong></code>和我的倔<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>強 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em>   <em>G</em> </strong></code></pre></pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`倔強（五月天） - 小楓.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><pre class="ugsChords ugsNoLyrics"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
+  "body": "<pre class="ugsChords ugsNoLyrics"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <h6 class="ugsComment">節奏</h6>
 <h6 class="ugsComment">前奏</h6>
 <pre class="ugsChords ugsNoLyrics"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
@@ -784,14 +784,14 @@ exports[`倔強（五月天） - 小楓.cpm.txt soprano, inline diagrams 1`] = `
 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>我和我最<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>後的倔強<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>握緊雙手<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>絶對不放
 <code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>下一站是<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>不是天堂 就<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>算失望不<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>能絶望
 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>我和我驕<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>傲的倔強<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>我在風<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>中大聲的唱
-<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>這一次為<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>自己瘋狂 就<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>這一次我<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>和我的倔<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>強 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre></pre></div></div>",
+<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>這一次為<code data-chordname="Bm" style="padding-right: 0px;"><strong> <em>Bm</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>自己瘋狂 就<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>這一次我<code data-chordname="D" style="padding-right: 0px;"><strong> <em>D</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>和我的倔<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>強 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre></pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`南山南 - 馬頔.cpm.txt soprano 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">B1</h6>
+  "body": "<h6 class="ugsComment">B1</h6>
 <pre class="ugsChords"><code data-chordname="Cmaj7" style="padding-right: 0px;"><strong> <em>Cmaj7</em> </strong></code>你在南方的<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>艷陽裡，<code data-chordname="Bm7" style="padding-right: 0px;"><strong> <em>Bm7</em> </strong></code>大雪紛<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>飛 <code data-chordname="Am7" style="padding-right: 0px;"><strong> <em>Am7</em> </strong></code>我在北方的<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>寒夜裡，四季<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>如春 <code data-chordname="Am7" style="padding-right: 0px;"><strong> <em>Am7</em>   <em>G/B</em> </strong></code></pre>
 <pre class="ugsChords"><code data-chordname="Cmaj7" style="padding-right: 0px;"><strong> <em>Cmaj7</em> </strong></code>如果天黑之前<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>來得及，我要<code data-chordname="Bm7" style="padding-right: 0px;"><strong> <em>Bm7</em> </strong></code>忘了你的眼<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>睛 <code data-chordname="Am7" style="padding-right: 0px;"><strong> <em>Am7</em> </strong></code>窮極一生，做不<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>完一場<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>夢<h6 class="ugsComment">A1段</h6>
 
@@ -810,14 +810,14 @@ exports[`南山南 - 馬頔.cpm.txt soprano 1`] = `
 <h6 class="ugsComment">C</h6>
 
 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>南山<code data-chordname="D/F#" style="padding-right: 0px;"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>北秋<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>悲 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>南山<code data-chordname="Bm7" style="padding-right: 0px;"><strong> <em>Bm7</em> </strong></code>有谷<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>堆
-<pre class="ugsChords"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>南風<code data-chordname="D/F#" style="padding-right: 0px;"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>北海<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>北 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>北海 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>碑</pre></div></div>",
+<pre class="ugsChords"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>南風<code data-chordname="D/F#" style="padding-right: 0px;"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong></code>北海<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong></code>北 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>北海 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong></code>有墓 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong></code>碑</pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;
 
 exports[`南山南 - 馬頔.cpm.txt soprano, inline diagrams 1`] = `
 {
-  "body": "<div class="ugsWrap ugsColumnCount3"><div class="ugsColumn"><h6 class="ugsComment">B1</h6>
+  "body": "<h6 class="ugsComment">B1</h6>
 <pre class="ugsChords"><code data-chordname="Cmaj7" style="padding-right: 0px;"><strong> <em>Cmaj7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>你在南方的<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>艷陽裡，<code data-chordname="Bm7" style="padding-right: 0px;"><strong> <em>Bm7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>大雪紛<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>飛 <code data-chordname="Am7" style="padding-right: 0px;"><strong> <em>Am7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>我在北方的<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>寒夜裡，四季<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>如春 <code data-chordname="Am7" style="padding-right: 0px;"><strong> <em>Am7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code><span class="ugsInlineSpacer">&nbsp;</span><code data-chordname="G/B" style="padding-right: 0px;"><strong> <em>G/B</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code></pre>
 <pre class="ugsChords"><code data-chordname="Cmaj7" style="padding-right: 0px;"><strong> <em>Cmaj7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>如果天黑之前<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>來得及，我要<code data-chordname="Bm7" style="padding-right: 0px;"><strong> <em>Bm7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>忘了你的眼<code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>睛 <code data-chordname="Am7" style="padding-right: 0px;"><strong> <em>Am7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>窮極一生，做不<code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>完一場<code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>夢<h6 class="ugsComment">A1段</h6>
 
@@ -836,7 +836,7 @@ exports[`南山南 - 馬頔.cpm.txt soprano, inline diagrams 1`] = `
 <h6 class="ugsComment">C</h6>
 
 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>南山<code data-chordname="D/F#" style="padding-right: 0px;"><strong> <em>D/F#</em> </strong></code>南， <code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北秋<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>悲 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>南山<code data-chordname="Bm7" style="padding-right: 0px;"><strong> <em>Bm7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>有谷<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>堆
-<pre class="ugsChords"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>南風<code data-chordname="D/F#" style="padding-right: 0px;"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北海<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北海 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>有墓 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>碑</pre></div></div>",
+<pre class="ugsChords"><code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>南風<code data-chordname="D/F#" style="padding-right: 0px;"><strong> <em>D/F#</em> </strong></code>喃， <code data-chordname="Em" style="padding-right: 0px;"><strong> <em>Em</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北海<code data-chordname="C" style="padding-right: 0px;"><strong> <em>C</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>北海 <code data-chordname="D7" style="padding-right: 0px;"><strong> <em>D7</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>有墓 <code data-chordname="G" style="padding-right: 0px;"><strong> <em>G</em> </strong><span class="ugs-diagrams--chord-img"><svg/></span></code>碑</pre>",
   "diagrams": "<span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span><span class="ugs-diagrams--chord-img"><svg/></span>",
 }
 `;

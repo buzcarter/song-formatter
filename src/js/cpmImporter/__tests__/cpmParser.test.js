@@ -21,6 +21,17 @@ describe('cpmParser', () => {
       };
       expect(results).toEqual(expect.objectContaining(expectedResult));
     });
+
+    it('should not carry anything over from the previous song', () => {
+      const first = parse('{key: G}\n[Am]One\n{column_break}\n[C]two\n{colb}\nthree');
+      expect(first).toMatchObject({ columnCount: 3, hasChords: true, key: 'G' });
+
+      const second = parse('[D7]Just one column');
+      expect(second).toMatchObject({ columnCount: 1, hasChords: true, key: 'D7' });
+
+      const third = parse('No chords at all');
+      expect(third).toMatchObject({ columnCount: 1, hasChords: false, key: '' });
+    });
   });
 
   describe('stripHtml', () => {

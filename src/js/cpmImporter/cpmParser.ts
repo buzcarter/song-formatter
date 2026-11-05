@@ -48,31 +48,37 @@ const RegExes = {
 };
 
 /**
- * Under development, bool indicating whether any chords were found within the lyrics.
- * Helpful for tablature-only arrangements.
- * @todo: do not rely on this!!!
+ * What the parse steps find out about a song along the way. These used to be module-level
+ * variables that were never reset, so the second song parsed inherited the first song's
+ * column count, key and `hasChords`. Each parseCPM() call now starts from scratch.
  */
-let hasChords = false; // TODO:
-let columnCount = 1;
-
-/** Song's key. May be set via command tag {key: C} otherwise use the first chord found (if available) */
-let firstChord = '';
+interface ParseFindings {
+  /** `true` if any lyric line has a chord; helps lay out tablature-only arrangements */
+  hasChords: boolean,
+  /** 1 + the number of `{column_break}`s */
+  columnCount: number,
+  /** The first chord in the lyrics, used as the key when there's no `{key: ...}` */
+  firstChord: string,
+}
 
 // type guards
 const isSongBlock = (block: BaseSongBlock): block is SongBlock => block.type !== BlockTypes.TabBlock;
 const isTabBlock = (block: BaseSongBlock): block is TabBlock => !isSongBlock(block);
 
-function parseSongBlocks(text: string): SongBlockArray {
+function parseSongBlocks(text: string): { songBlocks: SongBlockArray, findings: ParseFindings } {
   text = stripHtml(text);
   const songBlocks = textToSongBlocks(text);
   parseInstructions(songBlocks);
-  parseSimpleInstructions(songBlocks);
-  markChordLines(songBlocks);
+  const columnCount = parseSimpleInstructions(songBlocks);
+  const { hasChords, firstChord } = markChordLines(songBlocks);
   expandTabs(songBlocks);
   if (settings.opts.debugVerbose) {
     echo(songBlocks);
   }
-  return songBlocks;
+  return {
+    songBlocks,
+    findings: { hasChords, columnCount, firstChord },
+  };
 }
 
 /**
@@ -80,8 +86,8 @@ function parseSongBlocks(text: string): SongBlockArray {
  */
 export function parseCPM(text: string): Song {
   const song = new Song();
-  // eslint-disable-next-line no-multi-assign
-  const songBlocks = song.songBlocks = parseSongBlocks(text);
+  const { songBlocks, findings: { hasChords, columnCount, firstChord } } = parseSongBlocks(text);
+  song.songBlocks = songBlocks;
   song.hasChords = hasChords;
   song.columnCount = columnCount;
   let info;
@@ -235,8 +241,12 @@ function parseInstructions(songBlocks: SongBlockArray): void {
     });
 }
 
-/** A "Simple Instruction" is one that accepts no arguments. Presently this only handles Column Breaks. */
-function parseSimpleInstructions(songBlocks: SongBlockArray): void {
+/**
+ * A "Simple Instruction" is one that accepts no arguments. Presently this only handles Column Breaks.
+ * @returns the number of columns: 1 + the number of column breaks
+ */
+function parseSimpleInstructions(songBlocks: SongBlockArray): number {
+  let columnCount = 1;
   songBlocks
     .filter(isSongBlock)
     .forEach((block: SongBlock) => {
@@ -266,15 +276,18 @@ function parseSimpleInstructions(songBlocks: SongBlockArray): void {
         return line;
       });
     });
+  return columnCount;
 }
 
 /**
  * Runs through songNodes and if the line contains at least one chord it's type is et to
  * ChordText, otherwise it's marked as "PlainText", meaning straight lyrics
  */
-function markChordLines(songBlocks: SongBlockArray): void {
+function markChordLines(songBlocks: SongBlockArray): { hasChords: boolean, firstChord: string } {
   let chordFound;
   let hasOnlyChords;
+  let hasChords = false;
+  let firstChord = '';
 
   songBlocks
     .filter((block) => block.type === BlockTypes.TextBlock || block.type === BlockTypes.ChorusBlock)
@@ -303,6 +316,7 @@ function markChordLines(songBlocks: SongBlockArray): void {
         };
       });
     });
+  return { hasChords, firstChord };
 }
 
 function expandTabs(songBlocks: SongBlockArray): void {
