@@ -55,10 +55,6 @@
   display: block;
 }
 
-.ugs-grouped {
-  display: inline-block;
-}
-
 .ie8 .ugs-grouped {
   display: block;
 }
@@ -89,6 +85,12 @@
 .ugs-diagrams--chord-img svg {
   max-width: 100%;
   height: auto;
+}
+
+/* Reference diagrams: block, like the old <canvas>es, so they don't sit on the text
+   baseline and add a gap below each row */
+.ugs-diagrams-wrap .ugs-diagrams--chord-img svg {
+  display: block;
 }
 
 .ugsIgnoredChords {
