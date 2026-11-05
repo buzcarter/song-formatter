@@ -31,7 +31,8 @@ export function useInstrument(offset: integer | string) {
 
 export function setInstrument(instrumentIndex: integer, offset: integer | string = 0) {
   globalOffset = typeof offset === 'string' ? parseInt(offset, 10) : offset;
-  if (globalOffset > 0) {
+  // Offsets can be negative: ADF#B is -2. (This used to check `> 0`, so ADF#B drew soprano shapes.)
+  if (globalOffset !== 0) {
     retuneMap = retune(globalOffset);
   }
   const text = instruments[instrumentIndex];
@@ -55,7 +56,7 @@ export function get(chordName: string): Chord | null {
   }
 
   // next: built-in chords:
-  if (globalOffset < 1) {
+  if (globalOffset === 0) {
     return underscoreGet(chordName);
   }
 
