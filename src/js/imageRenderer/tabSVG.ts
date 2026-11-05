@@ -39,7 +39,9 @@ function getWidth(tabs: ExpandedTabs, labelOffset: number, isTruncate: boolean):
   let len = firstLine.length;
   let plusDot = tabSettings.dotRadius;
   if (firstLine[len - 1] === '|') {
-    // TODO: too much??? retest
+    // A line that ends with a bar "|": stop the staff lines at that bar instead of a note's
+    // width past it (drawNotes() puts the final bar at exactly this width). The parity tests
+    // check these lines against the old library: identical.
     len -= 1;
     plusDot = 0;
   }

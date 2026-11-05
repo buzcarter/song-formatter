@@ -12,8 +12,8 @@ import { logger } from '../tools';
 import { settings } from '../configs';
 
 /**
- * @todo add ukeGeeks Meta support:
- * /{(ukegeeks-meta|meta)\s*:\s*(.+?)}/i
+ * @todo {ukegeeks-meta: ...} works (see CpmInstructions.ugsMeta); this would also accept the
+ * shorter {meta: ...}: /{(ukegeeks-meta|meta)\s*:\s*(.+?)}/i
  */
 
 const RegExes = {
@@ -118,7 +118,8 @@ export function parseCPM(text: string): Song {
 }
 
 function getBlockType(line: string): BlockTypes {
-  // TODO: verify line's type in documentation
+  // ChordPro's names are {start_of_chorus} or {soc}, and {start_of_tab} or {sot};
+  // {start_of_tabs} is accepted too
   if (RegExes.CHORUS_BLOCKS.test(line)) {
     return BlockTypes.ChorusBlock;
   }

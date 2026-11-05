@@ -1,5 +1,5 @@
 import { Chord } from '../cpmImporter';
-import { FretBox, ImageBuilder, generateChordSvg, toSVGString } from '../imageRenderer';
+import { FretBox, ImageBuilder, generateChordSvg, toString } from '../imageRenderer';
 import { StringDict } from '../tools';
 import { SvgChordStyles } from './Styles';
 
@@ -8,7 +8,7 @@ function appendChild(element: HTMLElement, image: ImageBuilder, className: strin
   if (className) {
     wrapper.classList.add(className);
   }
-  wrapper.innerHTML = toSVGString(image.getData());
+  wrapper.innerHTML = toString(image);
   element.appendChild(wrapper);
   return wrapper;
 }

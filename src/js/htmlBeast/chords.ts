@@ -27,22 +27,13 @@ function encloseChords(chordNames: string[], text: string): string {
     // quotes aren't, so a `"` in a chord name, `[A" onclick="..."]`, could end the attribute
     // and add its own. Escaping it for the attribute keeps it a value.
     const attr = escapeHtml(chordName);
-    do { /* empty */ }
-    while (text.length !== (
-      // eslint-disable-next-line no-cond-assign
-      text = text.replace(`[${chordName}]`, `<code data-chordName="${attr}"><strong>${openBracket}<em>${chordName}</em>${closeBracket}</strong></code>`)
-    ).length);
+    const markup = `<code data-chordName="${attr}"><strong>${openBracket}<em>${chordName}</em>${closeBracket}</strong></code>`;
+    // split + join replaces EVERY "[A7+5]", taking the text literally. (This was a do/while
+    // repeating replace(), which only does the first; a /regex/g would need "+", "/", "#"...
+    // escaped, which an older, commented-out version here tried.)
+    text = text.split(`[${chordName}]`).join(markup);
   });
   return text;
-  /*
-  // need to handle chords such as: [A7+5]
-  var escapeRegEx = new RegExp('([+])','g');
-  for (var j = 0; j < this.chords.length; j++){
-    var s = this.chords[j].replace(escapeRegEx, '\\\$1')
-    var re = new RegExp('[[]' + s + ']', 'img');
-    text = text.replace(re, '<code data-chordName="' + this.chords[j] + '"><strong>[<em>' + this.chords[j] + '</em>]</strong></code>');
-  }
-  */
 }
 
 /**
@@ -51,6 +42,8 @@ function encloseChords(chordNames: string[], text: string): string {
  */
 function packChords(text: string, inlineDiagrams: boolean): string {
   if (inlineDiagrams) {
+    // With mini-diagrams, side-by-side chords can't share one <code> (each needs its own
+    // diagram), so a spacer goes between them instead of packing them together.
     /* TODO: problem with packing */
     const regEx = /(<\/strong><\/code>)[ \t]*(<code data-chordName="[^"]*"><strong>)/ig;
     return text.replace(regEx, `$1<span class="${Styles.INLINE_SPACER}">&nbsp;</span>$2`);

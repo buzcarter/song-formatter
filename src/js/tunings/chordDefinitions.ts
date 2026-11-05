@@ -2,7 +2,7 @@
  * Defines chords and provides simple lookup (find) tools.
  */
 import { retune, RetuneMap } from './transpose';
-import { integer } from '../tools';
+import { integer, logger } from '../tools';
 import { chordNameAliases, InstrumentTunings, settings } from '../configs';
 import { Chord, runBlock } from '../cpmImporter';
 
@@ -37,7 +37,7 @@ export function setInstrument(instrumentIndex: integer, offset: integer | string
   }
   const text = instruments[instrumentIndex];
   if (!text) {
-    // TODO: log error!!!
+    logger.warn(`setInstrument: no instrument ${instrumentIndex}; call addInstrument() first`);
     return;
   }
 

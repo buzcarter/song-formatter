@@ -70,7 +70,8 @@ function renderLayers(layers: SVGLayer[]): string {
     if (layer.type === LayerTypes.GROUP) {
       const { name } = layer;
       const style = layer.style ? getStyle(LayerTypes.GROUP, layer.style) : '';
-      // TODO: what was intent 15 years ago, bud? "renderLayers(layer.layers, layer.style)"
+      // No need to hand the group's style to its children ("renderLayers(layer.layers,
+      // layer.style)"): in SVG, shapes inherit fill, stroke and font from their <g>.
       acc += `<g ${name ? (`id="${name}"`) : ''} style="${style}">${renderLayers(layer.layers)}</g>`;
     } else {
       acc += renderLayer(layer);
@@ -79,8 +80,7 @@ function renderLayers(layers: SVGLayer[]): string {
   }, '');
 }
 
-// TODO: let's not do this
-/** used by src/js/htmlBeast/svgPlot.ts */
+/** The SVG markup for an image's data; toString() below is the usual way in, from an ImageBuilder */
 export function toSVGString(image: SVGImage): string {
   const { width, height } = image.dimensions;
   return ('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" '

@@ -27,8 +27,8 @@ export default class Dot {
   }
 
   /**
-   * The ukulele's string, numbered from "top" (1) to "bottom" (4). Sporano uke strings would be ['G' => 1,'C' => 2,'E' => 3,'A' => 4]
-   * TODO: do "add-ins" use char or int?
+   * The string, counted from 0: on a soprano uke G = 0, C = 1, E = 2, A = 3.
+   * Add-ins are numbers too, written from 1 (`add: string 1 ...`) and stored from 0.
    */
   string: number | null = null;
 

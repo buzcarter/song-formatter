@@ -101,9 +101,9 @@ function getSymbols(tabStrings: StringArray): StringArray {
 }
 
 /**
- * Run through all of the strings (array) and return the length of the shortest one.
- * would prefer the max length, but then I'd need to pad the shorter ones and ... well, it's complicated.
- * this gets a TODO: get max!
+ * Despite the name, this returns the LONGEST line's length (trailing dashes don't count),
+ * so the TODO that used to be here, "get max!", is done. Shorter lines don't need padding:
+ * getPackedLines() treats the missing end of a line as dashes.
  */
 function getMinLineLength(tabStrings: StringArray): number {
   return tabStrings

@@ -92,7 +92,9 @@ export function generateChordSvg(
     }
   }
 
-  // TODO: top offset
+  // The chord name sits 5px above the fretboard, centred 1.5 string-spaces in: the middle
+  // of FOUR strings. (On a 6-string guitar the middle would be 2.5; kept as the old library
+  // drew it until the guitar layout is settled.)
   if (fretBox.showText) {
     img.text((pos.x + 1.5 * fretBox.stringSpace), (pos.y - 5), chord.name).setStyle({
       fontFamily: fontSettings.text,
@@ -167,7 +169,7 @@ function newFretboard(
     .endGroup();
 }
 
-/** TODO: Loop over the muted array, dropping X's whenever a string position is `true` */
+/** Draws an X above each muted string (where `muted[i]` is `true`) */
 function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | null, strokeColor?: string): void {
   const { lineWidth, topLeftPos } = fretBox;
 

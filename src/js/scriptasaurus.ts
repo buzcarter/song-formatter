@@ -49,7 +49,7 @@ export function runByClasses(): Song[] {
 }
 
 /**
- * @todo: still nececessary?
+ * Still needed: the Songbook's editor calls it when you choose a tuning.
  * @param {number} offset default 0. Number of semitones to shift the tuning. See ukeGeeks.definitions.instrument.
  */
 export const setTuningOffset = (offset: integer): void => definitions.useInstrument(offset);

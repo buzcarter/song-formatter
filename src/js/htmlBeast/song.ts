@@ -90,7 +90,6 @@ function songBlocksToHTML(songBlocks: Renderable[], options?: SongBlockOptions):
         case BlockTypes.ChordText:
         case BlockTypes.PlainText:
         case BlockTypes.ChordOnlyText: {
-          // TODO: beware undefined's!!!
           // Repack the text, only open/close <pre> tags when type changes
           // problem: exacerbates WebKit browsers' first chord position bug.
           if (!firstLine) {
