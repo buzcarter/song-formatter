@@ -5,7 +5,7 @@ import { echo } from './debugWriter';
 import { readTabBlock } from './tabs';
 import { runLine } from './chordParser';
 import { BaseSongBlock, SongBlock, SongBlockArray, StringArray } from './interfaces/SongBlock';
-import getChordNames from './getChordNames';
+import { getRenderedChordNames } from './getChordNames';
 import Song from './classes/Song';
 
 import { logger } from '../tools';
@@ -128,7 +128,7 @@ export function parseCPM(text: string): Song {
   });
 
   definitions.replace(song.chordDefs);
-  song.chordNames = getChordNames(text);
+  song.chordNames = getRenderedChordNames(songBlocks);
 
   if (settings.opts.debugVerbose) {
     logger.json(song);

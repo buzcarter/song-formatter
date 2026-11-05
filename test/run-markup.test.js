@@ -59,6 +59,22 @@ describe('scriptasaurus.run(markup)', () => {
     codes.forEach((code) => expect(code.getAttributeNames().filter((name) => name.startsWith('on'))).toEqual([]));
   });
 
+  it('should list the chords that are shown, like the old library', () => {
+    const song = ugs.scriptasaurus.run([
+      '{title: Not a chord [Am]}',
+      '# a comment line [Bm]',
+      // escaped, so this is shown as text rather than being an HTML comment
+      '<!-- not an HTML comment [Cm] -->',
+      '{c: Intro [D7]}',
+      '[E7]Lyrics and [F]more',
+      '{soc}',
+      '[G]Chorus',
+      '{eoc}',
+    ].join('\n'));
+    // what the old UkeGeeks library returns for the same markup
+    expect(song.chords).toEqual(['Cm', 'D7', 'E7', 'F', 'G']);
+  });
+
   it('should leave entities in the song alone', () => {
     const song = ugs.scriptasaurus.run('{artist: Lyrics &amp; Music &copy; 1933}\nRock & roll');
     expect(song.artist).toBe('Lyrics &amp; Music &copy; 1933');
