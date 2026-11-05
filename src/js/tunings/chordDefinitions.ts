@@ -3,13 +3,14 @@
  */
 import { retune, RetuneMap } from './transpose';
 import { integer, logger } from '../tools';
-import { chordNameAliases, InstrumentTunings, settings } from '../configs';
+import { chordNameAliases, settings } from '../configs';
 import { Chord, runBlock } from '../cpmImporter';
 
 /**
  * Block of CPM text, expects to find these tags: `instrument`, `tuning`, and one or more `define` statements.
  */
 const instruments: string[] = [];
+const FIRST_INSTRUMENT = 0;
 
 /**
  * Array of "user" defined chords, in compactChord format. Use "Add" method.
@@ -24,9 +25,14 @@ let retuneMap: RetuneMap[] = [];
  */
 export const addInstrument = (definitions: string | string[]): number => instruments.push(Array.isArray(definitions) ? definitions.join('\n') : definitions) - 1;
 
-/** Choose which instrument's chord dictionary is used used for chord diagrams. */
+/**
+ * Re-tunes the first instrument added (the soprano dictionary, from scriptasaurus.init()):
+ * `offset` is semitones, see InstrumentTunings. The old library also always used the first.
+ * (This passed `InstrumentTunings.none` as the instrument number; it worked because that
+ * tuning offset happens to be 0, the first index.)
+ */
 export function useInstrument(offset: integer | string) {
-  setInstrument(InstrumentTunings.none, offset);
+  setInstrument(FIRST_INSTRUMENT, offset);
 }
 
 export function setInstrument(instrumentIndex: integer, offset: integer | string = 0) {
