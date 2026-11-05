@@ -94,3 +94,22 @@ describe('definitions.instrument', () => {
     expect(ugs.definitions.instrument).toMatchObject({ sopranoUke: 0, baritoneUke: 5, alternateUke: -2 });
   });
 });
+
+describe('scriptasaurus.runByClasses()', () => {
+  const songWrap = (text) => ''
+    + '<div class="ugs-song-wrap">'
+    + '<div class="ugs-song-meta"></div>'
+    + '<div class="ugs-diagrams-wrap"></div>'
+    + `<div class="ugs-source-wrap"><pre>${text}</pre></div>`
+    + '</div>';
+
+  it('should render every song on the page, each with its own chords and meta', () => {
+    document.body.innerHTML = songWrap('{t: One}\n[C]first') + songWrap('{t: Two}\n[G7]second');
+    const songs = ugs.scriptasaurus.runByClasses();
+    expect(songs.map((song) => [song.title, song.chords])).toEqual([['One', ['C']], ['Two', ['G7']]]);
+
+    const wraps = document.querySelectorAll('.ugs-song-wrap');
+    expect(wraps[1].querySelector('.ugs-song-meta').textContent).toContain('Two');
+    expect(wraps[1].querySelectorAll('.ugs-diagrams-wrap svg')).toHaveLength(1);
+  });
+});

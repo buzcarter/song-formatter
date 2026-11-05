@@ -100,7 +100,8 @@ const settings: Settings = Object.seal({
    */
   wrapClasses: {
     /** "Meta" includes song Title, Subtitle, Album, Artist */
-    songMeta:     'ugs-song-meta',
+    // (was 'ugs-song-meta', without the ".", which looked for an <ugs-song-meta> element)
+    songMeta:     '.ugs-song-meta',
     /** wraps BOTH Song Text and Chord Canvas */
     wrap:         '.ugs-song-wrap',
     /** Chord Diagrams */

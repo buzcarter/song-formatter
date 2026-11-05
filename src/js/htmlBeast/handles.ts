@@ -2,23 +2,20 @@ import HTMLHandles from './classes/HTMLHandles';
 
 import { settings } from '../configs';
 
+/** Finds one song's elements inside `wrap`, by the class names in `settings.wrapClasses` */
 export function getHandlesFromClass(wrap: HTMLElement): HTMLHandles | null {
-  const diagrams = wrap.querySelectorAll(settings.wrapClasses.diagrams);
-  const text = wrap.querySelectorAll(settings.wrapClasses.text);
-  const songMeta = wrap.querySelectorAll(settings.wrapClasses.songMeta);
+  // querySelector<HTMLElement> says what kind of element we expect, instead of casting the result
+  const find = (selector: string) => wrap.querySelector<HTMLElement>(selector);
+  const diagrams = find(settings.wrapClasses.diagrams);
+  const text = find(settings.wrapClasses.text);
 
-  if (!diagrams.length || !text.length) {
+  if (!diagrams || !text) {
     return null;
   }
-
-  return new HTMLHandles(
-    wrap,
-    diagrams[0] as HTMLElement,
-    text[0] as HTMLElement,
-    (songMeta.length && songMeta[0] as HTMLElement) || null,
-  );
+  return new HTMLHandles(wrap, diagrams, text, find(settings.wrapClasses.songMeta));
 }
 
+/** Finds the song's elements by the IDs in `settings.ids` */
 export function getHandlesFromId(): HTMLHandles | null {
   const { ids } = settings;
   const wrap = document.getElementById(ids.container);

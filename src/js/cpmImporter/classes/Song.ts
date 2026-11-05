@@ -35,6 +35,14 @@ export default class Song {
 
   chordNames: string[] = [];
 
+  /**
+   * The old library's name for `chordNames`; the Songbook reads `song.chords`.
+   * (A getter, instead of copying the array onto each song after it's made, as run() did.)
+   */
+  get chords(): string[] {
+    return this.chordNames;
+  }
+
   columnCount = 1;
 
   songBlocks: SongBlockArray = [];

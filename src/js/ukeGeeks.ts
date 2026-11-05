@@ -8,17 +8,32 @@ import { Chord, runLine } from './cpmImporter';
 import { definitions, shift, shiftChords } from './tunings';
 import { Fix, plot } from './htmlBeast';
 import { settings, InstrumentTunings } from './configs';
+import { FretBox } from './imageRenderer';
 import scriptasaurus from './scriptasaurus';
-import { escapeHtml, pack, trim } from './tools';
+import { StringDict, escapeHtml, pack, trim } from './tools';
 
-class ChordBrush extends Chord {
-  // @ts-ignore-next-line
-  // eslint-disable-next-line class-methods-use-this
-  plot(...args): void {
-    // @ts-ignore-next-line
-    plot(...args);
+/**
+ * The old library's `new ukeGeeks.chordBrush()`, which draws one chord diagram into an
+ * element; the Songbook's chord builder uses it.
+ * (It used to extend Chord, which it never needed, and pass `...args` straight to plot(),
+ * which took two @ts-ignores because TypeScript couldn't check untyped arguments.)
+ */
+/* eslint-disable class-methods-use-this -- methods, not functions, to keep the old `new chordBrush().plot()` API */
+class ChordBrush {
+  /** The old API had one; it does nothing */
+  init(): void {
+    // nothing to set up
+  }
+
+  /**
+   * @param fontSettings default: `settings.fonts`
+   * @param colorSettings default: `settings.colors`
+   */
+  plot(chordBox: HTMLElement, chord: Chord, fretBox: FretBox, fontSettings?: StringDict, colorSettings?: StringDict): void {
+    plot(chordBox, chord, fretBox, fontSettings, colorSettings);
   }
 }
+/* eslint-enable class-methods-use-this */
 
 /**
  * Finds page HTML elements & creates ukeGeek objects;

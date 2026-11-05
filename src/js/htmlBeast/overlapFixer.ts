@@ -60,12 +60,9 @@ function getBox(ele: HTMLElement): Box {
  * source: http://www.cjboco.com/blog.cfm/post/determining-an-elements-width-and-height-using-javascript/
  */
 function getWidth(ele: HTMLElement): number {
-  if ('clip' in ele) {
-    // @ts-ignore-next-line
-    return ele.clip.width;
-  }
-
-  return 'pixelWidth' in ele.style ? ele.style.pixelWidth as number : ele.offsetWidth;
+  // This used to try `ele.clip.width` and `ele.style.pixelWidth` first. Both existed only in
+  // old Internet Explorer, and TypeScript (rightly) didn't know them, hence a @ts-ignore.
+  return ele.offsetWidth;
 }
 
 /**
@@ -82,12 +79,14 @@ function getOffsets(ele: HTMLElement): Box {
     width: 0,
   };
 
-  // eslint-disable-next-line no-restricted-globals
-  while (ele && !isNaN(ele.offsetLeft) && !isNaN(ele.offsetTop)) {
-    box.left += ele.offsetLeft - ele.scrollLeft;
-    box.top += ele.offsetTop - ele.scrollTop;
-    // @ts-ignore-next-line
-    ele = ele.offsetParent;
+  // Add up the offsets from each positioned ancestor. offsetParent is typed `Element | null`
+  // (it could be an SVG element), so `instanceof` checks it's an HTMLElement before using it;
+  // the loop used to need a @ts-ignore here.
+  let node: HTMLElement | null = ele;
+  while (node) {
+    box.left += node.offsetLeft - node.scrollLeft;
+    box.top += node.offsetTop - node.scrollTop;
+    node = node.offsetParent instanceof HTMLElement ? node.offsetParent : null;
   }
 
   return box;
