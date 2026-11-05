@@ -4,12 +4,11 @@ import { BlockTypes, CpmInstructions } from './interfaces/BlockTypesEnum';
 import { echo } from './debugWriter';
 import { readTabBlock } from './tabs';
 import { runLine } from './chordParser';
-import { BaseSongBlock, SongBlock, SongBlockArray, StringArray } from './interfaces/SongBlock';
+import { BaseSongBlock, SongBlock, SongBlockArray, isSongBlock } from './interfaces/SongBlock';
 import { getRenderedChordNames } from './getChordNames';
 import Song from './classes/Song';
 
 import { logger } from '../tools';
-import definitions from '../tunings';
 import { settings } from '../configs';
 
 /**
@@ -59,8 +58,11 @@ interface ParseFindings {
   firstChord: string,
 }
 
-// type guard
-const isSongBlock = (block: BaseSongBlock): block is SongBlock => block.type !== BlockTypes.TabBlock;
+/**
+ * While parsing, a tab block is still a SongBlock of raw lines (expandTabs() comes last), so
+ * this checks the type number: instructions and chords inside tabs must not be parsed.
+ */
+const isLyricBlock = (block: BaseSongBlock): block is SongBlock => block.type !== BlockTypes.TabBlock;
 
 function parseSongBlocks(text: string): { songBlocks: SongBlockArray, findings: ParseFindings } {
   text = stripHtml(text);
@@ -127,7 +129,6 @@ export function parseCPM(text: string): Song {
     }
   });
 
-  definitions.replace(song.chordDefs);
   song.chordNames = getRenderedChordNames(songBlocks);
 
   if (settings.opts.debugVerbose) {
@@ -218,7 +219,7 @@ function parseInstructions(songBlocks: SongBlockArray): void {
   /* eslint-enable key-spacing */
 
   songBlocks
-    .filter(isSongBlock)
+    .filter(isLyricBlock)
     .forEach((block) => {
       block.lines = block.lines.map((line) => {
         if (typeof line !== 'string' || !RegExes.INSTRUCTION.test(line)) {
@@ -231,7 +232,9 @@ function parseInstructions(songBlocks: SongBlockArray): void {
           .replace(/\r/, ''); // IE7 bug
 
         return {
-          type: verbToBlockTypeHash[verb] || `Undefined-${verb}`,
+          // An instruction we don't know, e.g. {textsize: 12}, is kept but never shown.
+          // (This used to store the string `Undefined-textsize` in this BlockTypes field.)
+          type: verbToBlockTypeHash[verb] || BlockTypes.Undefined,
           lines: [args.trim()],
         };
       });
@@ -245,7 +248,7 @@ function parseInstructions(songBlocks: SongBlockArray): void {
 function parseSimpleInstructions(songBlocks: SongBlockArray): number {
   let columnCount = 1;
   songBlocks
-    .filter(isSongBlock)
+    .filter(isLyricBlock)
     .forEach((block: SongBlock) => {
       block.lines = block.lines.map((line) => {
         if (typeof line !== 'string' || !RegExes.COLUMN_BREAK.test(line)) {
@@ -288,7 +291,7 @@ function markChordLines(songBlocks: SongBlockArray): { hasChords: boolean, first
 
   songBlocks
     .filter((block) => block.type === BlockTypes.TextBlock || block.type === BlockTypes.ChorusBlock)
-    .filter(isSongBlock)
+    .filter(isLyricBlock)
     .forEach((block) => {
       block.lines = block.lines.map((line) => {
         if (typeof line !== 'string') {
@@ -322,32 +325,29 @@ function markChordLines(songBlocks: SongBlockArray): { hasChords: boolean, first
  * needed two @ts-ignores because one object changed type mid-way.)
  */
 function expandTabs(songBlocks: SongBlockArray): SongBlockArray {
-  return songBlocks.map((block) => (block.type === BlockTypes.TabBlock && 'lines' in block
-    ? readTabBlock(block.lines as StringArray)
+  return songBlocks.map((block) => (block.type === BlockTypes.TabBlock && isSongBlock(block)
+    ? readTabBlock(block.lines.filter((line): line is string => typeof line === 'string'))
     : block));
 }
 
 /** Searches the songNodes for the specified block type, returning all matching node line (text) values. */
 function getInfo(songBlocks: SongBlockArray, type: BlockTypes): string[] {
-  const rtn: string[] = [];
-
-  songBlocks
-    .filter((block) => block.type === type)
-    // @ts-ignore-next-line
-    .forEach((block) => rtn.push(block.lines[0]));
-
-  songBlocks
-    .filter((block) => block.type === BlockTypes.TextBlock)
-    .filter(isSongBlock)
-    .forEach((block) => {
-      block.lines
-        // @ts-ignore-next-line
-        .filter((line) => line.type === type)
-        // @ts-ignore-next-line
-        .forEach((line) => rtn.push(line.lines[0]));
-    });
-
-  return rtn;
+  const firstLine = ({ lines }: SongBlock): string => (typeof lines[0] === 'string' ? lines[0] : '');
+  return songBlocks.flatMap((block) => {
+    if (!isLyricBlock(block)) {
+      return [];
+    }
+    if (block.type === type) {
+      return [firstLine(block)];
+    }
+    if (block.type !== BlockTypes.TextBlock) {
+      return [];
+    }
+    // instructions such as {title: ...} are lines inside a text block
+    return block.lines
+      .filter((line): line is SongBlock => typeof line !== 'string' && line.type === type)
+      .map(firstLine);
+  });
 }
 
 /** Removes HTML "pre" tags and comments. */

@@ -3,7 +3,7 @@
  */
 import { retune, RetuneMap } from './transpose';
 import { integer } from '../tools';
-import { chordNameAliases, InstrumentTunings } from '../configs';
+import { chordNameAliases, InstrumentTunings, settings } from '../configs';
 import { Chord, runBlock } from '../cpmImporter';
 
 /**
@@ -42,6 +42,8 @@ export function setInstrument(instrumentIndex: integer, offset: integer | string
   }
 
   const instrument = runBlock(text);
+  // the rest of the library (tabs, diagrams) reads the number of strings from here
+  settings.tuning = instrument.tuning;
   setChords(instrument.chords);
 }
 

@@ -61,6 +61,8 @@ export function renderSong(text: string, options: RenderOptions = {}): RenderedS
   ensureDictionary();
 
   const song = parseCPM(isHtml ? text : escapeHtml(text));
+  // the song's own {define}s take priority over the dictionary while it's drawn
+  definitions.replace(song.chordDefs);
   const diagrams = referenceDiagrams(song.chordNames);
 
   let html = songToHTML(song, { exclude: META_BLOCK_TYPES, inlineDiagrams });

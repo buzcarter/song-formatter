@@ -3,7 +3,6 @@
  * text written in CPM syntax (looks for instrument, tuning, and define statements).
  */
 
-import { settings } from '../configs';
 import { pack } from '../tools';
 import Instrument from '../tunings/classes/Instrument';
 import { runLines } from './chordParser';
@@ -50,10 +49,9 @@ export function runBlock(text: string): Instrument {
   const name = getInstrument(text) || '';
   const tuning = getTuning(text) || [];
 
-  // TODO: want to pass this dependency, not set -- unexpected sideeffect!!
-  settings.tuning = tuning;
-
-  const chords = runLines(lines);
+  // The chords are read for this instrument's number of strings. (This used to set
+  // `settings.tuning` here, a side effect of parsing; setInstrument() does that now.)
+  const chords = runLines(lines, tuning.length);
   return new Instrument(
     getKey(name, tuning),
     name,

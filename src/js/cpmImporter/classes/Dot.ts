@@ -19,7 +19,8 @@
  * chord much easier to play.
  */
 export default class Dot {
-  constructor(string: number, fret: number, finger: number) {
+  /** Values can be `null` when an `add:` clause leaves one out */
+  constructor(string: number | null, fret: number | null, finger: number | null) {
     this.string = string;
     this.fret = fret;
     this.finger = finger;

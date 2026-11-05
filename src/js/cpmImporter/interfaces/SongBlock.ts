@@ -32,4 +32,10 @@ export interface SongBlock extends BaseSongBlock {
 
 export type SongBlockArray = (TabBlock | SongBlock)[];
 
+// Type guards: functions whose `block is X` return type tells TypeScript which kind of
+// block it has inside an `if`. They check the shape (`staves` or `lines`), which is what
+// the code then uses.
+export const isTabBlock = (block: BaseSongBlock): block is TabBlock => 'staves' in block;
+export const isSongBlock = (block: BaseSongBlock): block is SongBlock => 'lines' in block;
+
 export default SongBlock;
