@@ -37,6 +37,7 @@
     "build": "npm run build:clean && npm run build:js && npm run build:types && npm run build:css",
     "build:clean": "rimraf dist .tmp",
     "build:js": "webpack --mode production",
+    "build:site": "node scripts/build-site.cjs",
     "build:types": "dts-bundle-generator --project tsconfig.build.json --out-file dist/song-formatter.d.ts src/js/index.ts && node scripts/finish-types.cjs",
     "build:css": "webpack --config webpack.config.css.cjs --mode production",
     "lint": "eslint .",

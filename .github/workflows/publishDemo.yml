@@ -20,14 +20,14 @@ jobs:
         name: Install NPM Packages 🔧
       - run: npm run test
         name: Run unit tests 🧪
-      - run: npm run build
-        name: Build distribution bundles 📦
+      - run: npm run build && npm run build:site
+        name: Build distribution bundles and demo site 📦
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          folder: dist
+          folder: .site
           branch: gh-pages
           clean: true

@@ -11,6 +11,8 @@ __tests__
 .vscode
 *.tgz
 coverage
+.site
+scripts
 jest
 jest.config.cjs
 src
