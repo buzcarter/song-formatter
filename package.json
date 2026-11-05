@@ -24,7 +24,7 @@
   },
   "unpkg": "./dist/song-formatter.bundle.js",
   "jsdelivr": "./dist/song-formatter.bundle.js",
-  "author": "B.Carter <buz@ukegeeks.com>",
+  "author": "B.Carter <buz@ukegeeks.org>",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
