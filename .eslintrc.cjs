@@ -63,5 +63,13 @@ module.exports = {
       es6: true,
       jest: true,
     },
+  }, {
+    // the parity and snapshot tests run in jsdom, a browser-like environment
+    files: [
+      'test/**/*.test.js',
+    ],
+    env: {
+      browser: true,
+    },
   }],
 };
