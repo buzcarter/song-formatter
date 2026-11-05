@@ -1,4 +1,5 @@
 import { settings } from '../configs';
+import { escapeHtml } from '../tools';
 
 import { ChordsStyles as Styles } from './Styles';
 
@@ -23,10 +24,14 @@ function encloseChords(chordNames: string[], text: string): string {
   const closeBracket = retainBrackets ? ']' : ' ';
   // eslint-disable-next-line no-restricted-syntax, guard-for-in
   for (const i in chordNames) {
+    // The name comes from the song's HTML text, where `<`, `>` and `&` are already escaped but
+    // quotes aren't, so a `"` in a chord name, `[A" onclick="..."]`, could end the attribute
+    // and add its own. Escaping it for the attribute keeps it a value.
+    const attr = escapeHtml(chordNames[i]);
     do { /* empty */ }
     while (text.length !== (
       // eslint-disable-next-line no-cond-assign
-      text = text.replace(`[${chordNames[i]}]`, `<code data-chordName="${chordNames[i]}"><strong>${openBracket}<em>${chordNames[i]}</em>${closeBracket}</strong></code>`)
+      text = text.replace(`[${chordNames[i]}]`, `<code data-chordName="${attr}"><strong>${openBracket}<em>${chordNames[i]}</em>${closeBracket}</strong></code>`)
     ).length);
   }
   return text;

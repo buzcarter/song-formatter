@@ -12,8 +12,9 @@ let errList: string[] = [];
 
 /**
  * read Music, find chords, generate HTML version of song
+ * @param html the song as HTML text (already escaped); by default it's read from the page
  */
-export function processSong(handles: HTMLHandles | null): Song | null {
+export function processSong(handles: HTMLHandles | null, html?: string): Song | null {
   const { meta, text, wrap } = handles || {};
   if (!handles?.diagrams || !text || !wrap) {
     return null;
@@ -27,7 +28,7 @@ export function processSong(handles: HTMLHandles | null): Song | null {
     BlockTypes.UkeGeeksMeta,
   ];
 
-  const song = parseCPM(text.innerHTML);
+  const song = parseCPM(typeof html === 'string' ? html : text.innerHTML);
   text.innerHTML = songToHTML(song, { exclude: metaBlockTypes });
   if (meta) {
     meta.innerHTML = songToHTML(song, {
