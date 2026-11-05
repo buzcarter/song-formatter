@@ -1,0 +1,159 @@
+{
+ "source": "UkeGeeks 1.5.1 (3a3336c) js/ukeGeeks.scriptasaurus.merged.js",
+ "configs": {
+  "soprano": {
+   "song": {
+    "title": "Auto-convert \"Plain Text\" to ChordPro",
+    "st": "Lyrics and Chords on Separate Lines",
+    "st2": "",
+    "album": "",
+    "artist": "Mr.Automatic",
+    "key": "",
+    "hasChords": false,
+    "ugsMeta": [],
+    "chords": [],
+    "defs": []
+   },
+   "alerts": [],
+   "referenceDiagrams": [],
+   "ignoredChords": null,
+   "inlineChords": [],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn","ugsNoChords"]
+  },
+  "soprano-inline": {
+   "song": {
+    "title": "Auto-convert \"Plain Text\" to ChordPro",
+    "st": "Lyrics and Chords on Separate Lines",
+    "st2": "",
+    "album": "",
+    "artist": "Mr.Automatic",
+    "key": "",
+    "hasChords": false,
+    "ugsMeta": [],
+    "chords": [],
+    "defs": []
+   },
+   "alerts": [],
+   "referenceDiagrams": [],
+   "ignoredChords": null,
+   "inlineChords": [],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn","ugsNoChords"]
+  },
+  "baritone": {
+   "song": {
+    "title": "Auto-convert \"Plain Text\" to ChordPro",
+    "st": "Lyrics and Chords on Separate Lines",
+    "st2": "",
+    "album": "",
+    "artist": "Mr.Automatic",
+    "key": "",
+    "hasChords": false,
+    "ugsMeta": [],
+    "chords": [],
+    "defs": []
+   },
+   "alerts": [],
+   "referenceDiagrams": [],
+   "ignoredChords": null,
+   "inlineChords": [],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn","ugsNoChords"]
+  },
+  "baritone-inline": {
+   "song": {
+    "title": "Auto-convert \"Plain Text\" to ChordPro",
+    "st": "Lyrics and Chords on Separate Lines",
+    "st2": "",
+    "album": "",
+    "artist": "Mr.Automatic",
+    "key": "",
+    "hasChords": false,
+    "ugsMeta": [],
+    "chords": [],
+    "defs": []
+   },
+   "alerts": [],
+   "referenceDiagrams": [],
+   "ignoredChords": null,
+   "inlineChords": [],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn","ugsNoChords"]
+  },
+  "adfb": {
+   "song": {
+    "title": "Auto-convert \"Plain Text\" to ChordPro",
+    "st": "Lyrics and Chords on Separate Lines",
+    "st2": "",
+    "album": "",
+    "artist": "Mr.Automatic",
+    "key": "",
+    "hasChords": false,
+    "ugsMeta": [],
+    "chords": [],
+    "defs": []
+   },
+   "alerts": [],
+   "referenceDiagrams": [],
+   "ignoredChords": null,
+   "inlineChords": [],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn","ugsNoChords"]
+  },
+  "adfb-inline": {
+   "song": {
+    "title": "Auto-convert \"Plain Text\" to ChordPro",
+    "st": "Lyrics and Chords on Separate Lines",
+    "st2": "",
+    "album": "",
+    "artist": "Mr.Automatic",
+    "key": "",
+    "hasChords": false,
+    "ugsMeta": [],
+    "chords": [],
+    "defs": []
+   },
+   "alerts": [],
+   "referenceDiagrams": [],
+   "ignoredChords": null,
+   "inlineChords": [],
+   "inlineImages": {},
+   "tabs": [],
+   "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+   "wrapClasses": ["ugs-song-wrap","ugsInlineDiagrams","ugsLayoutTwoColumn","ugsNoChords"]
+  }
+ },
+ "runMarkup": {
+  "song": {
+   "title": "Auto-convert \"Plain Text\" to ChordPro",
+   "st": "Lyrics and Chords on Separate Lines",
+   "st2": "",
+   "album": "",
+   "artist": "Mr.Automatic",
+   "key": "",
+   "hasChords": false,
+   "ugsMeta": [],
+   "chords": [],
+   "defs": []
+  },
+  "alerts": [],
+  "referenceDiagrams": [],
+  "ignoredChords": null,
+  "inlineChords": [],
+  "inlineImages": {},
+  "tabs": [],
+  "bodyHtml": "<h6 class=\"ugsComment\">Intro</h6>\n<pre class=\"ugsPlain\">Em Gaug Em6 Gaug A9</pre>\n<h6 class=\"ugsComment\">Verse 1: OK</h6>\n<pre class=\"ugsPlain\">Gaug   Em6  B7\nSummer-time\nEm6     B7        Em6  B7 Em6\nan' the livin' is easy-y\nB7   Em6 Am      C Am7     C      Gdim B    F7 B\nFish are jumpin'   an' the cotton is   high.</pre>\n<h6 class=\"ugsComment\">Verse 2: Unrecognized Chords</h6>\n<pre class=\"ugsPlain\">Gaug   Gm7b5  B7\nSummer-time (whoops! didn't recognize those chords!)\nC            B/F\nWhat happens when\nD/G     C\nNot all slash-chords work</pre>\n<h6 class=\"ugsComment\">Verse 3: Chord Blocks</h6>\n<pre class=\"ugsPlain\">C   F   G  B7\nD  G    C\nB  B7</pre>\n",
+  "wrapClasses": ["ugs-song-wrap","ugsLayoutTwoColumn","ugsNoChords"]
+ }
+}
