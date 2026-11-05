@@ -11,6 +11,7 @@ First beta, published under the npm `beta` tag. The UkeGeeks Songbook renders wi
 - All output is HTML-escaped. `scriptasaurus.run(markup)` renders the given text (#33).
 - No `@ts-ignore`, stricter TypeScript settings (#35).
 - Node 24, TypeScript 5.9, ESLint 10, Jest 30 (#36).
+- `settings.scale(multiplier)` from the old API (the UkeGeeks WordPress plugin uses it).
 - `dist/css/` has the song stylesheets on their own, for pages with their own layout.
 - The demo site is deployed with GitHub Actions instead of the `gh-pages` branch.
 

@@ -1,5 +1,6 @@
 import { Settings } from './interfaces/Settings';
 import { InstrumentTunings } from './globalConsts';
+import { scale } from './scaleSettings';
 
 /**
  * Customize your installation. This JSON object controls appearance and
@@ -169,6 +170,14 @@ const settings: Settings = Object.seal({
   getLastStringName() {
     return settings.tuning[0] ?? '';
     // export const LAST_STRING_NAME = 'G';
+  },
+
+  /**
+   * Makes the chord diagrams bigger or smaller: multiplies the diagram's sizes and font sizes.
+   * From the old library's API; the UkeGeeks WordPress plugin calls it.
+   */
+  scale(multiplier: number) {
+    scale(settings, multiplier);
   },
 
   /**
