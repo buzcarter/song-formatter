@@ -53,7 +53,17 @@ describe('transpose', () => {
       }, {
         value: 'C#dim7',
         steps: 7,
-        expectedResult: 'Abdim7',
+        // the sharp, as the old library picked
+        expectedResult: 'G#dim7',
+      }, {
+        // a natural-note result must keep the suffix
+        value: 'Em',
+        steps: -5,
+        expectedResult: 'Bm',
+      }, {
+        value: 'Bbmaj7',
+        steps: -13,
+        expectedResult: 'Amaj7',
       }];
 
       tests.forEach(({ value, steps, expectedResult }) => {
