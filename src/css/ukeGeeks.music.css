@@ -298,9 +298,10 @@
   width: 40px;
 }
 
-.ugsInlineDiagrams .ugs-diagrams--chord-img svg {
+/* Only the mini-diagrams above the lyrics (inside <code>). Without `code` this also matched
+   the reference diagrams beside the song, shrinking them whenever inline diagrams were on. */
+.ugsInlineDiagrams code .ugs-diagrams--chord-img svg {
   max-width: 60px;
-  /* actually, not sure what setting this fixes/triggers, `cetp it works */
 }
 
 .ugsChords code svg,
