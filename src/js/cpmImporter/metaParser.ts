@@ -40,10 +40,12 @@ function getKey(name: string, tuning: string[]): string {
  * @param text Multiline text block containing definition, instrument, and tuning statements.
  */
 export function runBlock(text: string): Instrument {
-  // TODO: newlines get lost in strings, do I always rely on "{"?
+  // Usually one instruction per line. If the text has no line breaks (they can get lost along
+  // the way), split before each "{" instead. The (?=...) "lookahead" splits without removing
+  // the "{": runLine() needs it, and a plain split('{') dropped it, so no chords were found.
   let lines = text.split('\n');
   if (lines.length < 2) {
-    lines = text.split('{');
+    lines = text.split(/(?=\{)/);
   }
 
   const name = getInstrument(text) || '';
