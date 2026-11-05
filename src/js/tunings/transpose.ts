@@ -54,17 +54,18 @@ export function shift(name: string, steps: number = 0): string | null {
     return null;
   }
   let tone = (toneInfo.tone + steps) % 12;
-  // TODO: negative steps are allowed!!!
+  // `%` keeps the sign in JavaScript (-5 % 12 is -5), so wrap negative steps back into 0-11
   if (tone < 0) {
     tone += 12;
   }
 
-  // TODO: this is nuts? reduce????
-  const result = Object.keys(NoteToToneMap)
-    .filter((key) => tone === NoteToToneMap[key])
-    .reduce((acc, key) => key + toneInfo.suffix);
+  // Several names can share a tone (A# and Bb are both 1). Like the old library, use the
+  // first one in NoteToToneMap, which is the sharp. (This used to be a `reduce` with no
+  // starting value: it returned the LAST name, a flat, and when only one name matched,
+  // such as "B", reduce never called its callback, so the suffix was lost: Em -5 -> "B".)
+  const note = Object.keys(NoteToToneMap).find((key) => NoteToToneMap[key] === tone);
 
-  return result || null;
+  return note ? note + toneInfo.suffix : null;
 }
 
 /**
@@ -103,8 +104,9 @@ export function retune(offset: number | undefined): RetuneMap[] {
 }
 
 /**
- * returns copy of `chordNames`, each chord shifted by `semitoneSteps` steps (up or down)
+ * returns copy of `chordNames`, each chord shifted by `semitoneSteps` steps (up or down).
+ * A name that can't be transposed (e.g. "N.C.") becomes `null`, so the result always lines
+ * up with `chordNames`, as in the old library. (It used to drop them, shifting the rest.)
  */
-export const shiftChords = (chordNames: string[], semitoneSteps: number): string[] => chordNames
-  .map((c) => shift(c, semitoneSteps))
-  .filter(Boolean) as string[];
+export const shiftChords = (chordNames: string[], semitoneSteps: number): (string | null)[] => chordNames
+  .map((c) => shift(c, semitoneSteps));

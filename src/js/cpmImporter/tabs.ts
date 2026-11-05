@@ -3,7 +3,7 @@
  * Creates "packed" versions of the tabs, including a "key line" that's comprised
  * only of '-' and '*' -- the asterisks denoting where a dot will eventually be placed.
  */
-import { StringArray, ExpandedTabs, TabBlock } from './interfaces/SongBlock';
+import { StringArray, ExpandedTabs, TabBlock, TabStaff } from './interfaces/SongBlock';
 import { BlockTypes } from './interfaces/BlockTypesEnum';
 
 import { getLastStringName, getNumStrings } from '../configs';
@@ -22,12 +22,30 @@ const RegExes = Object.freeze({
 });
 
 /**
+ * Reads the lines of a `{start_of_tab}` block. Every `getNumStrings()` lines make one staff,
+ * so a block can hold several staves; lines left over at the end that don't make a whole
+ * staff are ignored, as the old library did. (Only the first staff used to be drawn.)
+ * @param lines the block's lines, trimmed, without blank lines
+ */
+export function readTabBlock(lines: StringArray): TabBlock {
+  const numStrings = getNumStrings();
+  const staves: TabStaff[] = [];
+  for (let i = 0; i + numStrings <= lines.length; i += numStrings) {
+    staves.push(readTabs(lines.slice(i, i + numStrings)));
+  }
+  return {
+    type: BlockTypes.TabBlock,
+    staves,
+  };
+}
+
+/**
  * This is insanely long, insanely kludgy, but, insanely, it works. This will read break a block of text into
  * four lines (the ukulele strings), then find which frets are used by each. Then, the hard part, pack un-needed
  * dashes. Once it's done that a 2-dimentional array (strings X frets) is created and returned.
- * @param tabStrings Block of tablbabure to be parsed
+ * @param tabStrings One staff: exactly one line per string
  */
-export function readTabs(tabStrings: StringArray): TabBlock {
+export function readTabs(tabStrings: StringArray): TabStaff {
   const hasLabels = tabStrings[getNumStrings() - 1][0] === getLastStringName();
   if (hasLabels) {
     stripStringLabels(tabStrings);
@@ -38,7 +56,6 @@ export function readTabs(tabStrings: StringArray): TabBlock {
   const guide = getGuideLine(symbols, minLength);
 
   return {
-    type: BlockTypes.TabBlock,
     tabs: getPackedLines(frets, symbols, guide, minLength),
     hasLabels,
   };

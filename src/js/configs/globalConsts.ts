@@ -19,6 +19,8 @@ export const InstrumentTunings: NumberDict = Object.freeze({
   none: 0,
   /** GCEA */
   sopranoUke: 0,
-  /** DGBA  -- Baritone's "A" fingering is the Soprano's "D" */
+  /** DGBE -- 5 steps lower than soprano: baritone's "A" fingering is the soprano's "D" */
   baritoneUke: 5,
+  /** ADF#B -- 2 steps higher than soprano */
+  alternateUke: -2,
 });

@@ -18,26 +18,35 @@ interface SongBlockOptions {
 const isSongBlock = (block: BaseSongBlock): block is SongBlock => block.type !== BlockTypes.TabBlock;
 const isTabBlock = (block: BaseSongBlock): block is TabBlock => !isSongBlock(block);
 
+function isIncluded(type: BlockTypes, options?: SongBlockOptions): boolean {
+  if (!options || type === BlockTypes.TextBlock) {
+    return true;
+  }
+  if (Array.isArray(options.include)) {
+    return options.include.includes(type);
+  }
+  if (Array.isArray(options.exclude)) {
+    return !options.exclude.includes(type);
+  }
+  return true;
+}
+
 function songBlocksToHTML(songBlocks: SongBlockArray, options?: SongBlockOptions): string {
   let nextType;
 
+  // Excluded blocks are skipped here rather than filtered out first: the <pre> logic below
+  // looks at the blocks either side (`songBlocks[i - 1]`, `songBlocks[i + 1]`), and those
+  // indexes have to point into the same array we're walking. With a `.filter()` first, `i`
+  // counted the filtered list but looked up the unfiltered one, so lines were split into
+  // separate <pre>s, or a <pre> was opened and never closed (nested <pre>s).
   return songBlocks
-    .filter(({ type }) => {
-      if (!options || type === BlockTypes.TextBlock) {
-        return true;
-      }
-      if (Array.isArray(options.include)) {
-        return options.include.includes(type);
-      }
-      if (Array.isArray(options.exclude)) {
-        return !options.exclude.includes(type);
-      }
-      return true;
-    })
     .reduce((html: string, block: BaseSongBlock, i: number) => {
+      if (!isIncluded(block.type, options)) {
+        return html;
+      }
       if (isTabBlock(block)) {
         html += `<pre class="${Styles.Tabs}">`;
-        html += generateTabSvg(block);
+        html += block.staves.map((staff) => generateTabSvg(staff)).join('');
         html += '</pre>\n';
         return html;
       }

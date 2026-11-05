@@ -1853,7 +1853,7 @@
  },
  "runMarkup": {
   "song": {
-   "title": "Theme Song from &quot;The Dick van Dyke Show&quot;",
+   "title": "Theme Song from \"The Dick van Dyke Show\"",
    "st": "",
    "st2": "",
    "album": "Dick Van Dyke Show Theme",
@@ -1861,7 +1861,7 @@
    "key": "Dm",
    "hasChords": true,
    "ugsMeta": [
-    "Sung by Dick van Dyke on &quot;Wait, Wait Don't Tell Me!&quot; 10/23/2010",
+    "Sung by Dick van Dyke on \"Wait, Wait Don't Tell Me!\" 10/23/2010",
     "For educational purposes ONLY -- sample, non-copyright infringing nonsense song"
    ],
    "chords": ["Dm","Gm","D7","Am","F","Dm7","C","G7"],

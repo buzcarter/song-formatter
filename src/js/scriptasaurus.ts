@@ -5,7 +5,7 @@ import {
   processSong,
 } from './htmlBeast';
 import { definitions } from './tunings';
-import { JsonData, integer, logger } from './tools';
+import { JsonData, escapeHtml, integer, logger } from './tools';
 import { settings, InstrumentTunings, sopranoUkuleleGcea } from './configs';
 import { Song } from './cpmImporter';
 
@@ -18,10 +18,13 @@ export function init(options?: JsonData): void {
 
 /**
  * Runs all Scriptasaurus methods using the element Ids defined in the settings class.
+ * @param markup the song's ChordPro text. If given it's rendered instead of the text already on
+ * the page; this is how the Songbook's editor re-renders as you type. It's plain text: it gets
+ * HTML-escaped first, so "<" shows as "<" and can't add tags.
  */
-export function run(): Song | null {
+export function run(markup?: string): Song | null {
   logger.log('run (Classic Mode)');
-  const song = processSong(getHandlesFromId());
+  const song = processSong(getHandlesFromId(), typeof markup === 'string' ? escapeHtml(markup) : undefined);
   if (!song) {
     return null;
   }

@@ -10,6 +10,7 @@ import { definitions, shift, shiftChords } from './tunings';
 import { Fix, plot } from './htmlBeast';
 import { settings, InstrumentTunings } from './configs';
 import scriptasaurus from './scriptasaurus';
+import { escapeHtml, pack, trim } from './tools';
 
 class ChordBrush extends Chord {
   // @ts-ignore-next-line
@@ -40,7 +41,14 @@ const publicInterface = {
   },
   settings,
   scriptasaurus, // legacy
+  /** The old library's helpers that the Songbook's editor still calls */
   toolsLite: {
+    escapeHtml,
+    pack,
+    trim,
+    hasClass(ele: HTMLElement, className: string) {
+      return ele.classList.contains(className);
+    },
     addClass(ele: HTMLDivElement, className: string) {
       ele.classList.add(className);
     },

@@ -109,16 +109,24 @@ function collect({ document, song, alerts, imageSelector, readImage }) {
 
   const ignored = diagrams.querySelector('.ugsIgnoredChords');
 
+  // The song's title, artist etc. are HTML (the Songbook puts them in with innerHTML), so
+  // compare them the way a browser reads them: `&quot;` and `"` are the same text.
+  const asHtml = (value) => {
+    const el = document.createElement('div');
+    el.innerHTML = value;
+    return el.innerHTML;
+  };
+
   return {
     song: song && {
-      title: song.title,
-      st: song.st,
-      st2: song.st2,
-      album: song.album,
-      artist: song.artist,
-      key: song.key,
+      title: asHtml(song.title),
+      st: asHtml(song.st),
+      st2: asHtml(song.st2),
+      album: asHtml(song.album),
+      artist: asHtml(song.artist),
+      key: asHtml(song.key),
       hasChords: song.hasChords,
-      ugsMeta: song.ugsMeta,
+      ugsMeta: (song.ugsMeta || []).map(asHtml),
       chords: song.chords,
       defs: (song.defs || song.chordDefs || []).map(toDefinition),
     },

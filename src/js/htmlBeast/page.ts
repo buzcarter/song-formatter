@@ -7,12 +7,14 @@ import { Fix } from './overlapFixer';
 import { songToHTML } from './song';
 import { PageStyles as Styles } from './Styles';
 
+/** Chords the last song used that have no diagram; see getUnknownChordErrors() */
 let errList: string[] = [];
 
 /**
  * read Music, find chords, generate HTML version of song
+ * @param html the song as HTML text (already escaped); by default it's read from the page
  */
-export function processSong(handles: HTMLHandles | null): Song | null {
+export function processSong(handles: HTMLHandles | null, html?: string): Song | null {
   const { meta, text, wrap } = handles || {};
   if (!handles?.diagrams || !text || !wrap) {
     return null;
@@ -26,7 +28,7 @@ export function processSong(handles: HTMLHandles | null): Song | null {
     BlockTypes.UkeGeeksMeta,
   ];
 
-  const song = parseCPM(text.innerHTML);
+  const song = parseCPM(typeof html === 'string' ? html : text.innerHTML);
   text.innerHTML = songToHTML(song, { exclude: metaBlockTypes });
   if (meta) {
     meta.innerHTML = songToHTML(song, {
@@ -43,8 +45,9 @@ export function processSong(handles: HTMLHandles | null): Song | null {
     showInline(song.chordNames);
   }
 
-  // error reporting:
-  errList = errList.concat(getErrors());
+  // error reporting: only this song's unknown chords. (These used to be appended to
+  // the previous songs' list, so the alert repeated old chords after every re-render.)
+  errList = [...getErrors()];
 
   if (wrap) {
     wrap.classList.toggle(Styles.NO_CHORDS, !song.hasChords);

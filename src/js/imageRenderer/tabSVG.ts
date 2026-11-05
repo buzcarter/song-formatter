@@ -3,7 +3,7 @@ import { toString } from './imageSVG';
 import { Position } from './interfaces/SVGImage';
 
 import { settings, getNumStrings } from '../configs';
-import { ExpandedTabs, TabBlock } from '../cpmImporter';
+import { ExpandedTabs, TabStaff } from '../cpmImporter';
 
 const { tabs: tabSettings } = settings;
 
@@ -120,7 +120,8 @@ function drawLabels(img: ImageBuilder, pos: Position): void {
   }
 }
 
-export function generateTabSvg({ hasLabels, tabs }: TabBlock): string {
+/** Draws one staff of tablature */
+export function generateTabSvg({ hasLabels, tabs }: TabStaff): string {
   const labelOffset = (hasLabels) ? tabSettings.labelWidth : 0;
   // how much space?
   const height = ((getNumStrings() - 1) * tabSettings.lineSpacing) + (2 * tabSettings.dotRadius) + tabSettings.bottomPadding;

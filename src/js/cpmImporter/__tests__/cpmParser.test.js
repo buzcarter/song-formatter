@@ -21,6 +21,31 @@ describe('cpmParser', () => {
       };
       expect(results).toEqual(expect.objectContaining(expectedResult));
     });
+
+    it('should list only chords that are shown', () => {
+      const input = [
+        '{title: Not a chord [Am]}',
+        '# a comment line [Bm]',
+        '<!-- an HTML comment [Cm] -->',
+        '{c: Intro [D7]}',
+        '[E7]Lyrics and [F]more',
+        '{soc}',
+        '[G]Chorus',
+        '{eoc}',
+      ].join('\n');
+      expect(parse(input).chordNames).toEqual(['D7', 'E7', 'F', 'G']);
+    });
+
+    it('should not carry anything over from the previous song', () => {
+      const first = parse('{key: G}\n[Am]One\n{column_break}\n[C]two\n{colb}\nthree');
+      expect(first).toMatchObject({ columnCount: 3, hasChords: true, key: 'G' });
+
+      const second = parse('[D7]Just one column');
+      expect(second).toMatchObject({ columnCount: 1, hasChords: true, key: 'D7' });
+
+      const third = parse('No chords at all');
+      expect(third).toMatchObject({ columnCount: 1, hasChords: false, key: '' });
+    });
   });
 
   describe('stripHtml', () => {

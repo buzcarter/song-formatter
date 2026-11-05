@@ -101,33 +101,42 @@ export function generateChordSvg(chord: Chord, fretBox: FretBox, fontSettings: S
   return img;
 }
 
-/** When requested diminsions won't accomodate other settings force adjustments. Allow for padding for text above and on sides. */
-function adjustDimensions(width: number, height: number, numStrings: integer, numFrets: integer, fretSpace: integer, stringSpace: integer): {
-    width: number,
-    height: number,
-  } {
+/**
+ * The image is normally `fretBox.width` x `fretBox.height`, as in the old library, and only
+ * grows if the fretboard wouldn't fit. Width allows about one string-space either side of
+ * the strings. Height is the fretboard's top (room for the chord name) plus the frets.
+ * (Height used to assume 1.3 frets of room above, wherever the fretboard started, which made
+ * the 50px inline diagrams 56.7px tall although they start 2px from the top.)
+ */
+function adjustDimensions(
+  { width, height, stringSpace, fretSpace, lineWidth }: FretBox,
+  topY: number,
+  numStrings: integer,
+  numFrets: integer,
+): { width: number, height: number } {
   const requiredWidth = (numStrings + 0.9) * stringSpace;
-  const requiredHeight = (numFrets + 1.3) * fretSpace;
+  const requiredHeight = topY + numFrets * fretSpace + lineWidth;
 
   return {
-    width: requiredWidth < width ? width : requiredWidth,
-    height: requiredHeight < height ? height : requiredHeight,
+    width: Math.max(width, requiredWidth),
+    height: Math.max(height, requiredHeight),
   };
 }
 
 function newFretboard(
   { x: topX, y: topY }: Position,
-  { width, height, lineWidth, fretSpace, stringSpace }: FretBox,
+  fretBox: FretBox,
   numStrings: integer,
   numFrets: integer,
   fretColor: string = '#000',
 ): ImageBuilder {
+  const { lineWidth, fretSpace, stringSpace } = fretBox;
   // width offset, a "subpixel" adjustment
   const offset = lineWidth / 2;
   const stringLinesHeight = numFrets * fretSpace;
   const fretLinesWidth = (numStrings - 1) * stringSpace;
 
-  const newDims = adjustDimensions(width, height, numStrings, numFrets, fretSpace, stringSpace);
+  const newDims = adjustDimensions(fretBox, topY, numStrings, numFrets);
 
   const fretboard = new ImageBuilder()
     .newImage(newDims.width, newDims.height)
