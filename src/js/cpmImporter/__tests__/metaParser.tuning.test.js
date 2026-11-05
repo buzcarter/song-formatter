@@ -27,7 +27,7 @@ describe('cpmParser', () => {
         if (expectedResult === null) {
           expect(results).toBe(expectedResult);
         } else {
-          expect(results).toEqual(expect.objectContaining(expectedResult));
+          expect(results).toEqual(expectedResult);
         }
       });
     });

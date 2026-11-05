@@ -22,7 +22,7 @@ const settings: Settings = Object.seal({
    * Chord Diagram Colors for fretboard's grid lines and text.
    */
   colors: {
-    /* eslint-disable key-spacing */
+
     fretLines: '#003366',
     dots: '#ff0000',
     dotText: '#ffffff',
@@ -30,7 +30,7 @@ const settings: Settings = Object.seal({
     fretText: '#4a4a4a',
     /* a muted string's 'X' stroke color */
     xStroke: '#444444',
-    /* eslint-enable key-spacing */
+
   },
 
   fretBox: {

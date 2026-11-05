@@ -136,7 +136,7 @@ function getGuideLine(symbols: StringArray, minLength: number): string {
 
   guide = guide.replace(RegExes.DOUBLE_DASH, '- ');
   let lastGuide = guide;
-  // eslint-disable-next-line no-constant-condition
+
   while (true) {
     guide = guide.replace(RegExes.SINGLE_DASH, '  ');
     if (guide === lastGuide) {
@@ -171,7 +171,7 @@ function getPackedLines(frets: StringArray[], symbols: StringArray, guide: strin
             return;
           }
           // a temp variable to hold the 'note'
-          let chrNote = '';
+          let chrNote: string;
           if (symbols[stringIdx]?.[guideIdx] === '*') {
             chrNote = frets[stringIdx]?.[fretCount] ?? '';
             fretCount++;

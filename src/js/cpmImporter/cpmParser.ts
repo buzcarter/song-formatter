@@ -1,5 +1,3 @@
-/* eslint-disable prefer-destructuring */
-
 import { BlockTypes, CpmInstructions } from './interfaces/BlockTypesEnum';
 import { echo } from './debugWriter';
 import { readTabBlock } from './tabs';

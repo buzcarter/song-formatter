@@ -13,7 +13,6 @@ export interface Position {
   y: number,
 }
 
-// eslint-disable-next-line no-shadow
 export enum LayerTypes {
   CIRCLE = 'circle',
   GROUP = 'group',

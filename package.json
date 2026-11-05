@@ -35,14 +35,15 @@
   "homepage": "https://github.com/buzcarter/song-formatter#readme",
   "scripts": {
     "build": "npm run build:clean && npm run build:js && npm run build:types && npm run build:css",
-    "build:clean": "rimraf dist .tmp",
+    "build:clean": "node -e \"for (const dir of ['dist', '.tmp', '.site']) require('fs').rmSync(dir, { recursive: true, force: true })\"",
     "build:js": "webpack --mode production",
-    "build:site": "node scripts/build-site.cjs",
     "build:types": "dts-bundle-generator --project tsconfig.build.json --out-file dist/song-formatter.d.ts src/js/index.ts && node scripts/finish-types.cjs",
     "build:css": "webpack --config webpack.config.css.cjs --mode production",
+    "build:site": "node scripts/build-site.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lint:ts": "eslint . --ext .ts",
+    "lint:ts": "eslint \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit -p .",
     "start": "webpack --mode development --watch",
     "test": "jest --silent --config ./jest.config.cjs",
     "test:watch": "npm test -- --watch",
@@ -65,21 +66,28 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
-    "@types/jquery": "^3.5.18",
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
+    "@eslint/eslintrc": "^3.3.7",
+    "@eslint/js": "^10.0.1",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "dts-bundle-generator": "^9.5.1",
-    "eslint": "^8.47.0",
+    "eslint": "^10.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.28.0",
-    "jest": "^29.6.2",
-    "jest-environment-jsdom": "^29.7.0",
-    "mini-css-extract-plugin": "^2.7.6",
-    "ts-loader": "^9.0.1",
-    "typescript": "~5.1.6",
-    "webpack": "^5.70.0",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.14.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
+    "jsdom": "^26.1.0",
+    "mini-css-extract-plugin": "^2.10.2",
+    "ts-loader": "^9.6.2",
+    "typescript": "~5.9",
+    "typescript-eslint": "^8.72.1",
+    "webpack": "^5.112.2",
     "webpack-cli": "^5.1.4"
+  },
+  "overrides": {
+    "eslint-config-airbnb-base": {
+      "eslint": "$eslint"
+    }
   }
 }
