@@ -66,16 +66,16 @@ export function get(chordName: string): Chord | null {
   // but get the fingering from the mapping
   const name = getAlias(chordName);
 
-  return retuneMap
+  // The first mapping that has a shape wins, as in the old library. (This was a filter/map/
+  // reduce whose reduce ignored its accumulator, so the LAST match won.)
+  const shape = retuneMap
     .filter((t) => name === t.original)
     .map((t) => underscoreGet(t.transposed))
-    .filter(Boolean)
-    .reduce((acc, c) => Object.assign(
-      new Chord(chordName),
-      c && {
-        dots: c.dots,
-        muted: c.muted,
-      }), null) || null;
+    .find((c): c is Chord => c !== null);
+
+  return shape
+    ? Object.assign(new Chord(chordName), { dots: shape.dots, muted: shape.muted })
+    : null;
 }
 
 /**

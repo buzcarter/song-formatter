@@ -60,9 +60,8 @@ function drawNotes(img: ImageBuilder, pos: Position, tabs: ExpandedTabs, lineWid
     y: pos.y,
   };
 
-  const numberOfStrings = settings.getNumStrings();
   tabs
-    .filter((tab, stringIndex) => stringIndex < numberOfStrings)
+    .slice(0, settings.getNumStrings())
     .forEach((tab) => {
       center.x = pos.x;
       tab.forEach((char, charIndex) => {
