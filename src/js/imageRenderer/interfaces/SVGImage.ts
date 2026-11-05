@@ -45,7 +45,8 @@ export interface GroupSVGLayer extends SVGBase {
 
 export interface LineSVGLayer extends SVGBase {
   type: LayerTypes.LINE,
-  endPoints: Position[]
+  /** a tuple: exactly two points, so endPoints[1] always exists */
+  endPoints: [Position, Position],
 }
 
 export interface RectangleSVGLayer extends SVGBase {

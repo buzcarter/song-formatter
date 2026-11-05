@@ -81,9 +81,14 @@ export function getTone(name: string): ToneThing | null {
     return null;
   }
 
-  const { prefix, suffix } = matches.groups;
+  const { prefix = '', suffix = '' } = matches.groups;
+  const tone = NoteToToneMap[prefix];
+  // e.g. "Cb" or "E#": a valid prefix for the regex, but not in NoteToToneMap
+  if (tone === undefined) {
+    return null;
+  }
   return {
-    tone: NoteToToneMap[prefix],
+    tone,
     prefix,
     suffix,
   };

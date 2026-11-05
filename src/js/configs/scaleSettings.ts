@@ -14,12 +14,12 @@ const SCALED_SIZES = [
  * TODO: determine minimum font size... 5pt/px?
  */
 function scaleFont(font: string, multiplier: number): string {
-  const matches = font.match(RegExes.VALUE);
-  if (!matches || matches.length < 2) {
+  const [, value, unit] = font.match(RegExes.VALUE) || [];
+  if (!value || !unit) {
     return font;
   }
-  const size = parseInt(matches[1], 10) * multiplier;
-  return font.replace(RegExes.VALUE, size + matches[2]);
+  const size = parseInt(value, 10) * multiplier;
+  return font.replace(RegExes.VALUE, size + unit);
 }
 
 /**
@@ -32,8 +32,8 @@ export function scale({ fonts, fretBox }: { fonts: StringDict, fretBox: FretBox 
     return;
   }
 
-  Object.keys(fonts).forEach((key) => {
-    fonts[key] = scaleFont(fonts[key], multiplier);
+  Object.entries(fonts).forEach(([key, font]) => {
+    fonts[key] = scaleFont(font, multiplier);
   });
 
   // (This used to walk every key of fretBox recursively, scaling whatever was a number, which

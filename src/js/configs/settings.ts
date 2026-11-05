@@ -167,7 +167,7 @@ const settings: Settings = Object.seal({
    * @todo Here for other instruments.
    */
   getLastStringName() {
-    return settings.tuning[0];
+    return settings.tuning[0] ?? '';
     // export const LAST_STRING_NAME = 'G';
   },
 

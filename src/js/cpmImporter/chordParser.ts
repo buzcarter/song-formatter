@@ -92,7 +92,7 @@ function getValues(input: string, numStrings: number): FretValue[] {
     .toLowerCase()
     .split(RegExes.SPACES_SPLIT);
 
-  if (split[0].length === input.length && input.length === numStrings) {
+  if (split[0]?.length === input.length && input.length === numStrings) {
     split = input.split('');
   }
   return split.map((value) => (value === MUTED_CHAR ? MUTED_CHAR : parseInt(value, 10)));

@@ -17,7 +17,7 @@ const RegExes = Object.freeze({
 
 function getInstrument(text: string): string | null {
   const matches = text.match(RegExes.INSTRUMENT);
-  return matches ? pack(matches[1]) : null;
+  return matches ? pack(matches[1] ?? '') : null;
 }
 
 function getTuning(text: string): string[] | null {
@@ -25,7 +25,7 @@ function getTuning(text: string): string[] | null {
   if (!matches) {
     return null;
   }
-  return matches[1].split(/\s+/);
+  return (matches[1] ?? '').split(/\s+/);
 }
 
 function getKey(name: string, tuning: string[]): string {

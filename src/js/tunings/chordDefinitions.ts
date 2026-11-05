@@ -109,11 +109,7 @@ function underscoreGet(chordName: string): Chord | null {
 }
 
 export function add(chords: Chord[]): integer {
-  if (chords.length) {
-    for (let i = 0; i < chords.length; i++) {
-      userChords.push(chords[i]);
-    }
-  }
+  userChords.push(...chords);
   return userChords.length;
 }
 

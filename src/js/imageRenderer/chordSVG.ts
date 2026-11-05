@@ -168,7 +168,7 @@ function newFretboard(
 }
 
 /** TODO: Loop over the muted array, dropping X's whenever a string position is `true` */
-function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | null, strokeColor: string): void {
+function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | null, strokeColor?: string): void {
   const { lineWidth, topLeftPos } = fretBox;
 
   const x = topLeftPos.x + lineWidth / 2;
@@ -185,7 +185,7 @@ function mutedStrings(img: ImageBuilder, fretBox: FretBox, muted: boolean[] | nu
 }
 
 /** Plots an "X" centered at POSITION */
-function drawX(img: ImageBuilder, pos: Position, fretBox: FretBox, strokeColor: string): void {
+function drawX(img: ImageBuilder, pos: Position, fretBox: FretBox, strokeColor?: string): void {
   const { xWidth } = fretBox;
   const x = pos.x - xWidth / 2;
   const y = pos.y - xWidth / 2;

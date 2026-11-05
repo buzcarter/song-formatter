@@ -121,7 +121,12 @@ export function Fix(ele: HTMLElement): void {
   const elements = Array.from(ele.querySelectorAll('code'));
   elements
     .forEach((e) => { e.style.paddingRight = '0px'; });
-  elements
-    .slice(0, -1)
-    .forEach((e, i) => checkChords(e, elements[i + 1]));
+  // compare each chord with the one after it
+  for (let i = 1; i < elements.length; i++) {
+    const previous = elements[i - 1];
+    const next = elements[i];
+    if (previous && next) {
+      checkChords(previous, next);
+    }
+  }
 }

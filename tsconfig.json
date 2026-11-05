@@ -10,6 +10,9 @@
     "rootDir": "./src/js",
     "sourceMap": true,
     "strict": true,
+    // Beyond strict: `array[i]` and `dict[key]` might be undefined, so TypeScript makes you say
+    // what happens then (`?? ''`, `?.`) instead of assuming the item is there.
+    "noUncheckedIndexedAccess": true,
     "target": "ES6"
   },
   "include": [

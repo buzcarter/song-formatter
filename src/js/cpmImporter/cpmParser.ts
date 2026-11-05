@@ -89,43 +89,23 @@ export function parseCPM(text: string): Song {
   song.songBlocks = songBlocks;
   song.hasChords = hasChords;
   song.columnCount = columnCount;
-  let info;
+  // The first {title}, {artist}... is used; a song can have two {subtitle}s.
+  // (`?? ''`: there may be none, and with noUncheckedIndexedAccess on, TypeScript says so.)
+  const info = (type: BlockTypes): string[] => getInfo(songBlocks, type);
+  const subtitles = info(BlockTypes.Subtitle);
+  song.title = info(BlockTypes.Title)[0] ?? '';
+  song.artist = info(BlockTypes.Artist)[0] ?? '';
+  song.st = subtitles[0] ?? '';
+  song.st2 = subtitles[1] ?? '';
+  song.album = info(BlockTypes.Album)[0] ?? '';
+  song.ugsMeta = info(BlockTypes.UkeGeeksMeta);
+  // no {key: ...}? then the first chord in the song
+  song.key = info(BlockTypes.Key)[0] ?? firstChord;
 
-  info = getInfo(songBlocks, BlockTypes.Title);
-  if (info.length) {
-    song.title = info[0];
-  }
-  info = getInfo(songBlocks, BlockTypes.Artist);
-  if (info.length) {
-    song.artist = info[0];
-  }
-  info = getInfo(songBlocks, BlockTypes.Subtitle);
-  if (info.length) {
-    song.st = info[0];
-    if (info.length > 1) {
-      song.st2 = info[1];
-    }
-  }
-  info = getInfo(songBlocks, BlockTypes.Album);
-  if (info.length) {
-    song.album = info[0];
-  }
-  info = getInfo(songBlocks, BlockTypes.UkeGeeksMeta);
-  if (info.length) {
-    song.ugsMeta = info;
-  }
-  info = getInfo(songBlocks, BlockTypes.Key);
-  if (info.length) {
-    song.key = info[0];
-  } else if (firstChord !== '') {
-    song.key = firstChord;
-  }
-
-  info = getInfo(songBlocks, BlockTypes.ChordDefinition);
-  info.forEach((t) => {
-    const d = runLine(`{define: ${t}}`);
-    if (d) {
-      song.chordDefs.push(d);
+  info(BlockTypes.ChordDefinition).forEach((definition) => {
+    const chord = runLine(`{define: ${definition}}`);
+    if (chord) {
+      song.chordDefs.push(chord);
     }
   });
 
@@ -305,7 +285,7 @@ function markChordLines(songBlocks: SongBlockArray): { hasChords: boolean, first
         if (chordFound && firstChord === '') {
           const matches = line.match(RegExes.CHORD);
           if (matches) {
-            firstChord = matches[1];
+            firstChord = matches[1] ?? '';
           }
         }
 
