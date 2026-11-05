@@ -46,7 +46,7 @@ function songBlocksToHTML(songBlocks: SongBlockArray, options?: SongBlockOptions
       }
       if (isTabBlock(block)) {
         html += `<pre class="${Styles.Tabs}">`;
-        html += generateTabSvg(block);
+        html += block.staves.map((staff) => generateTabSvg(staff)).join('');
         html += '</pre>\n';
         return html;
       }

@@ -1,6 +1,6 @@
 import { settings } from '../../configs';
 import TestData from './data/tabs.data';
-const { __test__ } = require('../tabs');
+const { __test__, readTabBlock } = require('../tabs');
 
 describe('tabs', () => {
   describe('getFretNumbers', () => {
@@ -68,5 +68,25 @@ describe('tabs', () => {
           expect(result).toEqual(symbols);
         });
       });
+  });
+
+  describe('readTabBlock', () => {
+    const staff = (fret) => [`A|--${fret}--|`, 'E|-----|', 'C|-----|', 'G|-----|'];
+
+    beforeEach(() => {
+      settings.tuning = ['G', 'C', 'E', 'A'];
+    });
+
+    it('should read every staff in a block', () => {
+      const block = readTabBlock([...staff(1), ...staff(2), ...staff(3)]);
+      expect(block.staves).toHaveLength(3);
+      expect(block.staves.map(({ tabs }) => tabs[0].filter((c) => /\d/.test(c)))).toEqual([['1'], ['2'], ['3']]);
+      expect(block.staves.every(({ hasLabels }) => hasLabels)).toBe(true);
+    });
+
+    it('should ignore lines left over that don\'t make a whole staff', () => {
+      const block = readTabBlock([...staff(1), 'A|--5--|', 'E|-----|']);
+      expect(block.staves).toHaveLength(1);
+    });
   });
 });

@@ -13,9 +13,9 @@ export function echo(songBlocks: SongBlockArray): void {
     const { type } = block;
     const typeName = getTypeName(type);
     if (block && type === BlockTypes.TabBlock) {
-      const { tabs } = block as TabBlock;
-      logger.log(`>> ${i}. ${type} node ("${typeName}"), ${tabs.length} lines`);
-      logger.json(tabs);
+      const { staves } = block as TabBlock;
+      logger.log(`>> ${i}. ${type} node ("${typeName}"), ${staves.length} staves`);
+      logger.json(staves);
       return;
     }
 

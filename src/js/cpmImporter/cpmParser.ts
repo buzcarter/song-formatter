@@ -2,15 +2,13 @@
 
 import { BlockTypes, CpmInstructions } from './interfaces/BlockTypesEnum';
 import { echo } from './debugWriter';
-import { readTabs } from './tabs';
+import { readTabBlock } from './tabs';
 import { runLine } from './chordParser';
-import {
-  BaseSongBlock, SongBlock, SongBlockArray, StringArray, TabBlock,
-} from './interfaces/SongBlock';
+import { BaseSongBlock, SongBlock, SongBlockArray, StringArray } from './interfaces/SongBlock';
 import getChordNames from './getChordNames';
 import Song from './classes/Song';
 
-import { clean, logger } from '../tools';
+import { logger } from '../tools';
 import definitions from '../tunings';
 import { settings } from '../configs';
 
@@ -61,9 +59,8 @@ interface ParseFindings {
   firstChord: string,
 }
 
-// type guards
+// type guard
 const isSongBlock = (block: BaseSongBlock): block is SongBlock => block.type !== BlockTypes.TabBlock;
-const isTabBlock = (block: BaseSongBlock): block is TabBlock => !isSongBlock(block);
 
 function parseSongBlocks(text: string): { songBlocks: SongBlockArray, findings: ParseFindings } {
   text = stripHtml(text);
@@ -71,12 +68,12 @@ function parseSongBlocks(text: string): { songBlocks: SongBlockArray, findings: 
   parseInstructions(songBlocks);
   const columnCount = parseSimpleInstructions(songBlocks);
   const { hasChords, firstChord } = markChordLines(songBlocks);
-  expandTabs(songBlocks);
+  const blocks = expandTabs(songBlocks);
   if (settings.opts.debugVerbose) {
-    echo(songBlocks);
+    echo(blocks);
   }
   return {
-    songBlocks,
+    songBlocks: blocks,
     findings: { hasChords, columnCount, firstChord },
   };
 }
@@ -319,15 +316,15 @@ function markChordLines(songBlocks: SongBlockArray): { hasChords: boolean, first
   return { hasChords, firstChord };
 }
 
-function expandTabs(songBlocks: SongBlockArray): void {
-  songBlocks
-    .filter(isTabBlock)
-    .forEach((block) => {
-      // @ts-ignore-next-line
-      const { lines } = block;
-      // @ts-ignore-next-line
-      Object.assign(clean(block), readTabs(lines as StringArray));
-    });
+/**
+ * Until now a tab block has been a SongBlock holding the raw lines; swap each one for the
+ * parsed TabBlock. (This used to empty the object and copy the new fields into it, which
+ * needed two @ts-ignores because one object changed type mid-way.)
+ */
+function expandTabs(songBlocks: SongBlockArray): SongBlockArray {
+  return songBlocks.map((block) => (block.type === BlockTypes.TabBlock && 'lines' in block
+    ? readTabBlock(block.lines as StringArray)
+    : block));
 }
 
 /** Searches the songNodes for the specified block type, returning all matching node line (text) values. */
