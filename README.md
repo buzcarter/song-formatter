@@ -12,6 +12,15 @@ renders the same songs the same way (its parity tests check this against the old
 
 ![Typical Layout](docs/images/ukulele-music-editor-grass-shack-sample.png)
 
+## Part of the UkeGeeks family
+
+- **[ukegeeks.org](https://ukegeeks.org)**: edit a song online, the User's Guide, and the blog.
+- **[UkeGeeks Songbook](https://github.com/buzcarter/UkeGeeks)**: your own songbook app, run with Node.js or PHP.
+- **[Song Formatter](https://github.com/buzcarter/song-formatter)** (this repo): chord diagrams and songsheets on your own website.
+- **[ACE ChordPro Extension](https://github.com/buzcarter/ace-chordpro-extension)**: ChordPro editing for the Ace code editor.
+
+Not sure which one you need? See [which UkeGeeks tool is right for you](https://ukegeeks.org/projects/).
+
 ## Installation
 
 With Node Package Manager (npm)
