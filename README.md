@@ -22,8 +22,8 @@ npm install @ukegeeks/song-formatter
 Or load it straight from a CDN:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ukegeeks/song-formatter@1.0.0-beta.1/dist/song-formatter.bundle.css" />
-<script src="https://cdn.jsdelivr.net/npm/@ukegeeks/song-formatter@1.0.0-beta.1/dist/song-formatter.bundle.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ukegeeks/song-formatter@1.0.0/dist/song-formatter.bundle.css" />
+<script src="https://cdn.jsdelivr.net/npm/@ukegeeks/song-formatter@1.0.0/dist/song-formatter.bundle.js"></script>
 ```
 
 ## Usage

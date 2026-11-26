@@ -1,6 +1,6 @@
 {
   "name": "@ukegeeks/song-formatter",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "Convert ChordPro markup text to HTML with chord fingering diagrams",
   "type": "module",
   "main": "./dist/song-formatter.cjs",
@@ -36,6 +36,7 @@
   "homepage": "https://github.com/buzcarter/song-formatter#readme",
   "scripts": {
     "build": "npm run build:clean && npm run build:js && npm run build:types && npm run build:css",
+    "prepublishOnly": "npm run lint && npm test && npm run build",
     "build:clean": "node -e \"for (const dir of ['dist', '.tmp', '.site']) require('fs').rmSync(dir, { recursive: true, force: true })\"",
     "build:js": "webpack --mode production",
     "build:types": "dts-bundle-generator --project tsconfig.build.json --out-file dist/song-formatter.d.ts src/js/index.ts && node scripts/finish-types.cjs",
