@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2026-12)
+
+Stable release, part of **UkeGeeks 2026.12**. The code is 1.0.0-beta.1's: no API or rendering changes since the beta.
+
+- Published as npm `latest`. The UkeGeeks Songbook, Song Editor 2.0.0 and UkeGeeks Studio use it.
+- `npm publish` now runs lint, the tests and a fresh build first (`prepublishOnly`), so a stale `dist/` can't be published.
+
 ## 1.0.0-beta.1 (2026-11)
 
 First beta, published under the npm `beta` tag. The UkeGeeks Songbook renders with this version.
