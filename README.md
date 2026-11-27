@@ -117,7 +117,7 @@ Then open `demo/index.html`. Other scripts:
 - `npm run lint` and `npm run typecheck`.
 - `npm start`: rebuild on change.
 
-Pull requests run lint, type-check, tests and build (`.github/workflows/runTests.yml`). The [demo site](https://buzcarter.github.io/song-formatter/) is published from `master` by `.github/workflows/publishDemo.yml`.
+Pull requests run lint, type-check, tests and build (`.github/workflows/runTests.yml`). The [demo site](https://buzcarter.github.io/song-formatter/) is published from `main` by `.github/workflows/publishDemo.yml`.
 
 See the [Changelog](CHANGELOG.md) for what's in each release.
 
